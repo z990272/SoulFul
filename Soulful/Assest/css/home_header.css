@@ -1,0 +1,31 @@
+.header-area {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-area a {
+    color: #fff;
+}
+
+.navbar-toggler {
+    padding: .1rem .75rem .65rem .35rem;
+}
+
+.navbar-toggler-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+
+@media screen and (max-width:992px) {
+    .header-area {
+        background-color: #000000;
+        position: sticky;
+    }
+}
