@@ -18,7 +18,7 @@ namespace Soulful
             // 準備好可進行生產時，請使用 https://modernizr.com 的建置工具，只挑選您需要的測試。
 
 
-            bundles.Add(new StyleBundle("~/Assest/css").Include(
+            bundles.Add(new StyleBundle("~/Content/css").Include(
                "~/Content/bootstrap.css"
                ));
             bundles.Add(new StyleBundle("~/Assest/css").Include(
