@@ -11,9 +11,7 @@
     color: #fff;
 }
 
-.navbar-toggler {
-    padding: .1rem .75rem .65rem .35rem;
-}
+
 
 .navbar-toggler-icon div {
     width: 35px;
@@ -27,5 +25,8 @@
     .header-area {
         background-color: #000000;
         position: sticky;
+    }
+    .navbar-toggler {
+        padding: .01rem .5rem .5rem .2rem;
     }
 }

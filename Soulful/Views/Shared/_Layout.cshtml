@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
-    @Styles.Render("~/Assest/css")
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Assest/css")
+
 
     @RenderSection("topCSS", required: false)
     @RenderSection("topJS", required: false)
@@ -153,6 +154,8 @@
 
 
     @Scripts.Render("~/Assest/js")
+    @*@Scripts.Render("~/bundles/boostrap")*@
+    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 
     @RenderSection("endCSS", required: false)
