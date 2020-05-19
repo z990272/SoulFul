@@ -9,7 +9,7 @@ namespace Soulful.Controllers
     public class AlbumController : Controller
     {
         // GET: Album
-        public ActionResult Index()
+        public ActionResult Albums()
         {
             return View();
         }
