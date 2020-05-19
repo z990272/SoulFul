@@ -28,9 +28,9 @@ namespace Soulful
                "~/Content/bootstrap.css"
                ));
             bundles.Add(new StyleBundle("~/Assest/css").Include(
-
                       "~/Assest/css/home_header.css",
-                      "~/Assest/css/home_footer.css"));
+                      "~/Assest/css/home_footer.css",
+                      "~/Assest/css/_layout.css"));
         }
     }
 }
