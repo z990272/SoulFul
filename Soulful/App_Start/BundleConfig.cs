@@ -15,7 +15,7 @@ namespace Soulful
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/boostrap").Include(
-                       "~/Scripts/bootstrap.bundle.js"));
+                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/Assest/js").Include(
                        "~/Assest/js/navbar.js"));
