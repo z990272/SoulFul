@@ -242,6 +242,10 @@
     <Content Include="Assest\image\asset 7.jpeg" />
     <Content Include="Assest\image\asset 8.jpeg" />
     <Content Include="Assest\image\asset 9.jpeg" />
+    <Content Include="Assest\image\b1.jpg" />
+    <Content Include="Assest\image\b2.jpg" />
+    <Content Include="Assest\image\b3.jpg" />
+    <Content Include="Assest\image\b4.jpg" />
     <Content Include="Assest\image\bg-2.png" />
     <Content Include="Assest\image\blog1.jpg" />
     <Content Include="Assest\image\blog2.jpg" />
