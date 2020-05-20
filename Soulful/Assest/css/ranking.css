@@ -1,0 +1,145 @@
+@media (min-width: 768px) {
+    /* #ranking_Explanation {
+        display: block;
+    } */
+
+    .flipper .charts_list_cover{
+        width: 90px;
+        height: 90px;
+    }
+    /* .charts-list-rank {
+        font-size: 36px;
+        width: 83px;
+        padding-left: 8px;
+    } */
+    .charts_list_song {
+        font-size: 18px;
+        margin: 0 0 3px;
+    }
+    .charts_list_artist {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .category, #check_category {
+        margin: 6px;
+    }
+
+    /* .container{
+        max-width: 960px;
+    } */
+}
+
+@media (max-width: 765px)
+{
+    #ranking_Explanation {
+        display: none;
+    }
+    /* .time_categories, .song_categories */
+}
+
+.category {
+    display: inline-block;
+    /* margin: 6px; */
+}
+
+/* 標題列底線 */
+.charts_list_row_header{
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+/* 標題列設定 */
+.charts_list_row_header .charts_list_rank{
+    width: 60px;
+    /* padding: 0 10px 0 0; */
+    margin-right: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.charts_list_row_header .charts_list_album_name{
+    width: 100%;
+}
+.charts_list_row_header .charts_list_content{
+    flex: 1 1 auto;
+}
+.charts_list_row_header .charts_list_sales{
+    width: 80px;
+    /* flex: 0 0 auto; */
+    text-align: right;
+}
+
+.charts_list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.charts_list_row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+
+.charts_list_row:hover{
+    background-color:#aaaaaa;
+}
+
+.charts_list_row .charts_list_rank{
+    font-size: 36px;
+    width: 60px;
+    /* padding-right: 10px; */
+    margin-right: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.flipper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.charts_list_desc{
+    flex: 1 1 auto;
+    padding-left: 15px;
+}
+
+.charts_list_song{
+    display: block;
+    font-weight: 600;
+    line-height: 1.2;
+
+}
+.charts_list_artist{
+    display: block;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .3px;
+}
+
+.charts_list_cover{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/* 
+.radio{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+.label{
+    background-color: #aaa;
+} */
