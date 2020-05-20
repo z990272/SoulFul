@@ -106,46 +106,7 @@
         transition-duration: 500ms;
     }
 
-.foot-layout {
-    background-color: black;
-}
 
-.foot-ul a {
-    text-decoration: none;
-    color: #898888;
-    padding: 0px 8px;
-}
-
-    .foot-ul a:hover {
-        color: #fff;
-    }
-
-.foot-ul li {
-    list-style: none;
-}
-
-.foot-ul {
-    text-align: center;
-    justify-content: flex-end;
-}
-
-.foot-txt {
-    color: rgba(166, 165, 165, 0.54);
-    font-size: 12px;
-}
-
-.foot-title {
-    color: #fff;
-}
-
-.foot-nav ul {
-    display: flex;
-}
-
-.foot-nav-box {
-    display: flex;
-    align-items: center;
-}
 
 ::-webkit-input-placeholder {
     /* WebKit browsers */
