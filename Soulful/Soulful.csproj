@@ -191,6 +191,7 @@
     <Content Include="Assest\css\News.css" />
     <Content Include="Assest\css\one2.css" />
     <Content Include="Assest\css\ranking.css" />
+    <Content Include="Assest\css\_layout.css" />
     <Content Include="Assest\image\1.png" />
     <Content Include="Assest\image\add1.gif" />
     <Content Include="Assest\image\add2.gif" />
@@ -410,12 +411,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assest\json\" />
     <Folder Include="Views\Album\" />
-    <Folder Include="Views\Contact\" />
     <Folder Include="Views\News\" />
     <Folder Include="Views\Rank\" />
   </ItemGroup>

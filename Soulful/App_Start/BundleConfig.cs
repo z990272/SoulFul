@@ -14,6 +14,9 @@ namespace Soulful
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/boostrap").Include(
+                       "~/Scripts/bootstrap.js"));
+
             bundles.Add(new ScriptBundle("~/Assest/js").Include(
                        "~/Assest/js/navbar.js"));
 
@@ -25,9 +28,9 @@ namespace Soulful
                "~/Content/bootstrap.css"
                ));
             bundles.Add(new StyleBundle("~/Assest/css").Include(
-
                       "~/Assest/css/home_header.css",
-                      "~/Assest/css/home_footer.css"));
+                      "~/Assest/css/home_footer.css",
+                      "~/Assest/css/_layout.css"));
         }
     }
 }
