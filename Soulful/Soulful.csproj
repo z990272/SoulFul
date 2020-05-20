@@ -191,6 +191,7 @@
     <Content Include="Assest\css\News.css" />
     <Content Include="Assest\css\one2.css" />
     <Content Include="Assest\css\ranking.css" />
+    <Content Include="Assest\css\_layout.css" />
     <Content Include="Assest\image\1.png" />
     <Content Include="Assest\image\add1.gif" />
     <Content Include="Assest\image\add2.gif" />
