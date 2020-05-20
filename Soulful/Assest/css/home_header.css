@@ -10,10 +10,15 @@
 .header-area a {
     color: #fff;
 }
-
-.navbar-toggler {
-    padding: .1rem .75rem .65rem .35rem;
+.nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
+.nav-item  a {
+    display: block;
+    padding: 0.5em 0;
+}
+
 
 .navbar-toggler-icon div {
     width: 35px;
@@ -27,5 +32,16 @@
     .header-area {
         background-color: #000000;
         position: sticky;
+    }
+    .navbar-toggler {
+        padding: .01rem .5rem .5rem .2rem;
+    }
+    .nav-item {
+       padding-left: 0;
+        padding-right: 0;
+    }
+    .nav-item  a {
+        display: block;
+        padding: 0.5em 0;
     }
 }
