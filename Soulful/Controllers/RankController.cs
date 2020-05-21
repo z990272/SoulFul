@@ -11,6 +11,7 @@ namespace Soulful.Controllers
         // GET: Rank
         public ActionResult Index()
         {
+            //資料庫抓出排行前10的建立models
             return View();
         }
     }
