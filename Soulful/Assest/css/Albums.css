@@ -1,35 +1,34 @@
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .head_area {
         position: relative;
         background-image: url('../image/login_bg.jpg');
-        height: 0;
+        z-index: 10;
+        padding-bottom: 270px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 300px;
     }
 
-    .head_txt{
-        width:  calc(100% - 60px);
+    .head_txt {
+        width: calc(100% - 60px);
     }
 }
 
-@media screen and (min-width: 768px){
-    .head_area{
-         position: relative;
+@media screen and (min-width: 768px) {
+    .head_area {
+        position: relative;
         background-image: url('../image/login_bg.jpg');
-        height: 0;
+        z-index: 10;
+        padding-bottom: 385px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 300px;
-        }
+    }
 
-    .head_txt{
+    .head_txt {
         width: 552px;
     }
 }
-
 .head_img{
     position: absolute;
     z-index: -1;

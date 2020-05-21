@@ -187,7 +187,7 @@
     <Content Include="Assest\css\Events.css" />
     <Content Include="Assest\css\home_footer.css" />
     <Content Include="Assest\css\home_header.css" />
-    <Content Include="Assest\css\index.css" />
+    <Content Include="Assest\css\Home.css" />
     <Content Include="Assest\css\login_page.css" />
     <Content Include="Assest\css\News.css" />
     <Content Include="Assest\css\one2.css" />
