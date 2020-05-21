@@ -187,10 +187,11 @@
     <Content Include="Assest\css\Events.css" />
     <Content Include="Assest\css\home_footer.css" />
     <Content Include="Assest\css\home_header.css" />
-    <Content Include="Assest\css\index.css" />
+    <Content Include="Assest\css\Home.css" />
     <Content Include="Assest\css\login_page.css" />
     <Content Include="Assest\css\News.css" />
     <Content Include="Assest\css\one2.css" />
+    <Content Include="Assest\css\rank.css" />
     <Content Include="Assest\css\ranking.css" />
     <Content Include="Assest\css\_layout.css" />
     <Content Include="Assest\image\1.png" />
@@ -273,6 +274,7 @@
     <Content Include="Assest\image\s4.jpg" />
     <Content Include="Assest\image\z.png" />
     <Content Include="Assest\js\navbar.js" />
+    <Content Include="Assest\js\rank.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -433,6 +435,9 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Album\Albums.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Rank\Index.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

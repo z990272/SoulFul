@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+﻿@media (min-width: 768px) {
     /* #ranking_Explanation {
         display: block;
     } */
@@ -137,6 +137,18 @@
 
 
 
+/* 
+.radio{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+.label{
+    background-color: #aaa;
+} */
+
+
+
 /* footer */
 .footer-area {
     position: relative;
@@ -145,7 +157,7 @@
     padding: 30px 0;
 }
 
-a, a:hover, a:focus {
+/*a, a:hover, a:focus {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     text-decoration: none;
@@ -154,7 +166,7 @@ a, a:hover, a:focus {
     font-weight: 700;
     font-size: 16px;
     font-family: "Archivo Narrow", sans-serif;
-}
+}*/
 
 .footer-area .copywrite-text {
     font-size: 12px;
@@ -273,19 +285,3 @@ p {
     margin-bottom: 0;
 }
 /*上方圖片區*/
-
-
-
-/* 
-.radio{
-    position: absolute;
-    height: 1px;
-    width: 1px;
-}
-.label{
-    background-color: #aaa;
-} */
-
-
-
-
