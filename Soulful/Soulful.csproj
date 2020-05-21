@@ -433,10 +433,12 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Album\Albums.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assest\json\" />
+    <Folder Include="Views\Album\" />
     <Folder Include="Views\Contact\" />
     <Folder Include="Views\News\" />
     <Folder Include="Views\Rank\" />
