@@ -400,8 +400,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -442,11 +440,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assest\json\" />
-    <Folder Include="Views\Album\" />
-    <Folder Include="Views\Contact\" />
-    <Folder Include="Views\Event\" />
-    <Folder Include="Views\News\" />
-    <Folder Include="Views\Rank\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
