@@ -183,6 +183,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assest\css\Albums.css" />
     <Content Include="Assest\css\Events.css" />
     <Content Include="Assest\css\home_footer.css" />
     <Content Include="Assest\css\home_header.css" />
@@ -193,6 +194,18 @@
     <Content Include="Assest\css\ranking.css" />
     <Content Include="Assest\css\_layout.css" />
     <Content Include="Assest\image\1.png" />
+    <Content Include="Assest\image\a1.jpg" />
+    <Content Include="Assest\image\a10.jpg" />
+    <Content Include="Assest\image\a11.jpg" />
+    <Content Include="Assest\image\a12.jpg" />
+    <Content Include="Assest\image\a2.jpg" />
+    <Content Include="Assest\image\a3.jpg" />
+    <Content Include="Assest\image\a4.jpg" />
+    <Content Include="Assest\image\a5.jpg" />
+    <Content Include="Assest\image\a6.jpg" />
+    <Content Include="Assest\image\a7.jpg" />
+    <Content Include="Assest\image\a8.jpg" />
+    <Content Include="Assest\image\a9.jpg" />
     <Content Include="Assest\image\add1.gif" />
     <Content Include="Assest\image\add2.gif" />
     <Content Include="Assest\image\asset 0.jpeg" />
@@ -230,6 +243,10 @@
     <Content Include="Assest\image\asset 7.jpeg" />
     <Content Include="Assest\image\asset 8.jpeg" />
     <Content Include="Assest\image\asset 9.jpeg" />
+    <Content Include="Assest\image\b1.jpg" />
+    <Content Include="Assest\image\b2.jpg" />
+    <Content Include="Assest\image\b3.jpg" />
+    <Content Include="Assest\image\b4.jpg" />
     <Content Include="Assest\image\bg-2.png" />
     <Content Include="Assest\image\blog1.jpg" />
     <Content Include="Assest\image\blog2.jpg" />
@@ -250,6 +267,10 @@
     <Content Include="Assest\image\event 9.jpeg" />
     <Content Include="Assest\image\login_bg.jpg" />
     <Content Include="Assest\image\rank.jpg" />
+    <Content Include="Assest\image\s1.jpg" />
+    <Content Include="Assest\image\s2.jpg" />
+    <Content Include="Assest\image\s3.jpg" />
+    <Content Include="Assest\image\s4.jpg" />
     <Content Include="Assest\image\z.png" />
     <Content Include="Assest\js\navbar.js" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -411,12 +432,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Event\Index.cshtml" />
-    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Album\Albums.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assest\json\" />
-    <Folder Include="Views\Album\" />
+    <Folder Include="Views\Contact\" />
     <Folder Include="Views\News\" />
     <Folder Include="Views\Rank\" />
   </ItemGroup>
