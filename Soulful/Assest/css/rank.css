@@ -157,7 +157,7 @@
     padding: 30px 0;
 }
 
-a, a:hover, a:focus {
+/*a, a:hover, a:focus {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     text-decoration: none;
@@ -166,7 +166,7 @@ a, a:hover, a:focus {
     font-weight: 700;
     font-size: 16px;
     font-family: "Archivo Narrow", sans-serif;
-}
+}*/
 
 .footer-area .copywrite-text {
     font-size: 12px;
