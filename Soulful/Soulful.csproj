@@ -184,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assest\css\Albums.css" />
+    <Content Include="Assest\css\Animate.css" />
     <Content Include="Assest\css\Events.css" />
     <Content Include="Assest\css\home_footer.css" />
     <Content Include="Assest\css\home_header.css" />
