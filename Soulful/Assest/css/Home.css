@@ -49,19 +49,24 @@
     }
 
 .soul_btn {
-    background-color: #fff;
+    background-color: transparent;
     position: relative;
     z-index: 1;
     display: inline-block;
     min-width: 212px;
     height: 49px;
-    color: #000;
-    border: 1px solid #000;
+    color: #fff;
+    border: 2px solid #fff;
     border-radius: 0;
     padding: 0 30px;
     font-size: 16px;
     line-height: 47px;
     font-weight: 700;
+}
+
+.btn_album_color {
+    border: 2px solid #000;
+    color: #000
 }
 
 .latest_albums {
