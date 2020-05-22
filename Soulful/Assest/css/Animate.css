@@ -58,7 +58,7 @@
 
 .hero_image_wrap {
     animation-name: picDraw;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 15s;
 }

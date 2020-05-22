@@ -14,7 +14,7 @@
 .hero_image_wrap {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/asset 33.jpeg");
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 60%;
 }
 
 .bg_image {
