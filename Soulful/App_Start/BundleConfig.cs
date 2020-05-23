@@ -15,7 +15,7 @@ namespace Soulful
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/boostrap").Include(
-                       "~/Scripts/bootstrap.js"));
+                       "~/Scripts/bootstrap.bundle.js"));
 
 
             // 使用開發版本的 Modernizr 進行開發並學習。然後，當您

@@ -3,8 +3,13 @@
 }
 @section topCSS{
     <link rel="stylesheet" href="~/Asset/css/Home.css" />
+    <link href="~/Content/Slick/slick.css" rel="stylesheet" />
+    <link href="~/Content/Slick/slick-theme.css" rel="stylesheet" />
 }
-
+@section endJS{
+    <script src="~/Scripts/Slick/slick.js"></script>
+    <script src="~/Asset/js/Slick.js"></script>
+}
 <!-- hero_image -->
 <section class="slide_image">
     <div class="hero_image bg_image">
@@ -23,26 +28,13 @@
 <!-- Latest Albums -->
 <section class="latest_albums">
     <div class="container py-5">
-        <div class="row">
+        <div class="row py-5">
             <div class="col-12">
                 <p>See what’s new</p>
                 <h2>Latest Albums</h2>
             </div>
         </div>
-        <div class="row my-5 px-5">
-            <div class="col-12 px-5">
-                <p class="px-5">
-                    Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu
-                    quam varius
-                    rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis
-                    nisi,
-                    ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante. Donec in
-                    velit
-                    non elit pulvinar pellentesque et non eros.
-                </p>
-            </div>
-        </div>
-        <div class="row">
+        <div class="row responsive">
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="album">
                     <div class="pic"><img class="d-block w-100" src="~/Asset/image/asset 6.jpeg" alt=""></div>
