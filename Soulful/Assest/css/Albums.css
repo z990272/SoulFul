@@ -370,12 +370,21 @@ display: inline-block;
 
     }
 }
-.album-txt{
+.album-txt {
     text-align: center;
+    margin-top: 5px;
 }
 .album-txt h5{
     color: #000;
 }
 .album-txt a{
     text-decoration: none;
+}
+.single-album img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: transform .9s ease;
 }

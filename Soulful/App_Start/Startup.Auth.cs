@@ -60,8 +60,8 @@ namespace Soulful
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
-            //    ClientId = "",
-            //    ClientSecret = ""
+            //    ClientId = "556925752894-sbrmnj9jirttrp3001mr6abudf5biga6.apps.googleusercontent.com",
+            //    ClientSecret = "11zf8uJ4zjRZK-1K6Myp0XIN"
             //});
         }
     }
