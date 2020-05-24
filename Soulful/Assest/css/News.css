@@ -3,34 +3,12 @@
     padding: 0;
     list-style: none;
 }
-@media screen and (max-width: 767px) {
-    .breadcumb_area {
-        position: relative;
-        background-image: url('../image/breadcumb3.jpg');
-        z-index: 10;
-        padding-bottom: 270px;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-
+.breadcumb_area {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 300px;
+    background-image: url('../image/breadcumb3.jpg');
 }
-
-@media screen and (min-width: 768px) {
-    .breadcumb_area {
-        position: relative;
-        background-image: url('../image/breadcumb3.jpg');
-        z-index: 10;
-        padding-bottom: 385px;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
- 
-}
-
 .bg-overlay{
     background-position: center center;
     background-size:cover;
@@ -98,13 +76,6 @@
 .card_body{
     padding: 15px 20px;
 }
-/* .card_body .card_content .blog_meta p::after{
-    content: '|';
-    position: relative;
-    left: 10px;
-    top: 0;
-    z-index: 5;
-} */
 .nav{
     margin: 10px;
 }
@@ -183,14 +154,12 @@ img{
     
 }
 .contact_area {
-    background-image: url("../image/bg-2.png");
-   
+    background-image: url("bg-2.jpg");
 }
 .has-bg-img{
     position: relative;
     z-index: 1;
     opacity: 1.0;
-    /* -webkit-filter:contrast(2); */
 }
 .bg-overlay{
     background-position: center center;
@@ -278,12 +247,18 @@ img{
     background-color: #fff;
     color: #000;
 }
-
-
-
-
-
-
-
-
-
+.has-bg-img .onemusic_btn i{
+    display: inline-block;  
+}
+.readmore_button_div{
+    display: flex;
+    justify-content: flex-end;
+}
+.readmore_button{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+.readmore_button:hover{
+    color: darkcyan;   
+}
