@@ -15,10 +15,8 @@ namespace Soulful
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/boostrap").Include(
-                       "~/Scripts/bootstrap.js"));
+                       "~/Scripts/bootstrap.bundle.js"));
 
-            bundles.Add(new ScriptBundle("~/Assest/js").Include(
-                       "~/Assest/js/navbar.js"));
 
             // 使用開發版本的 Modernizr 進行開發並學習。然後，當您
             // 準備好可進行生產時，請使用 https://modernizr.com 的建置工具，只挑選您需要的測試。
@@ -27,10 +25,7 @@ namespace Soulful
             bundles.Add(new StyleBundle("~/Content/css").Include(
                "~/Content/bootstrap.css"
                ));
-            bundles.Add(new StyleBundle("~/Assest/css").Include(
-                      "~/Assest/css/home_header.css",
-                      "~/Assest/css/home_footer.css",
-                      "~/Assest/css/_layout.css"));
+
         }
     }
 }

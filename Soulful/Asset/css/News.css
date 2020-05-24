@@ -3,13 +3,34 @@
     padding: 0;
     list-style: none;
 }
-.breadcumb_area{
-    background-image: url("../image/breadcumb3.jpg");
-    height: 270px;
-    position: relative;
-    z-index: 10;
-    width: 100%;
-} 
+@media screen and (max-width: 767px) {
+    .breadcumb_area {
+        position: relative;
+        background-image: url('../image/breadcumb3.jpg');
+        z-index: 10;
+        padding-bottom: 270px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .breadcumb_area {
+        position: relative;
+        background-image: url('../image/breadcumb3.jpg');
+        z-index: 10;
+        padding-bottom: 385px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+ 
+}
+
 .bg-overlay{
     background-position: center center;
     background-size:cover;

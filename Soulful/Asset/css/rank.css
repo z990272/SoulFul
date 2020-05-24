@@ -1,0 +1,287 @@
+﻿@media (min-width: 768px) {
+    /* #ranking_Explanation {
+        display: block;
+    } */
+
+    .flipper .charts_list_cover {
+        width: 90px;
+        height: 90px;
+    }
+    /* .charts-list-rank {
+        font-size: 36px;
+        width: 83px;
+        padding-left: 8px;
+    } */
+    .charts_list_song {
+        font-size: 18px;
+        margin: 0 0 3px;
+    }
+
+    .charts_list_artist {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .category, #check_category {
+        margin: 6px;
+    }
+
+    /* .container{
+        max-width: 960px;
+    } */
+}
+
+@media (max-width: 765px) {
+    #ranking_Explanation {
+        display: none;
+    }
+    /* .time_categories, .song_categories */
+}
+
+.category {
+    display: inline-block;
+    /* margin: 6px; */
+}
+
+/* 標題列底線 */
+.charts_list_row_header {
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+    /* 標題列設定 */
+    .charts_list_row_header .charts_list_rank {
+        width: 60px;
+        /* padding: 0 10px 0 0; */
+        margin-right: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .charts_list_row_header .charts_list_album_name {
+        width: 100%;
+    }
+
+    .charts_list_row_header .charts_list_content {
+        flex: 1 1 auto;
+    }
+
+    .charts_list_row_header .charts_list_sales {
+        width: 80px;
+        /* flex: 0 0 auto; */
+        text-align: right;
+    }
+
+.charts_list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.charts_list_row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+
+    .charts_list_row:hover {
+        background-color: #aaaaaa;
+    }
+
+    .charts_list_row .charts_list_rank {
+        font-size: 36px;
+        width: 60px;
+        /* padding-right: 10px; */
+        margin-right: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.charts_list_desc {
+    flex: 1 1 auto;
+    padding-left: 15px;
+}
+
+.charts_list_song {
+    display: block;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.charts_list_artist {
+    display: block;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .3px;
+}
+
+.charts_list_cover {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/* 
+.radio{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+.label{
+    background-color: #aaa;
+} */
+
+
+
+/* footer */
+.footer-area {
+    position: relative;
+    z-index: 1;
+    background-color: #000000;
+    padding: 30px 0;
+}
+
+/*a, a:hover, a:focus {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Archivo Narrow", sans-serif;
+}*/
+
+.footer-area .copywrite-text {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: rgba(166, 165, 165, 0.54);
+}
+
+.footer-area .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /*-ms-grid-row-align: center;*/
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+ul li, ol li {
+    list-style: none;
+}
+
+.footer-area .footer-nav li a {
+    color: #898888;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.footer-area .copywrite-text {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: rgba(166, 165, 165, 0.54);
+}
+
+
+
+
+
+/* 上方圖片 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: "Archivo Narrow", sans-serif; */
+    color: #000000;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.breadcumb-area {
+    background-image: url(../image/rank.jpg);
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 385px;
+}
+
+.bg-overlay {
+    position: relative;
+    z-index: 2;
+    background-position: center center;
+    background-size: cover;
+}
+/* .bg-overlay::after {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+} */
+.bg-img {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.breadcumb-area .bradcumbContent {
+    position: absolute;
+    background-color: #fff;
+    width: 552px;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    text-align: center;
+    padding-top: 40px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+    .breadcumb-area .bradcumbContent p {
+        line-height: 1.5;
+        font-size: 16px;
+        color: #5f5f5f;
+    }
+
+p {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #5f5f5f;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+}
+
+.breadcumb-area .bradcumbContent h2 {
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0;
+}
+/*上方圖片區*/
