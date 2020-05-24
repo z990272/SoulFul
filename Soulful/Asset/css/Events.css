@@ -109,7 +109,7 @@
 .event_meta:hover .event_txt a, 
 .event_meta:focus .event_txt h4,
 .event_meta:focus .event_txt a{
-        color: #000000 !important; }
+    color: #000000 !important; }
 
 
 .event_meta:hover .event_txt,
