@@ -83,7 +83,8 @@
     padding: 35px 15px;
 }
 
-.event_area h4{
+.event_area h4 {
+    color: #fff !important;
     margin-bottom: 8px;
 }
 
@@ -108,7 +109,7 @@
 .event_meta:hover .event_txt a, 
 .event_meta:focus .event_txt h4,
 .event_meta:focus .event_txt a{
-        color: #000000; }
+        color: #000000 !important; }
 
 
 .event_meta:hover .event_txt,
