@@ -83,7 +83,8 @@
     padding: 35px 15px;
 }
 
-.event_area h4 {
+.event_area h4,
+.event_area h4:focus{
     color: #fff !important;
     margin-bottom: 8px;
 }
