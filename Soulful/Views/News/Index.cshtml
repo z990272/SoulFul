@@ -2,11 +2,16 @@
 @{
     ViewBag.Title = "Index";
 }
-@*<h2>Index</h2>*@
 
 @section topCSS
 {
     <link href="~/Asset/css/News.css" rel="stylesheet" />
+}
+
+@section endJS{
+    <script src="~/Assest/js/navbar.js"></script>
+    <script src="~/Assest/js/New.js"></script>
+
 }
 
 <section class="breadcumb_area bg-img bg-overlay">
@@ -44,6 +49,9 @@
                             sem, ac sodales dui lobortis. Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus
                             mollis metus sem, ac sodales dui lobortis.
                         </p>
+                        <div class="readmore_button_div">
+                            <button class="readmore_button" id="readmore_button1">Read more...</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,6 +78,9 @@
                             sem, ac sodales dui lobortis. Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus
                             mollis metus sem, ac sodales dui lobortis.
                         </p>
+                        <div class="readmore_button_div">
+                            <button class="readmore_button" id="readmore_button2">Read more...</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,6 +107,9 @@
                             sem, ac sodales dui lobortis. Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus
                             mollis metus sem, ac sodales dui lobortis.
                         </p>
+                        <div class="readmore_button_div">
+                            <button class="readmore_button" id="readmore_button3">Read more...</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,6 +188,26 @@
                 <a href="#">
                     <img src="~/Asset/image/add2.gif" alt="">
                 </a>
+            </div>
+        </div>
+
+        <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newsModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="news_description"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
