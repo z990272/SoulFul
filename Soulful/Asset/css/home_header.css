@@ -25,10 +25,62 @@
         padding-right: 3rem;
     }
 
-    .nav-item a {
-        display: block;
-        padding: 0.5em 0;
+
+    .nav-item:nth-child(7) {
+        display: flex;
+        align-self: center;
     }
+
+.btn_chart {
+    margin-bottom: 0;
+}
+
+    .btn_chart i {
+        color: #ffffff;
+        display: block;
+        text-decoration: none;
+        outline: 0 solid transparent;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+        .btn_chart i:hover,
+        .btn_chart i:focus {
+            transition-duration: 500ms;
+            text-decoration: none;
+            outline: 0 solid transparent;
+            color: #f60926;
+        }
+
+#chart_control {
+    position: absolute;
+    top: -100px;
+}
+
+.navbar-nav .nav-item .chart {
+    display: none;
+}
+
+.navbar-nav .nav-item input:checked ~ .chart {
+    display: block;
+}
+
+.navbar-nav .nav-item .chart {
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100%;
+    width: 40%;
+    background-color: white;
+}
+
+
+
+
+.nav-item a {
+    display: block;
+    padding: 0.5em 0;
+}
 
 
 .navbar-toggler-icon div {
@@ -55,8 +107,12 @@
     }
 
 
-        .nav-item a {
-            display: block;
-            padding: 0.5em 0;
-        }
+    .nav-item a, .nav-item i {
+        display: block;
+        padding: 0.5em 0;
+    }
+
+    .nav-item:nth-child(7) {
+        align-self: unset;
+    }
 }

@@ -15,7 +15,7 @@
     @RenderSection("topJS", required: false)
 </head>
 <body>
-
+ 
     <header class="header-area py-2 ">
         <div class="container">
             <div class="row">
@@ -54,7 +54,14 @@
                             <li class="nav-item">
                                 @Html.ActionLink("Register", "Register", "Account")
                             </li>
-                            <li class="nav-item"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="nav-item">
+
+                                <input type="checkbox" id="chart_control">
+                                <label for="chart_control" class="btn_chart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </label>
+                                <div class="chart">...</div>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -140,7 +147,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/boostrap")
 
-    
+
     @RenderSection("endCSS", required: false)
     @RenderSection("endJS", required: false)
 </body>
