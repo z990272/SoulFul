@@ -15,7 +15,7 @@
     @RenderSection("topJS", required: false)
 </head>
 <body>
- 
+
     <header class="header-area py-2 ">
         <div class="container">
             <div class="row">
@@ -53,11 +53,14 @@
                             </li>
                             <li class="nav-item">
 
-                                <input type="checkbox" id="chart_control">
-                                <label for="chart_control" class="btn_chart">
+                                <input type="checkbox" id="cart_control">
+                                <label for="cart_control" class="btn_cart">
                                     <i class="fas fa-shopping-cart"></i>
                                 </label>
-                                <div class="chart">...</div>
+                                <div class="cart">
+                                    <label for="cart_control" class="close">X</label>
+                                    <a class="btn_cart_product">添加商品</a>
+                                </div>
                             </li>
                         </ul>
                     </div>

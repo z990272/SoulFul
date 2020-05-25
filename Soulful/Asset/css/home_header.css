@@ -20,6 +20,7 @@
         padding-left: 3rem;
         padding-right: 1rem;
     }
+
     .nav-item:nth-child(6) {
         padding-left: 1rem;
         padding-right: 3rem;
@@ -31,11 +32,11 @@
         align-self: center;
     }
 
-.btn_chart {
+.btn_cart {
     margin-bottom: 0;
 }
 
-    .btn_chart i {
+    .btn_cart i {
         color: #ffffff;
         display: block;
         text-decoration: none;
@@ -44,36 +45,56 @@
         cursor: pointer;
     }
 
-        .btn_chart i:hover,
-        .btn_chart i:focus {
+        .btn_cart i:hover,
+        .btn_cart i:focus {
             transition-duration: 500ms;
             text-decoration: none;
             outline: 0 solid transparent;
             color: #f60926;
         }
 
-#chart_control {
+#cart_control {
     position: absolute;
     top: -100px;
 }
 
-.navbar-nav .nav-item .chart {
+.navbar-nav .nav-item .cart {
     display: none;
 }
 
-.navbar-nav .nav-item input:checked ~ .chart {
-    display: block;
+@keyframes right_to_left {
+    0% {
+        opacity: 0;
+        right: -40%;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
 }
 
-.navbar-nav .nav-item .chart {
+.navbar-nav .nav-item input:checked ~ .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: right_to_left;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+
+.navbar-nav .nav-item .cart {
     position: fixed;
     right: 0;
-    top:0;
+    top: 0;
     height: 100%;
-    width: 40%;
+    width: 30%;
     background-color: white;
+    border: 2px double #808080;
+    box-sizing: border-box;
 }
-
 
 
 
@@ -90,8 +111,40 @@
     margin: 6px 0;
 }
 
+a.btn_cart_product {
+    background-color: #000000;
+    position: relative;
+    z-index: 1;
+    min-width: 212px;
+    height: 49px;
+    color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 47px;
+    cursor: pointer;
+    text-align: center;
+}
+
+    a.btn_cart_product:hover {
+        background-color: #000000;
+        color: #f60926;
+    }
+
+
+.cart .close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 @media screen and (max-width:992px) {
+    .header-area .navbar {
+        flex-direction: row-reverse;
+    }
+
     .header-area {
         background-color: #000000;
         position: sticky;
@@ -114,5 +167,9 @@
 
     .nav-item:nth-child(7) {
         align-self: unset;
+    }
+
+    .navbar-nav .nav-item .cart {
+        width: 40%;
     }
 }
