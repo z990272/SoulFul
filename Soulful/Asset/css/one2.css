@@ -1,26 +1,24 @@
 @media screen and (max-width: 767px) {
     .pic {
         position: relative;
+        background-image: url('../image/z.png');
         z-index: 10;
-        height: 0;
-        background-image: url("../image/z.png");
+        padding-bottom: 270px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 300px
     }
 }
 
 @media screen and (min-width: 768px) {
     .pic {
         position: relative;
+        background-image: url('../image/z.png');
         z-index: 10;
-        height: 0;
-        background-image: url("../image/z.png");
+        padding-bottom: 385px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 300px
     }
 }
 
@@ -132,6 +130,10 @@ iframe {
 .section-heading {
     text-align: center;
 }
+
+    .section-heading h2 {
+        color: #000000;
+    }
 
 .contact-area {
     background-image: none;
