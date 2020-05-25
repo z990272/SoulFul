@@ -65,7 +65,7 @@
 @keyframes right_to_left {
     0% {
         opacity: 0;
-        right: -40%;
+        right: -30%;
     }
 
     100% {
@@ -169,7 +169,19 @@ a.btn_cart_product {
         align-self: unset;
     }
 
+    @keyframes right_to_left {
+        0% {
+            opacity: 0;
+            right: -50%;
+        }
+
+        100% {
+            opacity: 1;
+            right: 0;
+        }
+    }
+
     .navbar-nav .nav-item .cart {
-        width: 40%;
+        width: 50%;
     }
 }
