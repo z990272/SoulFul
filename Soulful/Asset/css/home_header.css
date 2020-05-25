@@ -16,11 +16,11 @@
     padding-right: 0.5rem;
 }
 
-    .nav-item:nth-child(6) {
+    .nav-item:nth-child(5) {
         padding-left: 3rem;
         padding-right: 1rem;
     }
-    .nav-item:nth-child(7) {
+    .nav-item:nth-child(6) {
         padding-left: 1rem;
         padding-right: 3rem;
     }
