@@ -1,0 +1,143 @@
+.contact-area {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/bg-2.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed !important;
+
+}
+
+/* 
+.contact-area::after {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+} */
+
+
+.section-heading  {
+    text-align: center;
+}
+.section-heading h2{
+    color: #fff;
+}
+
+.form-group .form-name {
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+
+}
+
+.form-group .form-email {
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+
+}
+
+.form-group .form-subject {
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+
+}
+
+
+.form-message input {
+    height: 160px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+
+}
+
+.send-btn {
+    min-width: 212px;
+    height: 49px;
+    border-color: #fff;
+    color: #fff;
+    background-color: transparent;
+    border: #fff solid 1px;
+}
+
+.send-btn:hover {
+    background-color: #fff;
+    color: black;
+    transition-duration: 500ms;
+}
+
+.foot-layout {
+    background-color: black;
+
+}
+
+.foot-ul a {
+    text-decoration: none;
+    color: #898888;
+    padding: 0px 8px;
+
+}
+
+.foot-ul a:hover {
+    color: #fff;
+}
+
+.foot-ul li {
+    list-style: none;
+
+}
+
+.foot-ul {
+    display: flex;
+
+    justify-content: flex-end;
+
+
+}
+
+
+
+.foot-txt {
+    color: rgba(166, 165, 165, 0.54);
+    font-size: 12px;
+}
+
+.foot-title {
+    color: #fff;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #343a40;
+}
+
+.foot-nav-box {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:425px) {
+    .foot-ul {
+        padding: 0;
+    }
+
+    .foot-ul a {
+        text-decoration: none;
+        color: #898888;
+        padding: 0px 3px;
+
+    }
+}
