@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -176,9 +178,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Default\AccountViewModels.cs" />
+    <Compile Include="Models\Detail\Album.cs" />
+    <Compile Include="Models\Identity\AspNetRoles.cs" />
+    <Compile Include="Models\Identity\AspNetUserClaims.cs" />
+    <Compile Include="Models\Identity\AspNetUserLogins.cs" />
+    <Compile Include="Models\Identity\AspNetUsers.cs" />
+    <Compile Include="Models\Detail\Buy.cs" />
+    <Compile Include="Models\C__MigrationHistory.cs" />
+    <Compile Include="Models\Detail\Event.cs" />
+    <Compile Include="Models\Default\IdentityModels.cs" />
+    <Compile Include="Models\Detail\Language.cs" />
+    <Compile Include="Models\Detail\Like.cs" />
+    <Compile Include="Models\Default\ManageViewModels.cs" />
+    <Compile Include="Models\Detail\News.cs" />
+    <Compile Include="Models\Detail\Singer.cs" />
+    <Compile Include="Models\Detail\Song.cs" />
+    <Compile Include="Models\Detail\SoulfulModel.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

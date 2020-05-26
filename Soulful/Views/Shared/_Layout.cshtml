@@ -10,7 +10,6 @@
     <link href="~/Asset/css/home_header.css" rel="stylesheet" />
     <link href="~/Asset/css/home_footer.css" rel="stylesheet" />
     <link href="~/Asset/css/_layout.css" rel="stylesheet" />
-
     @RenderSection("topCSS", required: false)
     @RenderSection("topJS", required: false)
 </head>
@@ -145,7 +144,8 @@
 
     <script src="~/Asset/js/navbar.js"></script>
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/boostrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
 
 
     @RenderSection("endCSS", required: false)

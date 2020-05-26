@@ -3,12 +3,12 @@
     ViewBag.Title = "註冊";
 }
 
-@section topCSS{
+@*@section topCSS{
     <link href="~/Asset/css/login_page.css" rel="stylesheet" />
-}
+}*@
 
 @* 原始程式碼 *@
-@*<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title.</h2>
 
     @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
@@ -41,12 +41,9 @@
         </div>
     }
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    }*@
+   
 
-
-<div class="breadcumb-area bg-img bg-overlay">
+@*<div class="breadcumb-area bg-img bg-overlay">
     <div class="bradcumbContent">
         <p>New Users</p>
         <h2>Register</h2>
@@ -88,4 +85,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
