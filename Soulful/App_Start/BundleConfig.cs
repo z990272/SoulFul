@@ -8,6 +8,8 @@ namespace Soulful
         // 如需統合的詳細資訊，請瀏覽 https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = true;
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -23,7 +25,10 @@ namespace Soulful
 
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-               "~/Content/bootstrap.css"
+               "~/Content/bootstrap.css",
+               "~/Asset/css/home_header.css",
+               "~/Asset/css/home_footer.css",
+               "~/Asset/css/_layout.css"
                ));
 
         }

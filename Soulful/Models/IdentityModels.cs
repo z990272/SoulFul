@@ -29,5 +29,6 @@ namespace Soulful.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }
