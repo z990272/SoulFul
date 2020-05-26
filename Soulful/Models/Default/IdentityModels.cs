@@ -21,7 +21,7 @@ namespace Soulful.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("SoulfulContext", throwIfV1Schema: false)
         {
         }
 
