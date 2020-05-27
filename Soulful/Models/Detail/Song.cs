@@ -26,6 +26,10 @@ namespace Soulful.Models
 
         public int Language_id { get; set; }
 
+        [Required]
+        [StringLength(64)]
+        public string Audio_file { get; set; }
+
         public virtual Album Album { get; set; }
 
         public virtual Language Language { get; set; }

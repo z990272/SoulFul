@@ -16,9 +16,9 @@ namespace Soulful.Models
         [Required]
         public string About { get; set; }
 
-        [Column(TypeName = "image")]
         [Required]
-        public byte[] Pic { get; set; }
+        [StringLength(64)]
+        public string Pic { get; set; }
 
         [Required]
         [StringLength(50)]

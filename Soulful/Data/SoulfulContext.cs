@@ -5,9 +5,9 @@ namespace Soulful.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class SoulfulModel : DbContext
+    public partial class SoulfulContext : DbContext
     {
-        public SoulfulModel()
+        public SoulfulContext()
             : base("name=SoulfulContext")
         {
         }
@@ -25,6 +25,7 @@ namespace Soulful.Models
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Singer> Singer { get; set; }
         public virtual DbSet<Song> Song { get; set; }
+        public virtual DbSet<Style> Style { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -36,6 +37,11 @@ namespace Soulful.Models
 
             modelBuilder.Entity<Album>()
                 .HasMany(e => e.Song)
+                .WithRequired(e => e.Album)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Album>()
+                .HasMany(e => e.Style)
                 .WithRequired(e => e.Album)
                 .WillCascadeOnDelete(false);
 

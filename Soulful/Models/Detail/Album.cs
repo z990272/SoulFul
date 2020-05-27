@@ -14,6 +14,7 @@ namespace Soulful.Models
         {
             Buy = new HashSet<Buy>();
             Song = new HashSet<Song>();
+            Style = new HashSet<Style>();
         }
 
         [Key]
@@ -27,17 +28,12 @@ namespace Soulful.Models
         [StringLength(50)]
         public string Album_Name { get; set; }
 
-        public int Year { get; set; }
-
         [Required]
-        [StringLength(50)]
-        public string Conpany { get; set; }
+        [StringLength(64)]
+        public string Pic { get; set; }
 
-        [StringLength(50)]
-        public string Style { get; set; }
-
-        [Column(TypeName = "image")]
-        public byte[] Pic { get; set; }
+        [StringLength(64)]
+        public string About { get; set; }
 
         public virtual Singer Singer { get; set; }
 
@@ -46,5 +42,8 @@ namespace Soulful.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Song> Song { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Style> Style { get; set; }
     }
 }

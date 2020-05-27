@@ -22,13 +22,15 @@ namespace Soulful.Models
 
         public decimal Price { get; set; }
 
-        [Column(TypeName = "image")]
-        public byte[] Pic { get; set; }
+        [Required]
+        [StringLength(64)]
+        public string Pic { get; set; }
 
         [Required]
         [StringLength(50)]
         public string Adress { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string About { get; set; }
 
