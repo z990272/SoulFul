@@ -179,6 +179,43 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005280423272_Tes01.cs" />
+    <Compile Include="Migrations\202005280423272_Tes01.Designer.cs">
+      <DependentUpon>202005280423272_Tes01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280424172_Tes02.cs" />
+    <Compile Include="Migrations\202005280424172_Tes02.Designer.cs">
+      <DependentUpon>202005280424172_Tes02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280427264_Tes03.cs" />
+    <Compile Include="Migrations\202005280427264_Tes03.Designer.cs">
+      <DependentUpon>202005280427264_Tes03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280428437_Tes04.cs" />
+    <Compile Include="Migrations\202005280428437_Tes04.Designer.cs">
+      <DependentUpon>202005280428437_Tes04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280610575_Tes05.cs" />
+    <Compile Include="Migrations\202005280610575_Tes05.Designer.cs">
+      <DependentUpon>202005280610575_Tes05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280629202_Tes06.cs" />
+    <Compile Include="Migrations\202005280629202_Tes06.Designer.cs">
+      <DependentUpon>202005280629202_Tes06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280634296_Test07.cs" />
+    <Compile Include="Migrations\202005280634296_Test07.Designer.cs">
+      <DependentUpon>202005280634296_Test07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280737136_Test08.cs" />
+    <Compile Include="Migrations\202005280737136_Test08.Designer.cs">
+      <DependentUpon>202005280737136_Test08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280756345_Test09.cs" />
+    <Compile Include="Migrations\202005280756345_Test09.Designer.cs">
+      <DependentUpon>202005280756345_Test09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
     <Compile Include="Models\Identity\AspNetUserClaims.cs" />
@@ -479,7 +516,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
-    <Folder Include="Migrations\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -491,6 +530,35 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005280423272_Tes01.resx">
+      <DependentUpon>202005280423272_Tes01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280424172_Tes02.resx">
+      <DependentUpon>202005280424172_Tes02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280427264_Tes03.resx">
+      <DependentUpon>202005280427264_Tes03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280428437_Tes04.resx">
+      <DependentUpon>202005280428437_Tes04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280610575_Tes05.resx">
+      <DependentUpon>202005280610575_Tes05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280629202_Tes06.resx">
+      <DependentUpon>202005280629202_Tes06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280634296_Test07.resx">
+      <DependentUpon>202005280634296_Test07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280737136_Test08.resx">
+      <DependentUpon>202005280737136_Test08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280756345_Test09.resx">
+      <DependentUpon>202005280756345_Test09.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
