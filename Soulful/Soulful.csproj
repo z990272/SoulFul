@@ -208,6 +208,7 @@
     <Content Include="Asset\css\home_header.css" />
     <Content Include="Asset\css\Home.css" />
     <Content Include="Asset\css\login_page.css" />
+    <Content Include="Asset\css\modal.css" />
     <Content Include="Asset\css\News.css" />
     <Content Include="Asset\css\one2.css" />
     <Content Include="Asset\css\rank.css" />
