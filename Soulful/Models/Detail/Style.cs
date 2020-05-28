@@ -10,6 +10,7 @@ namespace Soulful.Models
     public partial class Style
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Style_id { get; set; }
 
         [Required]

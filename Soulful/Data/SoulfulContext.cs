@@ -31,6 +31,10 @@ namespace Soulful.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Album>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<Album>()
                 .HasMany(e => e.Buy)
                 .WithRequired(e => e.Album)
                 .WillCascadeOnDelete(false);

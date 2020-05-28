@@ -18,6 +18,7 @@ namespace Soulful.Models
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Album_id { get; set; }
 
         public int Singer_id { get; set; }
@@ -32,8 +33,11 @@ namespace Soulful.Models
         [StringLength(64)]
         public string Pic { get; set; }
 
+        [Required]
         [StringLength(64)]
         public string About { get; set; }
+
+        public decimal Price { get; set; }
 
         public virtual Singer Singer { get; set; }
 

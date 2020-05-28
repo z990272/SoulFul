@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -178,15 +179,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005271632508_Singer01.cs" />
-    <Compile Include="Migrations\202005271632508_Singer01.Designer.cs">
-      <DependentUpon>202005271632508_Singer01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005271647546_Language01.cs" />
-    <Compile Include="Migrations\202005271647546_Language01.Designer.cs">
-      <DependentUpon>202005271647546_Language01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
     <Compile Include="Models\Identity\AspNetUserClaims.cs" />
@@ -478,10 +470,16 @@
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\CRUD\Create.cshtml" />
+    <Content Include="Views\CRUD\Delete.cshtml" />
+    <Content Include="Views\CRUD\Details.cshtml" />
+    <Content Include="Views\CRUD\Edit.cshtml" />
+    <Content Include="Views\CRUD\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -493,14 +491,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005271632508_Singer01.resx">
-      <DependentUpon>202005271632508_Singer01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005271647546_Language01.resx">
-      <DependentUpon>202005271647546_Language01.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
