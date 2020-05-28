@@ -7,12 +7,15 @@ using System.Web.Mvc;
 
 namespace Soulful.Controllers
 {
-    public class AlbumController : Controller
+    public class PartialViewController : Controller
     {
-        // GET: Album
-        public ActionResult Albums()
+        // GET: SimpleCard
+        public ActionResult Index()
         {
-
+            return View();
+        }
+        public ActionResult SimpleCard()
+        {
             List<AlbumCard> cards = new List<AlbumCard>
             {
                 new AlbumCard{AlbumName="ASAP Ferg",AlbumBrief="Plain Jane",AlbumPhoto="a1.jpg"},
