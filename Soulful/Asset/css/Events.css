@@ -124,21 +124,6 @@
     color: #fff;
 }
 
-.load_more_btn a{
-    margin-top: 70px;
-    color: #000;
-    font-size: 16px;
-    padding: 10px 50px;
-    border: 1px solid #000;
-}
-
-.load_more_btn a:hover{
-    color: #fff;
-    background-color: #000;
-    transition-duration: 500ms;
-}
-
-.load_more_btn i,
 .subscribe_btn i,
 .testimonials .slide .name{
     margin-left: 5px;
@@ -211,14 +196,10 @@
     padding: 45px;
 }
 
-
-
 .testimonials .section_heading h2,
 .testimonials .slide{
     color: #fff;
 }
-
-
 
 .testimonials .slide .txt{
     margin-bottom: 16px;
