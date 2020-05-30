@@ -199,6 +199,10 @@ namespace Soulful.Migrations
                 new Event { Event_id = 5, Name = "GREEN DAY LIVE IN TAIPEI 2021 年輕歲月2021台北演唱會", Singer_id = 14, Datetime = new DateTime(2021, 03, 16), Pic = "GreenDay.jpg", Adress = "台北小巨蛋", About = "有生之年系列再一發成軍33年 終於等到美國大白癡!美國龐克教父年輕歲月 明年3月唱進小巨蛋90年代指標性龐克樂團 全球唱片銷量逾7500萬葛萊美獎五度認證 名列搖滾名人堂" },
                 new Event { Event_id = 6, Name = "2020 安懂新歌發表會《順著海流》", Singer_id = 15, Datetime = new DateTime(2021, 06, 27), Pic = "順著海流.jpg", Adress = "河岸留言西門紅樓展演館", About = "順著「海洋音樂祭」的黑潮，安懂帶著滿滿家鄉的祝福，從台東的部落流浪到了台北。每天潛沉在自己的世界，愉快地寫著歌、唱著歌，偶爾探出頭換個氣，交交朋友，看看這片自己徜徉的音樂海洋。這張 「順著海流」專輯，記錄著安懂的心情，安懂的思念，安懂的感恩，及安懂的成長。這段屬於安懂的故事，希望和你們分享，也希望「順著海流」能夠陪大家去到更遠的地方。" }
                 );
+
+            context.News.AddOrUpdate(x => x.News_id,
+                new News { News_id = 1, Singer_id = 1, About = "", Pic = "", News_title = "" }
+               );
         }
     }
 }
