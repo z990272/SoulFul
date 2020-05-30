@@ -20,7 +20,6 @@ namespace Soulful.Models
 
         public DateTime Datetime { get; set; }
 
-        public decimal Price { get; set; }
 
         [Required]
         [StringLength(64)]
@@ -31,7 +30,6 @@ namespace Soulful.Models
         public string Adress { get; set; }
 
         [Required]
-        [StringLength(50)]
         public string About { get; set; }
 
         public virtual Singer Singer { get; set; }

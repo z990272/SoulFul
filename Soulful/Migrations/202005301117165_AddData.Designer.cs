@@ -7,13 +7,13 @@ namespace Soulful.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Test08 : IMigrationMetadata
+    public sealed partial class AddData : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Test08));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddData));
         
         string IMigrationMetadata.Id
         {
-            get { return "202005280737136_Test08"; }
+            get { return "202005301117165_AddData"; }
         }
         
         string IMigrationMetadata.Source

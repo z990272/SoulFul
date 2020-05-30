@@ -3,7 +3,7 @@ namespace Soulful.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Tes02 : DbMigration
+    public partial class AddData : DbMigration
     {
         public override void Up()
         {

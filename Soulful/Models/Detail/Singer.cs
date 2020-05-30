@@ -9,14 +9,7 @@ namespace Soulful.Models
     [Table("Singer")]
     public partial class Singer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Singer()
-        {
-            Album = new HashSet<Album>();
-            Event = new HashSet<Event>();
-            News = new HashSet<News>();
-        }
-
+ 
         [Key]
         public int Singer_id { get; set; }
 
@@ -34,15 +27,11 @@ namespace Soulful.Models
 
         public int Language_id { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Album> Album { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Event> Event { get; set; }
 
         public virtual Language Language { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<News> News { get; set; }
     }
 }
