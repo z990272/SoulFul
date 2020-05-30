@@ -34,7 +34,10 @@ namespace Soulful.Migrations
              new Singer { Singer_id = 12, Name = "蔡依林", Gender = "Woman", Country = "TWN", Language_id = 4 },
              new Singer { Singer_id = 13, Name = "ONE OK ROCK", Gender = "Group", Country = "JPN", Language_id = 1 },
              new Singer { Singer_id = 14, Name = "年輕歲月", Gender = "Group", Country = "USA", Language_id = 3 },
-             new Singer { Singer_id = 15, Name = "安懂", Gender = "Man", Country = "TWN", Language_id = 4 }
+             new Singer { Singer_id = 15, Name = "安懂", Gender = "Man", Country = "TWN", Language_id = 4 },
+             new Singer { Singer_id = 16, Name = "BiSH", Gender = "Group", Country = "JPN", Language_id = 1 },
+             new Singer { Singer_id = 17, Name = "Jason Mraz", Gender = "Man", Country = "USA", Language_id = 3 },
+             new Singer { Singer_id = 18, Name = "Taylor Swift", Gender = "Woman", Country = "USA", Language_id = 3 }
              );
 
             context.Language.AddOrUpdate(x => x.Language_id,
@@ -201,7 +204,10 @@ namespace Soulful.Migrations
                 );
 
             context.News.AddOrUpdate(x => x.News_id,
-                new News { News_id = 1, Singer_id = 1, About = "", Pic = "", News_title = "" }
+                new News { News_id = 1, Singer_id = 16, About = "不拿樂器的龐克搖滾樂團BiSH，在5/21宣布預計在日本7個城市舉辦的單獨Live House巡迴演唱會「BiSH'S GASP!!GOLD!!GHOST!!GALAXY!!GARBAGE!! TOUR」及第一次舉辦的樂團對決巡迴演唱會「BiSH’S 5G are MAKiNG LOVE TOUR」，為防範新冠病毒擴大感染，全部公演停止舉辦。目前無法確定延期日程，日後將公告退票辦法。", Pic = "BisH.jpg", News_title = "BiSH宣佈巡迴公演全部停辦 " },
+                new News { News_id = 2, Singer_id = 17, About = "「音樂大玩童」Jason Mraz 傑森瑪耶茲繼2018年發行專輯《Know. 懂得愛》後，睽違兩年推出新作品〈Look For The Good〉，同名新專輯也預計將在6月發行，融入全新音樂風格的傑森瑪耶茲相當值得期待！傑森瑪耶茲與台灣緣分深厚，他曾四度來台，包括受邀參加金曲獎與金曲歌王林俊傑合唱〈I’m Yours〉、首次來台便完售的台大體育館演唱會，以及兩次攻蛋經驗，他的〈I’m Yours〉、〈Lucky〉等金曲在台灣也長年傳唱，可以說是台灣最愛的西洋情歌天王。傑森在去年來台時，更因收到來自華納音樂以再生紙與回收吸管製作的多白金唱片，而感動在社群網站上寫下「台灣很了解我」的字句，表達對台灣的喜愛。", Pic = "Jason Mraz.jpg", News_title = "傑森瑪耶茲『轉行』回收場開怪手？" },
+                new News { News_id = 3, Singer_id = 18, About = "原本預定將在本月底在全美音樂獎(American Music Awards)上應邀演出，並且會在典禮上被授予「近十年最佳藝人(Artist of the Decade Award)」獎項的流行天后泰勒絲，原先已經準備好在頒獎典禮當天演出她近十年的熱門單曲串燒，然而泰勒絲卻突然接到知名經紀人Scooter Braun及前唱片公司老闆Scott Brochetta的通知，在她明年十一月自己重錄這些專輯的新版本之前，將禁止她公開演出這些舊專輯的曲目，除非泰勒絲同意立即停止重新錄製舊專輯的計劃，並且停止繼續公開談論Scott Brochetta以及Scooter Braun。", Pic = "Taylor Swift.jpg", News_title = " Taylor Swift全美音樂獎演出遭前東家阻撓 發表公開聲明嚴肅痛斥：正視創作者權益" }
+
                );
         }
     }
