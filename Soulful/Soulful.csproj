@@ -282,7 +282,7 @@
     <Content Include="Asset\image\breadcumb3.jpg" />
     <Content Include="Asset\image\breadcumb3.png" />
     <Content Include="Asset\image\ChinaBlue_2020RockStar.jpg" />
-    <Content Include="Asset\image\DELIGHT.jpg" />
+    <Content Include="Asset\image\伯賢-DELIGHT.jpg" />
     <Content Include="Asset\image\event 1.jpeg" />
     <Content Include="Asset\image\event 10.jpeg" />
     <Content Include="Asset\image\event 11.jpeg" />
@@ -498,6 +498,7 @@
     <Content Include="Views\CRUD\Details.cshtml" />
     <Content Include="Views\CRUD\Edit.cshtml" />
     <Content Include="Views\CRUD\Index.cshtml" />
+    <Content Include="Views\Home\HomeCardPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
