@@ -204,7 +204,10 @@
     <Compile Include="Models\Detail\Style.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CardViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\css\Albums.css" />
@@ -503,9 +506,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

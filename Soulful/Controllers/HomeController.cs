@@ -1,4 +1,6 @@
 ﻿using Soulful.Models;
+using Soulful.Repositories;
+using Soulful.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +12,13 @@ namespace Soulful.Controllers
 {
     public class HomeController : Controller
     {
-        private SoulfulContext context = new SoulfulContext();
+
         public ActionResult Index()
         {
+            ProductService productService = new ProductService();
 
-            var AlbumDetail = from album in context.Album
-                              join singer in context.Singer
-                              on album.Singer_id equals singer.Singer_id
-                              select album;
-            
-            return View(AlbumDetail);
+
+            return View(productService.GetSingerName());
         }
 
 
