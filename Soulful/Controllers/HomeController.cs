@@ -14,8 +14,8 @@ namespace Soulful.Controllers
         public ActionResult Index()
         {
 
-            var AlbumDetail = from album in context.Album.ToList()
-                              join singer in context.Singer.ToList()
+            var AlbumDetail = from album in context.Album
+                              join singer in context.Singer
                               on album.Singer_id equals singer.Singer_id
                               select album;
             
