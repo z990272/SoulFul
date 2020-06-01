@@ -1,0 +1,18 @@
+﻿.rogin-box {
+    margin: auto;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: black;
+    color: #fff;
+}
+
+.forgot-btn {
+    width: 100%;
+    background-color: black;
+    color: #fff;
+}
+.contact-area {
+   display:none;
+}
