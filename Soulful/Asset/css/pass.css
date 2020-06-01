@@ -1,0 +1,45 @@
+.form-list{
+    margin: auto;
+}
+.form-check{
+    display: flex;
+    justify-content: space-between;
+}
+.form-check button{
+    border-radius: 100px;
+    background-color: white;
+    color: black;
+    border: #6666 solid 1px;
+}
+.from-forget{
+    padding-bottom: 30px;
+    border-bottom:rgb(218, 218, 218) solid 1px ;
+}
+.registered{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+}
+.registered button{
+margin: 10px;
+background-color: white;
+color: black;
+border-radius: 100px;
+border: #6666 solid 1px;
+}
+.btn-primary:hover{
+    color: blanchedalmond;
+    background-color: gray;
+    border: none;
+}
+
+.contact-area {
+    background-image: none;
+}
+.breadcumb_area {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 300px;
+    background-image: url('../image/breadcumb3.jpg');
+}

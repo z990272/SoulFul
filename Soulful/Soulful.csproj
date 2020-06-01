@@ -210,8 +210,10 @@
     <Content Include="Asset\css\login_page.css" />
     <Content Include="Asset\css\News.css" />
     <Content Include="Asset\css\one2.css" />
+    <Content Include="Asset\css\pass.css" />
     <Content Include="Asset\css\rank.css" />
     <Content Include="Asset\css\ranking.css" />
+    <Content Include="Asset\css\Register.css" />
     <Content Include="Asset\css\_layout.css" />
     <Content Include="Asset\image\1.png" />
     <Content Include="Asset\image\a1.jpg" />

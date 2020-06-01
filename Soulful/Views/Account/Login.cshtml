@@ -3,16 +3,63 @@
 @{
     ViewBag.Title = "登入";
 }
+@section topCSS{
 
-@*@section topCSS{
-    <link href="~/Asset/css/login_page.css" rel="stylesheet" />
+    <link href="~/Asset/css/pass.css" rel="stylesheet" />
 }
+@*@section topCSS{
+        <link href="~/Asset/css/login_page.css" rel="stylesheet" />
+    }
 
 
-原始程式碼*@
-    <h2>@ViewBag.Title.</h2>
-
+    原始程式碼*@
+<h2>@ViewBag.Title.</h2>
+<section class="breadcumb_area bg-img bg-overlay">
+    <div class="breadcumb_content">
+        <p>See what's new</p>
+        <h4><strong>NEWS</strong></h4>
+    </div>
+</section>
+<div class="container">
     <div class="row">
+        <div class="col-4 form-list">
+            <form>
+                <div class="form-group">
+                    @*<label for="exampleInputEmail1">Email address</label>*@
+                    @Html.LabelFor(m => m.Email, new { @class = "col-4 control-label" })
+                    @*<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">*@
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    @*<label for="exampleInputPassword1">Password</label>*@
+                    @Html.LabelFor(m => m.Password, new { @class = "col-4 control-label" })
+                    @*<input type="password" class="form-control" id="exampleInputPassword1">*@
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-check">
+                    @*<input type="checkbox" class="form-check-input" id="exampleCheck1">*@
+                    @*<label class="form-check-label" for="exampleCheck1">記住我</label>*@
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe)
+                    <button type="submit" class="btn btn-primary">登入</button>
+                </div>
+                <div class="from-forget" style="text-align: center;">
+                    
+                    @Html.ActionLink("忘記密碼?", "ForgotPassword")
+                </div>
+            </form>
+            <div class="col-12 registered">
+                <span>未註冊帳號?</span>
+                <button type="submit" class="btn btn-primary">  @Html.ActionLink("註冊SOULFUL", "Register")</button>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="row">
         <div class="col-md-8">
             <section id="loginForm">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -65,50 +112,50 @@
                 @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
             </section>
         </div>
-    </div>
+    </div>*@
 
 
 
 @*<div class="breadcumb-area bg-img bg-overlay">
-    <div class="bradcumbContent">
-        <p>See what’s new</p>
-        <h2>Login</h2>
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Login</h2>
+        </div>
     </div>
-</div>
 
-<div class="login-area section-padding-100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div class="login-content">
-                    <h3>Welcome Back</h3>
+    <div class="login-area section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="login-content">
+                        <h3>Welcome Back</h3>
 
-                    <div class="login-form">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                       aria-describedby="emailHelp" placeholder="Enter E-mail">
-                                <small id="emailHelp" class="form-text text-muted">
-                                    <i class="fa fa-lock mr-2"></i>We'll never share your email with anyone
-                                    else.
-                                </small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                       placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
-                            <br>
-                            <a href="" type="submit" class="btn oneMusic-btn mt-30">Go To Register</a>
-                        </form>
+                        <div class="login-form">
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           aria-describedby="emailHelp" placeholder="Enter E-mail">
+                                    <small id="emailHelp" class="form-text text-muted">
+                                        <i class="fa fa-lock mr-2"></i>We'll never share your email with anyone
+                                        else.
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                           placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
+                                <br>
+                                <a href="" type="submit" class="btn oneMusic-btn mt-30">Go To Register</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 
 
 
