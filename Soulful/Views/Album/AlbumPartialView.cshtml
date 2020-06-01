@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Soulful.ViewModels.CardViewModel> 
+
+@foreach(var m in Model)
+{
+    <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item">
+        <div class="single-album">
+            <img src="~/Asset/image/@m.Pic" alt="" class="d-block w-100">
+        </div>
+        <div class="album-txt">
+            <a href="">
+                <h5>@m.Name</h5>
+            </a>
+            <p>@m.Singer</p>
+        </div>
+    </div>
+}
+
+

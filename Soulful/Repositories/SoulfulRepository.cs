@@ -7,12 +7,12 @@ using System.Web;
 
 namespace Soulful.Repositories
 {
-    public class ProductRepository<T> where T : class
+    public class SoulfulRepository<T> where T : class
     {
-        private SoulfulContext _context;
-        public SoulfulContext context { get { return _context; } }
+        private readonly SoulfulContext _context;
+        public SoulfulContext Context { get { return _context; } }
 
-        public ProductRepository(SoulfulContext context)
+        public SoulfulRepository(SoulfulContext context)
         {
             if (context == null)
             {

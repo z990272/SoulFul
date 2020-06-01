@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Soulful.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace Soulful.Controllers
         // GET: Album
         public ActionResult Albums()
         {
-            return View();
+            ProductService productService = new ProductService();
+
+            return View(productService.GetSingerName());
         }
     }
 }
