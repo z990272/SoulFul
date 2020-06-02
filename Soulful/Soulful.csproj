@@ -169,12 +169,14 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
+    <Compile Include="Controllers\ConfirmOrderController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +216,8 @@
   <ItemGroup>
     <Content Include="Asset\css\Albums.css" />
     <Content Include="Asset\css\Animate.css" />
+    <Content Include="Asset\css\Buy.css" />
+    <Content Include="Asset\css\Cheack.css" />
     <Content Include="Asset\css\Events.css" />
     <Content Include="Asset\css\home_footer.css" />
     <Content Include="Asset\css\home_header.css" />
@@ -506,6 +510,8 @@
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
     <Content Include="Views\News\NewsPartialView.cshtml" />
     <Content Include="Views\Album\AlbumPartialView.cshtml" />
+    <Content Include="Views\Pay\PayView.cshtml" />
+    <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
