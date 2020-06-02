@@ -144,9 +144,8 @@
 
     <script src="~/Asset/js/navbar.js"></script>
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
-
+    @RenderSection("Scripts", required: false)
 
     @RenderSection("endCSS", required: false)
     @RenderSection("endJS", required: false)

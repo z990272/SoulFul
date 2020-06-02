@@ -1,4 +1,4 @@
-namespace Soulful.Models
+namespace Soulful
 {
     using System;
     using System.Collections.Generic;
@@ -16,13 +16,8 @@ namespace Soulful.Models
         [Required]
         public string About { get; set; }
 
-        [Required]
-        [StringLength(64)]
-        public string Pic { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string News_title { get; set; }
+        [Column(TypeName = "image")]
+        public byte[] Pic { get; set; }
 
         public virtual Singer Singer { get; set; }
     }

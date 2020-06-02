@@ -1,0 +1,77 @@
+﻿.form-horizontal {
+    margin: auto;
+}
+
+
+
+.btn-default {
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    border: 2px solid black;
+}
+
+    .btn-default:hover {
+        width: 100%;
+        background-color: #fff;
+        color: black;
+    }
+
+.form-box {
+    margin: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .head_area {
+        position: relative;
+        background-image: url('../image/event 11.jpeg');
+        z-index: 10;
+        padding-bottom: 270px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .head_txt {
+        width: calc(100% - 60px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .head_area {
+        position: relative;
+        background-image: url('../image/event 11.jpeg');
+        z-index: 10;
+        padding-bottom: 385px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .head_txt {
+        width: 552px;
+    }
+}
+
+.head_img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.head_area .head_txt {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    text-align: center;
+    transform: translateX(-50%);
+    padding-top: 40px;
+}
+
+.head_area p {
+    margin-bottom: 16px;
+}

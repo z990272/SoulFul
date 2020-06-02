@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Soulful.ViewModels.EventViewModel>
+
+@foreach (var m in Model)
+{
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="event_meta" id="@m.Id" onclick="show(this)">
+            <div class="event_img">
+                <img src="~/Asset/image/@m.Pic" />
+            </div>
+            <div class="event_txt">
+                <h4>@m.Name</h4>
+                <div class="event_data">
+                    <a href="#" class="place">@m.Date</a>
+                </div>
+                <a href="#" class="see_more_btn">SEE More</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal: modalSocial-->
+    <div class="modal fade" id="modal_@m.Id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body mb-0 text-center p-4">
+                    <img src="~/Asset/image/@m.Pic"class="w-50 h-50">
+                    <h4 style="color:black !important" class="pb-2 pt-2">@m.Name</h4>
+                    <h5 class="pb-2">@m.Date</h5>
+                    <h6 class="pb-2">@m.Address</h6>
+                    <p style="font-size:16px; color:#555555" class="text-left">@m.About</p>
+                </div>
+            </div>
+            <!--/.Content-->
+
+        </div>
+    </div>
+    <!--Modal: modalSocial-->
+}
+
+
+
+
