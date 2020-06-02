@@ -7,5 +7,7 @@ namespace Soulful.Services
 {
     public class AlbumModal
     {
+        
+
     }
 }
