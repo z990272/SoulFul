@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<Soulful.ViewModels.EventViewModel>
+
 @foreach (var m in Model)
 {
     <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="event_meta">
+        <div class="event_meta" id="@m.Id" onclick="show()">
             <div class="event_img">
                 <img src="~/Asset/image/@m.Pic" />
             </div>
@@ -15,6 +16,37 @@
             </div>
         </div>
     </div>
+
+    <!--Modal: modalSocial-->
+    <div class="modal fade" id="modalSocial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header light-blue darken-3 white-text">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body mb-0 text-center p-4">
+                    <img src="~/Asset/image/@m.Pic" />
+                    <h4 style="color:black !important">@m.Name</h4>
+                    <h5>@m.Date</h5>
+                    <h6>@m.Address</h6>
+                    <p style="color:#444">@m.About</p>
+                </div>
+            </div>
+            <!--/.Content-->
+
+        </div>
+    </div>
+    <!--Modal: modalSocial-->
 }
+
+
 
 
