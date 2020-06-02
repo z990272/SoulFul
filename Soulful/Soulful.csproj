@@ -183,6 +183,14 @@
     <Compile Include="Migrations\202005301117165_AddData.Designer.cs">
       <DependentUpon>202005301117165_AddData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006020437219_chinablue.cs" />
+    <Compile Include="Migrations\202006020437219_chinablue.Designer.cs">
+      <DependentUpon>202006020437219_chinablue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006020553290_NewEvent.cs" />
+    <Compile Include="Migrations\202006020553290_NewEvent.Designer.cs">
+      <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
@@ -191,9 +199,9 @@
     <Compile Include="Models\Identity\AspNetUsers.cs" />
     <Compile Include="Models\Detail\Buy.cs" />
     <Compile Include="Models\C__MigrationHistory.cs" />
-    <Compile Include="Models\Default\AccountViewModels.cs" />
-    <Compile Include="Models\Default\IdentityModels.cs" />
-    <Compile Include="Models\Default\ManageViewModels.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\IdentityModels.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Models\Detail\Event.cs" />
     <Compile Include="Models\Detail\Language.cs" />
     <Compile Include="Models\Detail\Like.cs" />
@@ -226,8 +234,10 @@
     <Content Include="Asset\css\modal.css" />
     <Content Include="Asset\css\News.css" />
     <Content Include="Asset\css\one2.css" />
+    <Content Include="Asset\css\pass.css" />
     <Content Include="Asset\css\rank.css" />
     <Content Include="Asset\css\ranking.css" />
+    <Content Include="Asset\css\Register.css" />
     <Content Include="Asset\css\_layout.css" />
     <Content Include="Asset\image\1.png" />
     <Content Include="Asset\image\a1.jpg" />
@@ -517,6 +527,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
+    <Folder Include="Models\Default\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -532,6 +543,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005301117165_AddData.resx">
       <DependentUpon>202005301117165_AddData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006020437219_chinablue.resx">
+      <DependentUpon>202006020437219_chinablue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006020553290_NewEvent.resx">
+      <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

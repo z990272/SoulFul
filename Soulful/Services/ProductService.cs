@@ -10,7 +10,7 @@ namespace Soulful.Services
 {
     public class ProductService
     {
-        public List<CardViewModel> GetSingerName()
+        public IEnumerable<CardViewModel> GetSingerName()
         {
             SoulfulContext context = new SoulfulContext();
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
@@ -24,9 +24,9 @@ namespace Soulful.Services
                                  Name = album.Album_Name,
                                  Singer = singer.Name
                              };
+            
 
-
-            return SingerName.ToList();
+            return SingerName;
         }
     }
 }

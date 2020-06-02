@@ -37,7 +37,8 @@ namespace Soulful.Migrations
              new Singer { Singer_id = 15, Name = "安懂", Gender = "Man", Country = "TWN", Language_id = 4 },
              new Singer { Singer_id = 16, Name = "BiSH", Gender = "Group", Country = "JPN", Language_id = 1 },
              new Singer { Singer_id = 17, Name = "Jason Mraz", Gender = "Man", Country = "USA", Language_id = 3 },
-             new Singer { Singer_id = 18, Name = "Taylor Swift", Gender = "Woman", Country = "USA", Language_id = 3 }
+             new Singer { Singer_id = 18, Name = "Taylor Swift", Gender = "Woman", Country = "USA", Language_id = 3 },
+             new Singer { Singer_id = 19, Name = "SUKIMASWITCH TOUR", Gender = "Group", Country = "JPN", Language_id = 1 }
              );
 
             context.Language.AddOrUpdate(x => x.Language_id,
@@ -195,12 +196,12 @@ namespace Soulful.Migrations
                 );
 
             context.Event.AddOrUpdate(x => x.Event_id,
-                new Event { Event_id = 1, Name = "伍佰＆ChinaBlue 2020 RockStar演唱會-台中站", Singer_id = 10, Datetime = new DateTime(2021, 01, 23), Pic = "ChinaBlue_2020RockSta.jpg", Adress = "台中圓滿戶外劇場", About = "還記得2018年「台灣限定透南風演唱會」與大家一起在圓滿戶外劇場大合唱的感動，伍佰 & China Blue ROCK STAR大型巡迴演唱會繼2019高雄站，2020即將前進台中！伍佰與China Blue將重新開啟你對搖滾樂的視野與認知。橫跨歷年專輯的曲目，讓你窺見伍佰各時期大膽前衛的風格轉變，以及伍佰之所以成為搖滾巨星的核心力量。" },
+                new Event { Event_id = 1, Name = "伍佰＆ChinaBlue 2020 RockStar演唱會-台中站", Singer_id = 10, Datetime = new DateTime(2021, 01, 23), Pic = "ChinaBlue_2020RockStar.jpg", Adress = "台中圓滿戶外劇場", About = "還記得2018年「台灣限定透南風演唱會」與大家一起在圓滿戶外劇場大合唱的感動，伍佰 & China Blue ROCK STAR大型巡迴演唱會繼2019高雄站，2020即將前進台中！伍佰與China Blue將重新開啟你對搖滾樂的視野與認知。橫跨歷年專輯的曲目，讓你窺見伍佰各時期大膽前衛的風格轉變，以及伍佰之所以成為搖滾巨星的核心力量。" },
                 new Event { Event_id = 2, Name = "ALAN WALKER 2020 LIVE IN TAIPEI", Singer_id = 11, Datetime = new DateTime(2020, 12, 09), Pic = "AlanWalker.jpg", Adress = "新北大都會公園幸福水漾園區", About = "百大DJ第27名— 蒙面天才ALAN WALKER 暌違三年終於來台英國挪威混血DJ - Alan Walker(艾倫 · 沃克)以「Faded」一曲紅遍全球，歌曲已有超過26億Youtube觀看次數。將於4月18日於新北大都會公園，跟歌迷見面。帶著經典EDM神曲「Faded」﹑「Alone」﹑「Sing Me To Sleep」﹑「Darkside」﹑「The Spectre」等多首破億魔性單曲，將無限顛覆所有電音迷的EDM聽覺﹑視覺體驗，帶給各位專屬的現場魅力！" },
                 new Event { Event_id = 3, Name = "ONE OK ROCK EYE OF THE STORM ASIA TOUR 2020 IN TAIWAN", Singer_id = 13, Datetime = new DateTime(2020, 011, 04), Pic = "ONEOKROCK .jpg", Adress = "台北小巨蛋", About = "ONE OK ROCK風暴強烈席捲2020年11月4日、6日、7日 三天稱霸台北小巨蛋！日本搖滾天團ONE OK ROCK稱霸世界第二章開啟！各位粉絲久違2年昂首期盼的最新「暴風眼」亞洲巡迴最終站就在台灣" },
                 new Event { Event_id = 4, Name = "蔡依林 Ugly Beauty 2019-2020 世界巡迴演唱會 高雄站", Singer_id = 12, Datetime = new DateTime(2020, 09, 04), Pic = "UglyBeauty.jpeg", Adress = "高雄巨蛋", About = "台北站六場場場都給”長輩”各種不同驚喜的Jolin，在最終場尾末仍不忘拋驚喜震撼彈宣布要在5 / 9、5 / 10兩天於高雄巨蛋再加兩場演出，主辦單位特別宣布高雄加場將於1 / 18中午12:16在開始售票！#「蔡依林Ugly Beauty 2019-2020 世界巡迴演唱會 高雄站」2020/9/4 再加場#歌迷注意！Jolin「消極掰幫」以斧頭號召在高雄場相認！" },
                 new Event { Event_id = 5, Name = "GREEN DAY LIVE IN TAIPEI 2021 年輕歲月2021台北演唱會", Singer_id = 14, Datetime = new DateTime(2021, 03, 16), Pic = "GreenDay.jpg", Adress = "台北小巨蛋", About = "有生之年系列再一發成軍33年 終於等到美國大白癡!美國龐克教父年輕歲月 明年3月唱進小巨蛋90年代指標性龐克樂團 全球唱片銷量逾7500萬葛萊美獎五度認證 名列搖滾名人堂" },
-                new Event { Event_id = 6, Name = "2020 安懂新歌發表會《順著海流》", Singer_id = 15, Datetime = new DateTime(2021, 06, 27), Pic = "順著海流.jpg", Adress = "河岸留言西門紅樓展演館", About = "順著「海洋音樂祭」的黑潮，安懂帶著滿滿家鄉的祝福，從台東的部落流浪到了台北。每天潛沉在自己的世界，愉快地寫著歌、唱著歌，偶爾探出頭換個氣，交交朋友，看看這片自己徜徉的音樂海洋。這張 「順著海流」專輯，記錄著安懂的心情，安懂的思念，安懂的感恩，及安懂的成長。這段屬於安懂的故事，希望和你們分享，也希望「順著海流」能夠陪大家去到更遠的地方。" }
+                new Event { Event_id = 6, Name = "SUKIMASWITCH TOUR POPMAN’S CARNIVAL in Taipei", Singer_id = 19, Datetime = new DateTime(2020, 09, 11), Pic = "Popman.jpg",About="無限開關是由常田真太郎及大橋卓彌組成，出道屆滿20周年，2020年是第一次展開亞洲巡迴並到台北開唱。台灣歌迷透過許多由他們演唱的知名動畫例如「哆啦a夢」、「神奇寶貝」、「宇宙兄弟」…. 等主題曲，早已對他們的歌曲有相當的認識，再到爆紅並高話題度的日劇、電影「大叔的愛」主題曲「Revival」，歌迷對無限開關的歌更是不陌生。", Adress = "三創生活園區CLAPPER STUDIO" }
                 );
 
             context.News.AddOrUpdate(x => x.News_id,
