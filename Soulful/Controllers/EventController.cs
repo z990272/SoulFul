@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Soulful.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,10 @@ namespace Soulful.Controllers
         // GET: Event
         public ActionResult Index()
         {
-            return View();
+            EventService eventService = new EventService();
+
+
+            return View(eventService.GetSingerName());
         }
     }
 }
