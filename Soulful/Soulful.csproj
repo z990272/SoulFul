@@ -174,7 +174,6 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,6 +190,10 @@
     <Compile Include="Migrations\202006020553290_NewEvent.Designer.cs">
       <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006020707547_DelNews.cs" />
+    <Compile Include="Migrations\202006020707547_DelNews.Designer.cs">
+      <DependentUpon>202006020707547_DelNews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
@@ -205,7 +208,6 @@
     <Compile Include="Models\Detail\Event.cs" />
     <Compile Include="Models\Detail\Language.cs" />
     <Compile Include="Models\Detail\Like.cs" />
-    <Compile Include="Models\Detail\News.cs" />
     <Compile Include="Models\Detail\Singer.cs" />
     <Compile Include="Models\Detail\Song.cs" />
     <Compile Include="Data\SoulfulContext.cs" />
@@ -215,7 +217,6 @@
     <Compile Include="Repositories\SoulfulRepository.cs" />
     <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\AlbumModal.cs" />
-    <Compile Include="Services\NewsService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AlbumViewModel.cs" />
@@ -511,7 +512,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Album\Albums.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\CRUD\Create.cshtml" />
@@ -520,7 +520,6 @@
     <Content Include="Views\CRUD\Edit.cshtml" />
     <Content Include="Views\CRUD\Index.cshtml" />
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
-    <Content Include="Views\News\NewsPartialView.cshtml" />
     <Content Include="Views\Album\AlbumPartialView.cshtml" />
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
   </ItemGroup>
@@ -549,6 +548,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006020553290_NewEvent.resx">
       <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006020707547_DelNews.resx">
+      <DependentUpon>202006020707547_DelNews.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

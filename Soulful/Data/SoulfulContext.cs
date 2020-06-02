@@ -22,7 +22,6 @@ namespace Soulful.Models
         public virtual DbSet<Event> Event { get; set; }
         public virtual DbSet<Language> Language { get; set; }
         public virtual DbSet<Like> Like { get; set; }
-        public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Singer> Singer { get; set; }
         public virtual DbSet<Song> Song { get; set; }
         public virtual DbSet<Style> Style { get; set; }

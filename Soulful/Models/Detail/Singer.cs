@@ -32,6 +32,6 @@ namespace Soulful.Models
         public virtual ICollection<Event> Event { get; set; }
 
         public virtual Language Language { get; set; }
-        public virtual ICollection<News> News { get; set; }
+
     }
 }
