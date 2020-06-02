@@ -1,0 +1,131 @@
+@media screen and (max-width: 767px) {
+    .pic {
+        position: relative;
+        background-image: url('../image/z.png');
+        z-index: 10;
+        padding-bottom: 270px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pic {
+        position: relative;
+        background-image: url('../image/z.png');
+        z-index: 10;
+        padding-bottom: 385px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.block {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.bradcumb-content {
+    width: 35%;
+    text-align: center;
+    margin: auto;
+    background-color: #fff;
+    padding-top: 40px;
+}
+
+.pic {
+    position: relative;
+}
+
+    .pic div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+* {
+    text-align: center;
+}
+
+
+.buy-program-box {
+    margin-bottom: 50px;
+}
+
+.buy-program {
+    display: flex;
+    justify-content: center;
+}
+
+.alert {
+    margin: 5px;
+    border: #6666 solid 1px;
+}
+
+.money {
+    text-align: center;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+}
+
+.col-12 button {
+    text-align: center;
+}
+
+.table-box {
+    border: 2px solid #7a7979;
+    width: 100%;
+}
+
+.thead-box th {
+    border: 2px solid #999999;
+    background-color: #7a7979;
+    color: white;
+}
+
+.tbody-tr td {
+    border: 2px solid #7a7979;
+}
+
+.pay-program {
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .pay-program section {
+        padding: 0px 80px;
+    }
+
+.pay-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-back {
+    background-color: pink;
+    font-weight: bolder;
+    justify-content: space-around;
+}
+
+    .btn-back:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+.btn-secondary:hover {
+    background-color: black;
+    font-weight: bolder;
+}
+
+.pay {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
