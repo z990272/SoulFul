@@ -18,9 +18,12 @@ namespace Soulful.Services
             var eventContext = from Event in eventRepostitory.GetAll()
                                select new EventViewModel
                                {
+                                   Id = Event.Event_id,
                                    Name = Event.Name,
                                    Date = Event.Datetime,
-                                   Pic = Event.Pic
+                                   Address = Event.Adress,
+                                   Pic = Event.Pic,                                   
+                                   About = Event.About
                                };
 
             return eventContext.ToList();
