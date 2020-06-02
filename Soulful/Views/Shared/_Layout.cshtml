@@ -39,9 +39,6 @@
                                 @Html.ActionLink("Event", "Index", "Event")
                             </li>
                             <li class="nav-item">
-                                @Html.ActionLink("News", "Index", "News")
-                            </li>
-                            <li class="nav-item">
                                 @Html.ActionLink("Contact", "Contact", "Contact")
                             </li>
                             <li class="nav-item">
@@ -129,11 +126,18 @@
                 <div class="col-12 col-md-6 foot-nav-box">
                     <div class="foot-nav">
                         <ul class="foot-ul">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Albums</a></li>
-                            <li><a href="">Events</a></li>
-                            <li><a href="">News</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li class="nav-item">
+                                @Html.ActionLink("SOULFUL", "Index", "Home")
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Album", "Albums", "Album")
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Event", "Index", "Event")
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Contact", "Contact", "Contact")
+                            </li>
                         </ul>
                     </div>
                 </div>
