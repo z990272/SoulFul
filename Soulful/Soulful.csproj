@@ -175,6 +175,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\PartialViewController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -209,6 +210,7 @@
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
+    <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -506,6 +508,8 @@
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
     <Content Include="Views\News\NewsPartialView.cshtml" />
     <Content Include="Views\Album\AlbumPartialView.cshtml" />
+    <Content Include="Views\Shared\_EventCardPartial.cshtml" />
+    <Content Include="Views\PartialView\EventCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
