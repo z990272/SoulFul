@@ -1,6 +1,8 @@
-﻿.form-horizontal{
-    margin:auto;
+﻿.form-horizontal {
+    margin: auto;
 }
+
+
 
 .btn-default {
     width: 100%;
@@ -8,11 +10,12 @@
     color: #fff;
     border: 2px solid black;
 }
-.btn-default:hover {
-    width: 100%;
-    background-color: #fff;
-    color: black;
-}
+
+    .btn-default:hover {
+        width: 100%;
+        background-color: #fff;
+        color: black;
+    }
 
 .form-box {
     margin: 100px;

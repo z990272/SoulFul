@@ -1,4 +1,8 @@
-.form-list {
+.form-horizontal {
+    margin: auto;
+}
+
+#loginForm {
     margin: auto;
 }
 
@@ -27,7 +31,7 @@
 }
 
 
-.btn-primary{
+.btn-secondary {
     margin: 10px;
     background-color: white;
     color: black;
@@ -35,7 +39,7 @@
     border: #6666 solid 1px;
 }
 
-    .btn-primary:hover {
+    .btn-secondary:hover {
         background-color: black;
         color: white;
     }

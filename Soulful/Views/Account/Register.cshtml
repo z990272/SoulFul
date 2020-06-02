@@ -23,7 +23,7 @@
 </section>
 <div class="container form-box">
     <div class="row">
-        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal col-8", role = "form" }))
         {
             @Html.AntiForgeryToken()
             <h4>建立新帳戶。</h4>
