@@ -183,6 +183,14 @@
     <Compile Include="Migrations\202005301117165_AddData.Designer.cs">
       <DependentUpon>202005301117165_AddData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006020437219_chinablue.cs" />
+    <Compile Include="Migrations\202006020437219_chinablue.Designer.cs">
+      <DependentUpon>202006020437219_chinablue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006020553290_NewEvent.cs" />
+    <Compile Include="Migrations\202006020553290_NewEvent.Designer.cs">
+      <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
@@ -528,6 +536,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005301117165_AddData.resx">
       <DependentUpon>202005301117165_AddData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006020437219_chinablue.resx">
+      <DependentUpon>202006020437219_chinablue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006020553290_NewEvent.resx">
+      <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
