@@ -203,13 +203,6 @@ namespace Soulful.Migrations
                 new Event { Event_id = 5, Name = "GREEN DAY LIVE IN TAIPEI 2021 年輕歲月2021台北演唱會", Singer_id = 14, Datetime = new DateTime(2021, 03, 16), Pic = "GreenDay.jpg", Adress = "台北小巨蛋", About = "有生之年系列再一發成軍33年 終於等到美國大白癡!美國龐克教父年輕歲月 明年3月唱進小巨蛋90年代指標性龐克樂團 全球唱片銷量逾7500萬葛萊美獎五度認證 名列搖滾名人堂" },
                 new Event { Event_id = 6, Name = "SUKIMASWITCH TOUR POPMAN’S CARNIVAL in Taipei", Singer_id = 19, Datetime = new DateTime(2020, 09, 11), Pic = "Popman.jpg",About="無限開關是由常田真太郎及大橋卓彌組成，出道屆滿20周年，2020年是第一次展開亞洲巡迴並到台北開唱。台灣歌迷透過許多由他們演唱的知名動畫例如「哆啦a夢」、「神奇寶貝」、「宇宙兄弟」…. 等主題曲，早已對他們的歌曲有相當的認識，再到爆紅並高話題度的日劇、電影「大叔的愛」主題曲「Revival」，歌迷對無限開關的歌更是不陌生。", Adress = "三創生活園區CLAPPER STUDIO" }
                 );
-
-            context.News.AddOrUpdate(x => x.News_id,
-                new News { News_id = 1, Singer_id = 16, About = "不拿樂器的龐克搖滾樂團BiSH，在5/21宣布預計在日本7個城市舉辦的單獨Live House巡迴演唱會「BiSH'S GASP!!GOLD!!GHOST!!GALAXY!!GARBAGE!! TOUR」及第一次舉辦的樂團對決巡迴演唱會「BiSH’S 5G are MAKiNG LOVE TOUR」，為防範新冠病毒擴大感染，全部公演停止舉辦。目前無法確定延期日程，日後將公告退票辦法。", Pic = "BisH.jpg", News_title = "BiSH宣佈巡迴公演全部停辦 " },
-                new News { News_id = 2, Singer_id = 17, About = "「音樂大玩童」Jason Mraz 傑森瑪耶茲繼2018年發行專輯《Know. 懂得愛》後，睽違兩年推出新作品〈Look For The Good〉，同名新專輯也預計將在6月發行，融入全新音樂風格的傑森瑪耶茲相當值得期待！傑森瑪耶茲與台灣緣分深厚，他曾四度來台，包括受邀參加金曲獎與金曲歌王林俊傑合唱〈I’m Yours〉、首次來台便完售的台大體育館演唱會，以及兩次攻蛋經驗，他的〈I’m Yours〉、〈Lucky〉等金曲在台灣也長年傳唱，可以說是台灣最愛的西洋情歌天王。傑森在去年來台時，更因收到來自華納音樂以再生紙與回收吸管製作的多白金唱片，而感動在社群網站上寫下「台灣很了解我」的字句，表達對台灣的喜愛。", Pic = "Jason Mraz.jpg", News_title = "傑森瑪耶茲『轉行』回收場開怪手？" },
-                new News { News_id = 3, Singer_id = 18, About = "原本預定將在本月底在全美音樂獎(American Music Awards)上應邀演出，並且會在典禮上被授予「近十年最佳藝人(Artist of the Decade Award)」獎項的流行天后泰勒絲，原先已經準備好在頒獎典禮當天演出她近十年的熱門單曲串燒，然而泰勒絲卻突然接到知名經紀人Scooter Braun及前唱片公司老闆Scott Brochetta的通知，在她明年十一月自己重錄這些專輯的新版本之前，將禁止她公開演出這些舊專輯的曲目，除非泰勒絲同意立即停止重新錄製舊專輯的計劃，並且停止繼續公開談論Scott Brochetta以及Scooter Braun。", Pic = "Taylor Swift.jpg", News_title = " Taylor Swift全美音樂獎演出遭前東家阻撓 發表公開聲明嚴肅痛斥：正視創作者權益" }
-
-               );
         }
     }
 }
