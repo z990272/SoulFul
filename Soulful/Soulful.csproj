@@ -175,7 +175,6 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Global.asax.cs">
@@ -225,7 +224,6 @@
     <Compile Include="ViewModels\AlbumViewModel.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
-    <Compile Include="ViewModels\NewsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\css\Albums.css" />
@@ -238,7 +236,6 @@
     <Content Include="Asset\css\Home.css" />
     <Content Include="Asset\css\login_page.css" />
     <Content Include="Asset\css\modal.css" />
-    <Content Include="Asset\css\News.css" />
     <Content Include="Asset\css\one2.css" />
     <Content Include="Asset\css\pass.css" />
     <Content Include="Asset\css\rank.css" />
