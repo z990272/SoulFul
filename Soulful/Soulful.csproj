@@ -205,9 +205,11 @@
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\SoulfulRepository.cs" />
+    <Compile Include="Services\AlbumModal.cs" />
     <Compile Include="Services\NewsService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AlbumViewModel.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
   </ItemGroup>
@@ -219,6 +221,7 @@
     <Content Include="Asset\css\home_header.css" />
     <Content Include="Asset\css\Home.css" />
     <Content Include="Asset\css\login_page.css" />
+    <Content Include="Asset\css\modal.css" />
     <Content Include="Asset\css\News.css" />
     <Content Include="Asset\css\one2.css" />
     <Content Include="Asset\css\rank.css" />
@@ -321,6 +324,7 @@
     <Content Include="Asset\image\瘦子ESO-靈魂出竅.jpg" />
     <Content Include="Asset\image\華晨宇-新世界.jpg" />
     <Content Include="Asset\image\順著海流.jpg" />
+    <Content Include="Asset\js\modal.js" />
     <Content Include="Asset\js\navbar.js" />
     <Content Include="Asset\js\New.js" />
     <Content Include="Asset\js\rank.js" />
