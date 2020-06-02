@@ -8,7 +8,8 @@ namespace Soulful.ViewModels
     public class EventViewModel
     {
         public string Name { get; set; }
+        public DateTime Date { get; set; }
 
-        public 
+        public string Pic { get; set; }
     }
 }
