@@ -18,7 +18,7 @@ namespace Soulful.Models
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
-        public virtual DbSet<Buy> Buy { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Event> Event { get; set; }
         public virtual DbSet<Language> Language { get; set; }
         public virtual DbSet<Like> Like { get; set; }

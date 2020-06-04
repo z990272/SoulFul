@@ -6,11 +6,11 @@ namespace Soulful.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Buy")]
-    public partial class Buy
+    [Table("Order")]
+    public partial class Order
     {
         [Key]
-        public int Buy_id { get; set; }
+        public int Order_id { get; set; }
 
         public int Album_id { get; set; }
 

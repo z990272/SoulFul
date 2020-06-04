@@ -196,14 +196,19 @@
     <Compile Include="Migrations\202006020707547_DelNews.Designer.cs">
       <DependentUpon>202006020707547_DelNews.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006040408434_Order.cs" />
+    <Compile Include="Migrations\202006040408434_Order.Designer.cs">
+      <DependentUpon>202006040408434_Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
     <Compile Include="Models\Identity\AspNetUserClaims.cs" />
     <Compile Include="Models\Identity\AspNetUserLogins.cs" />
     <Compile Include="Models\Identity\AspNetUsers.cs" />
-    <Compile Include="Models\Detail\Buy.cs" />
+    <Compile Include="Models\Detail\Order.cs" />
     <Compile Include="Models\C__MigrationHistory.cs" />
+    <Compile Include="Services\AccountService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -305,6 +310,7 @@
     <Content Include="Asset\image\breadcumb3.jpg" />
     <Content Include="Asset\image\breadcumb3.png" />
     <Content Include="Asset\image\ChinaBlue_2020RockStar.jpg" />
+    <Content Include="Asset\image\Popman.jpg" />
     <Content Include="Asset\image\伯賢-DELIGHT.jpg" />
     <Content Include="Asset\image\event 1.jpeg" />
     <Content Include="Asset\image\event 10.jpeg" />
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006020707547_DelNews.resx">
       <DependentUpon>202006020707547_DelNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006040408434_Order.resx">
+      <DependentUpon>202006040408434_Order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

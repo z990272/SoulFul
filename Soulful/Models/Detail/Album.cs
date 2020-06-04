@@ -32,7 +32,7 @@ namespace Soulful.Models
 
         public virtual Singer Singer { get; set; }
 
-        public virtual ICollection<Buy> Buy { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
         public virtual ICollection<Song> Song { get; set; }
 
         public virtual ICollection<Style> Style { get; set; }
