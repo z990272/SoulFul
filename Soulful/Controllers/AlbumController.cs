@@ -12,9 +12,9 @@ namespace Soulful.Controllers
         // GET: Album
         public ActionResult Albums()
         {
-            ProductService productService = new ProductService();
+           AlbumModalService albumModalService = new AlbumModalService();
 
-            return View(productService.GetSingerName());
+            return View(albumModalService.GetModalinform());
         }
     }
 }
