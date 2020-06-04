@@ -118,9 +118,9 @@
     color: #fff;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder  {
     /* WebKit browsers */
-    color: #fff;
+    color: white;
 }
 
 .foot-nav-box {

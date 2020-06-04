@@ -19,8 +19,7 @@ namespace Soulful.Controllers
             
 
             return View(productService.GetSingerName());
-        }
-
+        }   
 
     }
 }

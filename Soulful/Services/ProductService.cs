@@ -10,23 +10,25 @@ namespace Soulful.Services
 {
     public class ProductService
     {
+        SoulfulContext context = new SoulfulContext();
         public IEnumerable<CardViewModel> GetSingerName()
         {
-            SoulfulContext context = new SoulfulContext();
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
             SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
             var SingerName = from album in AlbumRepository.GetAll()
                              join singer in SingerRepository.GetAll()
                              on album.Singer_id equals singer.Singer_id
-                             select new CardViewModel 
+                             select new CardViewModel
                              {
                                  Pic = album.Pic,
                                  Name = album.Album_Name,
                                  Singer = singer.Name
                              };
-            
+
 
             return SingerName;
+
         }
+
     }
 }
