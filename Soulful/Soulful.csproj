@@ -173,6 +173,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\GiveBackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PayController.cs" />
@@ -538,6 +539,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
     <Folder Include="Models\Default\" />
+    <Folder Include="Views\GiveBack\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
