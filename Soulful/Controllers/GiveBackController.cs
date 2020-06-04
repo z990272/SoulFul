@@ -13,11 +13,5 @@ namespace Soulful.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public ActionResult GiveBack()
-        {
-            return View();
-        }
     }
 }
