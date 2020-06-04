@@ -223,7 +223,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\SoulfulRepository.cs" />
     <Compile Include="Services\EventService.cs" />
-    <Compile Include="Services\AlbumModal.cs" />
+    <Compile Include="Services\AlbumModalService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AlbumViewModel.cs" />
