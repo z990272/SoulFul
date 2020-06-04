@@ -1,7 +1,5 @@
-
 function show(btn) {
-
     let t = btn.id;
-    $('#modalQuickView '.concat(t)).modal('show');
+    $('#modalQuickView_'.concat(t)).modal('show');
 }
 
