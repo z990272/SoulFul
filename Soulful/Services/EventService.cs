@@ -14,12 +14,16 @@ namespace Soulful.Services
         {
             SoulfulContext context = new SoulfulContext();
             SoulfulRepository<Event> eventRepostitory = new SoulfulRepository<Event>(context);
+            SoulfulRepository<Singer> singerRepostitory = new SoulfulRepository<Singer>(context);
 
             var eventContext = from Event in eventRepostitory.GetAll()
+                               join Singer in singerRepostitory.GetAll()
+                               on Event.Singer_id equals Singer.Singer_id 
                                select new EventViewModel
                                {
                                    Id = Event.Event_id,
                                    Name = Event.Name,
+                                   Singer = Singer.Name,
                                    Date = Event.Datetime,
                                    Address = Event.Adress,
                                    Pic = Event.Pic,                                   
