@@ -41,9 +41,10 @@ strong{
     font-weight: 600;
 }
 .buy-btn {
-    background-color: coral;
+    /*background-color: coral;*/
+    background-color: #6d4c41;
     /*background-color:#8f79b7;*/
-    font-weight:bolder;
+    font-weight: bolder;
 }
     .buy-btn:hover{
         background-color:white;
