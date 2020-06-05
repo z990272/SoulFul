@@ -311,6 +311,7 @@
     <Content Include="Asset\image\breadcumb3.jpg" />
     <Content Include="Asset\image\breadcumb3.png" />
     <Content Include="Asset\image\ChinaBlue_2020RockStar.jpg" />
+    <Content Include="Asset\image\GreenDay.jpg" />
     <Content Include="Asset\image\Popman.jpg" />
     <Content Include="Asset\image\伯賢-DELIGHT.jpg" />
     <Content Include="Asset\image\event 1.jpeg" />
@@ -325,7 +326,6 @@
     <Content Include="Asset\image\event 7.jpeg" />
     <Content Include="Asset\image\event 8.jpeg" />
     <Content Include="Asset\image\event 9.jpeg" />
-    <Content Include="Asset\image\GreenDay.jpg" />
     <Content Include="Asset\image\Jason Mraz.jpg" />
     <Content Include="Asset\image\KEITA-inK.jpg" />
     <Content Include="Asset\image\LADYGAGA.jpg" />
