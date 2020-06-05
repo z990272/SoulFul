@@ -34,7 +34,37 @@
       display: flex;
       justify-content: space-between;
     }
+/*.modal-body {
+    background-color: black;
+}*/
+strong{
+    font-weight: 600;
+}
+.buy-btn {
+    background-color: coral;
+    /*background-color:#8f79b7;*/
+    font-weight:bolder;
+}
+    .buy-btn:hover{
+        background-color:white;
+        color:black;
+        
+    }
+    .modal-body {
+        background-color: #000;
+    }
 
+.select-label {
+    color: #fff;
+}
 
+.green-text strong {
+    color: #fff;
+}
 
-
+.grey-text s {
+    color: #9a9fb0;
+}
+.product-name strong{
+    color:white;
+}
