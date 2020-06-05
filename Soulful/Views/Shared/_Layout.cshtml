@@ -50,18 +50,88 @@
                             <li class="nav-item">
                                 @Html.ActionLink("Pay", "PayView", "Pay")
                             </li>
-                            <li class="nav-item">
-
-                                <input type="checkbox" id="cart_control">
-                                <label for="cart_control" class="btn_cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </label>
-                                <div class="cart">
-                                    <label for="cart_control" class="close">X</label>
-                                    <a class="btn_cart_product">添加商品</a>
-                                </div>
-                            </li>
                         </ul>
+
+                        <a href="#" type="button" class="cart_btn p-3 " data-toggle="modal" data-target="#modalPoll-1" style="background-color:transparent">
+                            <i class="fa fa-cart-plus" aria-hidden="true" style="color:#ffffff"></i>
+                        </a>
+
+
+                        <div class="modal fade right " id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true" data-backdrop="false">
+                            <div class="modal-dialog modal-full-height modal-right modal-notify modal-info ml-auto mr-0 mt-5 border-0" role="document" style="max-height:80%">
+                                <div class="modal-content">
+                                    <!--Header-->
+                                    <div class="modal-header">
+                                        <p class="heading lead">
+                                            購物車
+                                        </p>
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" class="white-text">×</span>
+                                        </button>
+                                    </div>
+
+                                    <!--Body-->
+                                    <div class="modal-body ">
+
+                                        <div class="main " style="box-sizing:border-box;">
+                                            <div class="first d-flex ">
+                                                <div class="left w-50 p-3 ">
+                                                    <img src="~/Asset/image/劉若英-我要你好好的.jpg" style="width:100%" />
+                                                </div>
+                                                <div class="right w-50 p-3">
+                                                    <p>劉若英-我要你好好的</p>
+                                                    <p>價錢:3000</p>
+                                                    <p>庫存量:100</p>
+                                                    <div class="count d-flex  ">
+                                                        <button type="button" class="btn btn-info minus">-</button>
+
+                                                        <input class="w-25" value="1" type="text" />
+
+                                                        <button type="button" class="btn btn-info add">+</button>
+
+                                                        <button type="button" class="btn btn-info ml-3">移除</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main " style="box-sizing:border-box;">
+                                            <div class="d-flex ">
+                                                <div class="left w-50 p-3 ">
+                                                    <img src="~/Asset/image/杜娃黎波-流行先鋒.jpg" style="width:100%" />
+                                                </div>
+                                                <div class="right w-50 p-3">
+                                                    <p>杜娃黎波-流行先鋒</p>
+                                                    <p>價錢:2000</p>
+                                                    <p>庫存量:200</p>
+                                                    <div class="count d-flex ">
+                                                        <button type="button" class="btn btn-info minus">-</button>
+                                                        <input class="w-25" value="1" type="text" />
+                                                        <button type="button" class="btn btn-info add">+</button>
+
+                                                        <button type="button" class="btn btn-info ml-3">移除</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Basic textarea-->
+                                        <div class="md-form">
+                                            <label for="form79textarea">備註</label>
+                                            <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+                                        </div>
+                                        <div class="total">
+                                            <p>總金額:</p>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <a href="#" type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">前往結帳</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </nav>
             </div>
