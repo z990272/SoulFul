@@ -120,9 +120,8 @@
 
 ::-webkit-input-placeholder {
     /* WebKit browsers */
-    color: #fff;
+    color: #f8f9fa;
 }
-
 .foot-nav-box {
     display: flex;
     align-items: center;

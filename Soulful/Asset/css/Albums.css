@@ -348,10 +348,6 @@ display: inline-block;
     color: #fff;
 }
 
-::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: #343a40;
-}
 
 .foot-nav-box {
     display: flex;
@@ -386,4 +382,11 @@ display: inline-block;
     -o-transform: scale(1.1);
     transform: scale(1.1);
     transition: transform .9s ease;
+}
+.browse-categories button{
+    border:none;
+    margin:0px 15px;
+    background:black;
+    color:white;
+   
 }
