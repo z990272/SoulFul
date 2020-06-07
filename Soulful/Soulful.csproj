@@ -178,6 +178,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\RankController.cs" />
+    <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,6 +212,7 @@
     <Compile Include="Models\C__MigrationHistory.cs" />
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\CartViewModel.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Models\Detail\Event.cs" />
@@ -230,6 +232,7 @@
     <Compile Include="ViewModels\AlbumViewModel.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\css\Albums.css" />
@@ -534,12 +537,15 @@
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
     <Content Include="Views\Pay\PayView.cshtml" />
     <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
+    <Content Include="Views\Shared\CartPartialView.cshtml" />
+    <Content Include="Views\Shared\CartCountPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
     <Folder Include="Models\Default\" />
     <Folder Include="Views\GiveBack\" />
+    <Folder Include="Views\Shopping\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
