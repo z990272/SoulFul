@@ -12,7 +12,7 @@ namespace Soulful.Controllers
 {
     public class ShoppingController : Controller
     {
-
+        List<CartViewModel> cartItems = new List<CartViewModel>();
 
         // GET: Shopping
         public ActionResult Index()
@@ -20,20 +20,17 @@ namespace Soulful.Controllers
             return View();
         }
 
-
-
         [HttpPost]
         public ActionResult AddToCart(ProductViewModel productVM)
         {
-            List<CartViewModel> cartItems = new List<CartViewModel>();
 
             ProductService productService = new ProductService();
 
             var ProductInCart = productService.GetProductById(productVM.ProductId);
 
-
             if (Session["Cart"] == null)
             {
+
                 CartViewModel cart = new CartViewModel
                 {
                     RecordId = 1,
@@ -52,7 +49,7 @@ namespace Soulful.Controllers
             else
             {
                 cartItems = (List<CartViewModel>)Session["Cart"]; //將Session中的購物車記錄還原成集合
-                if (cartItems.All(x => x.Id != productVM.ProductId))
+                if (cartItems.All(x => x.Id != ProductInCart.Album_id))
                 {
                     CartViewModel cart = new CartViewModel
                     {
@@ -68,11 +65,19 @@ namespace Soulful.Controllers
                     Session["Cart"] = cartItems;
                     Session["CartItemCount"] = cart.RecordId;
                 }
+
             }
-
-
             return PartialView("CartPartialView");
         }
 
+
+        [HttpPost]
+        public ActionResult RemoveProduct(ProductViewModel productVM)
+        {
+            cartItems = (List<CartViewModel>)Session["Cart"]; //將Session中的購物車記錄還原成集合
+            cartItems.Remove(cartItems.FirstOrDefault(x => x.Id == productVM.ProductId));
+            Session["CartItemCount"] = cartItems.Count;
+            return PartialView("CartPartialView");
+        }
     }
 }
