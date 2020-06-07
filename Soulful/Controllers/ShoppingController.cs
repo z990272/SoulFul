@@ -13,19 +13,24 @@ namespace Soulful.Controllers
     public class ShoppingController : Controller
     {
 
-        List<CartViewModel> cartItems = new List<CartViewModel>();
+
         // GET: Shopping
         public ActionResult Index()
         {
             return View();
         }
 
+
+
         [HttpPost]
         public ActionResult AddToCart(ProductViewModel productVM)
         {
+            List<CartViewModel> cartItems = new List<CartViewModel>();
+
             ProductService productService = new ProductService();
 
             var ProductInCart = productService.GetProductById(productVM.ProductId);
+
 
             if (Session["Cart"] == null)
             {
@@ -58,7 +63,6 @@ namespace Soulful.Controllers
                     Pic = ProductInCart.Pic,
                     Price = ProductInCart.Price
                 };
-
                 cartItems.Add(cart);
 
                 Session["Cart"] = cartItems;

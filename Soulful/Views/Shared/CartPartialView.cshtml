@@ -1,7 +1,4 @@
 ﻿
-@{
-    var currentCart = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
-}
 <a href="#" type="button" class="nav-link" data-toggle="modal" data-target="#modalPoll-1" style="background-color:transparent">
     Cart(@Session["CartItemCount"])
 </a>
@@ -30,29 +27,7 @@
                 else
                 {
 
-                    foreach (var m in currentCart)
-                    {
-                        <div class="main " style="box-sizing:border-box;">
-                            <div class="first d-flex ">
-                                <div class="left w-50 p-3 ">
-                                    <img src="~/Asset/image/@m.Pic" style="width:100%" />
-                                </div>
-                                <div class="right w-50 p-3">
-                                    <p>@m.Name</p>
-                                    <p>@m.Price</p>
-                                    <div class="count d-flex  ">
-                                        <button id="reduce_one" type="button" class="btn btn-info minus" onclick="reduce()">-</button>
-
-                                        <input  id="count"      type="text"   class="w-25" value="1" />
-
-                                        <button id="add_one"    type="button" class="btn btn-info add" onclick="add()">+</button>
-
-                                        <button type="button" class="btn btn-info ml-3">移除</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
+                    @Html.Partial("CartProductPartialView")
                 }
 
                 <!--Basic textarea-->

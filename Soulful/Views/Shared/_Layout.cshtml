@@ -50,7 +50,7 @@
                             <li class="nav-item" id="MyCart">
                                 @if (Session["CartItemCount"] == null || (int)Session["CartItemCount"] == 0)
                                 {
-                                    <a href="#" type="button" class="nav-link" data-toggle="modal" data-target="#modalPoll-1" style="background-color:transparent">
+                                    <a href="#" type="button" class="nav-link" data-toggle="modal" data-target="#modalPoll-2" style="background-color:transparent">
                                         Cart()
                                     </a>
 
@@ -58,59 +58,14 @@
                                 else
                                 {
 
-                                    <a href="#" type="button" class="nav-link" data-toggle="modal" data-target="#modalPoll-1" style="background-color:transparent">
-                                        Cart(@Session["CartItemCount"])
-                                    </a>
+                                    @Html.Partial("CartPartialView")
 
                                 }
                             </li>
                         </ul>
-                        <div class="modal fade right " id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true" data-backdrop="false">
-                            <div class="modal-dialog modal-full-height modal-right modal-notify modal-info ml-auto mr-0 mt-5 border-0" role="document" style="max-height:80%">
-                                <div class="modal-content">
-                                    <!--Header-->
-                                    <div class="modal-header">
-                                        <p class="heading lead">
-                                            購物車
-                                        </p>
-
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true" class="white-text">×</span>
-                                        </button>
-                                    </div>
-
-                                    <!--Body-->
-                                    <div class="modal-body ">
-                                        @if (Session["Cart"] == null)
-                                        {
-                                            <p>請先添加商品</p>
-                                        }
-                                        else
-                                        {
-
-                                            @Html.Partial("CartProductPartialView")
-                                        }
-
-                                        <!--Basic textarea-->
-                                        <div class="md-form">
-                                            <label for="form79textarea">備註</label>
-                                            <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
-                                        </div>
-                                        <div class="total">
-                                            <p>總金額:</p>
-                                        </div>
-
-                                        <!--Footer-->
-                                        <div class="modal-footer justify-content-center">
-                                            <a href="/Pay/PayView" type="button" class="btn btn-outline-info waves-effect">前往結帳</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </nav>
+                @Html.Partial("NoProductPartialView")
             </div>
         </div>
     </header>
@@ -195,16 +150,13 @@
         </div>
     </footer>
 
-
     <script src="~/Asset/js/navbar.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)
     <script>
+
         function postValue(_albumId) {
-
-
-            console.log(_albumId);
             $.ajax({
                 type: "POST",
                 url: "/Shopping/AddToCart",
@@ -216,19 +168,18 @@
             });
         }
 
-       var count = document.getElementById("count");
+
+        var count = document.getElementById("count");
 
         //Add
-        function add()
-        {
-            var add_txt = document.getElementById("count");     
+        function add() {
+            var add_txt = document.getElementById("count");
             var Add = add_txt.value;
             Add++;
             add_txt.value = Add;
         }
         //Reduce
-        function reduce()
-        {
+        function reduce() {
             var minu_txt = document.getElementById("count");
             var Reduce = minu_txt.value;
             if (Reduce > 1) {
@@ -239,6 +190,11 @@
                 minu_txt.value = 1;
             }
         }
+
+        function removeCartItem() {
+
+        }
+
     </script>
 
 
