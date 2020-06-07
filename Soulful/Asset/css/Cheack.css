@@ -64,18 +64,12 @@
     border: #6666 solid 1px;
 }
 
-.money {
-    text-align: center;
-}
 
 .statistics {
     display: flex;
     justify-content: center;
 }
 
-.col-12 button {
-    text-align: center;
-}
 
 .table-box {
     border: 2px solid #7a7979;
@@ -95,24 +89,26 @@
 }
 
 .btn-keep-buy {
-    background-color: pink;
+    background-color: #aa7968;
     font-weight: bolder;
     justify-content: space-around;
-}
 
-    .btn-keep-buy:hover {
-        background-color: #000;
-        color: #fff;
-    }
+}
+.btn-secondary {
+    font-weight: bolder;
+}
+.btn-keep-buy:hover {
+    background-color: #000;
+    color: #fff;
+    font-weight: bolder;
+}
 
 .btn-secondary:hover {
     background-color: black;
     font-weight: bolder;
 }
 
-.btn-box {
-    margin: 50px;
-}
+
 
 .buy-program-box {
     margin-bottom: 50px;
@@ -124,4 +120,21 @@
 }
 .delete-btn{
     border:none;
+}
+.buy-program
+{
+    text-align:center;
+  
+}
+.alert{
+    font-size:larger;
+    font-weight:bolder;
+}
+.thead-box {
+    font-size: larger;
+    font-weight: bolder;
+}
+.total {
+    font-size: larger;
+    font-weight: bolder;
 }
