@@ -41,11 +41,11 @@
                                     <p>@m.Name</p>
                                     <p>@m.Price</p>
                                     <div class="count d-flex  ">
-                                        <button type="button" class="btn btn-info minus">-</button>
+                                        <button id="reduce_one" type="button" class="btn btn-info minus" onclick="reduce()">-</button>
 
-                                        <input class="w-25" value="1" type="text" />
+                                        <input  id="count"      type="text"   class="w-25" value="1" />
 
-                                        <button type="button" class="btn btn-info add">+</button>
+                                        <button id="add_one"    type="button" class="btn btn-info add" onclick="add()">+</button>
 
                                         <button type="button" class="btn btn-info ml-3">移除</button>
                                     </div>
@@ -58,7 +58,7 @@
                 <!--Basic textarea-->
                 <div class="md-form">
                     <label for="form79textarea">備註</label>
-                    <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+                    <textarea type="text" id="formtextarea" class="md-textarea form-control" rows="3"></textarea>
                 </div>
                 <div class="total">
                     <p>總金額:</p>

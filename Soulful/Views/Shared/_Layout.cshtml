@@ -215,6 +215,30 @@
                 }
             });
         }
+
+       var count = document.getElementById("count");
+
+        //Add
+        function add()
+        {
+            var add_txt = document.getElementById("count");     
+            var Add = add_txt.value;
+            Add++;
+            add_txt.value = Add;
+        }
+        //Reduce
+        function reduce()
+        {
+            var minu_txt = document.getElementById("count");
+            var Reduce = minu_txt.value;
+            if (Reduce > 1) {
+                Reduce--;
+                minu_txt.value = Reduce;
+            }
+            else {
+                minu_txt.value = 1;
+            }
+        }
     </script>
 
 
