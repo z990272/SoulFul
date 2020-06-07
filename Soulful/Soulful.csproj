@@ -539,6 +539,7 @@
     <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
     <Content Include="Views\Shared\CartPartialView.cshtml" />
     <Content Include="Views\Shared\CartCountPartialView.cshtml" />
+    <Content Include="Views\Shared\CartProductPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

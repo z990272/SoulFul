@@ -1,0 +1,31 @@
+﻿
+
+@{
+    var currentCart = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
+}
+
+
+
+@foreach (var m in currentCart)
+{
+    <div class="main " style="box-sizing:border-box;">
+        <div class="first d-flex ">
+            <div class="left w-50 p-3 ">
+                <img src="~/Asset/image/@m.Pic" style="width:100%" />
+            </div>
+            <div class="right w-50 p-3">
+                <p>@m.Name</p>
+                <p>@m.Price</p>
+                <div class="count d-flex  ">
+                    <button type="button" class="btn btn-info minus">-</button>
+
+                    <input class="w-25" value="1" type="text" />
+
+                    <button type="button" class="btn btn-info add">+</button>
+
+                    <button type="button" class="btn btn-info ml-3">移除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
