@@ -51,9 +51,9 @@ strong{
         color:black;
         
     }
-    .modal-body {
-        background-color: #000;
-    }
+#album-modal {
+    background-color: #000;
+}
 
 .select-label {
     color: #fff;
