@@ -191,8 +191,16 @@
             }
         }
 
-        function removeCartItem() {
-
+        function RemoveProduct(_albumId) {
+            $.ajax({
+                type: "POST",
+                url: "/Shopping/RemoveProduct",
+                data: { ProductId: _albumId },
+                dataType: "text",
+                success: function (response) {
+                    $("#MyCart").html(response);
+                }
+            });
         }
 
     </script>
