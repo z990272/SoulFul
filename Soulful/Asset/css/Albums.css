@@ -393,4 +393,6 @@ display: inline-block;
 .product-area {
     overflow: scroll;
     height: 400px;
+    margin-top:150px;
+    margin-bottom:150px;
 }
