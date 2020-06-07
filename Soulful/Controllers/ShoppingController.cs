@@ -52,21 +52,22 @@ namespace Soulful.Controllers
             else
             {
                 cartItems = (List<CartViewModel>)Session["Cart"]; //將Session中的購物車記錄還原成集合
-
-
-                CartViewModel cart = new CartViewModel
+                if (cartItems.All(x => x.Id != productVM.ProductId))
                 {
-                    RecordId = cartItems.Count() + 1,
-                    CartId = Guid.NewGuid().ToString(),
-                    Id = ProductInCart.Album_id,
-                    Name = ProductInCart.Album_Name,
-                    Pic = ProductInCart.Pic,
-                    Price = ProductInCart.Price
-                };
-                cartItems.Add(cart);
+                    CartViewModel cart = new CartViewModel
+                    {
+                        RecordId = cartItems.Count() + 1,
+                        CartId = Guid.NewGuid().ToString(),
+                        Id = ProductInCart.Album_id,
+                        Name = ProductInCart.Album_Name,
+                        Pic = ProductInCart.Pic,
+                        Price = ProductInCart.Price
+                    };
+                    cartItems.Add(cart);
 
-                Session["Cart"] = cartItems;
-                Session["CartItemCount"] = cart.RecordId;
+                    Session["Cart"] = cartItems;
+                    Session["CartItemCount"] = cart.RecordId;
+                }
             }
 
 

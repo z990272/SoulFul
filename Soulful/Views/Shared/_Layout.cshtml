@@ -155,7 +155,6 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)
     <script>
-
         function postValue(_albumId) {
             $.ajax({
                 type: "POST",
@@ -166,6 +165,7 @@
                     $("#MyCart").html(response);
                 }
             });
+
         }
 
 
