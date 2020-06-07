@@ -19,8 +19,7 @@
     }
 
 .form-box {
-    margin:auto;
-    
+    margin: 100px;
 }
 
 @media screen and (max-width: 767px) {
