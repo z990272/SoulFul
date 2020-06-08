@@ -185,23 +185,22 @@
 
         var count = document.getElementById("count");
 
+       
         //Add
-        function add() {
-            var add_txt = document.getElementById("count");
-            var Add = add_txt.value;
+        function add(count_Id) {
+            var Add = count_Id.value;
             Add++;
-            add_txt.value = Add;
+            count_Id.value = Add;
         }
         //Reduce
-        function reduce() {
-            var minu_txt = document.getElementById("count");
-            var Reduce = minu_txt.value;
+        function reduce(count_Id) {
+            var Reduce = count_Id.value;
             if (Reduce > 1) {
                 Reduce--;
-                minu_txt.value = Reduce;
+                count_Id.value = Reduce;
             }
             else {
-                minu_txt.value = 1;
+                count_Id.value = 1;
             }
         }
 

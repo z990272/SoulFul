@@ -16,13 +16,13 @@
                 <p>@m.Name</p>
                 <p>@m.Price</p>
                 <div class="count d-flex  ">
-                    <button id="reduce_one" onclick="reduce()" type="button" class="btn btn-info minus">-</button>
+                    <button id="reduce_@m.Id" onclick="reduce(count_@m.Id)" type="button" class="btn btn-dark minus">-</button>
 
-                    <input id="count" class="w-25" value="1" type="text" />
+                    <input id="count_@m.Id" class="w-25" value="1" type="text" />
 
-                    <button id="add_one" onclick="add()" type="button" class="btn btn-info add">+</button>
+                    <button id="add_@m.Id" onclick="add(count_@m.Id)" type="button" class="btn btn-dark add">+</button>
 
-                    <button type="button" class="btn btn-info ml-3" onclick="ReduceProductCount(@m.Id)">移除</button>
+                    <button type="button" class="btn btn-dark ml-3" onclick="ReduceProductCount(@m.Id)">移除</button>
                 </div>
             </div>
         </div>
