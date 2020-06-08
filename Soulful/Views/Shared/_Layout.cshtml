@@ -117,7 +117,7 @@
             </div>
             <div class="row py-5">
                 <div class="col-12 text-center">
-                    <button class="send-btn">send >></button>
+                    <button class="send-btn" onclick="Send()">send >></button>
                 </div>
             </div>
         </div>
@@ -157,84 +157,16 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)
-    <script>
-        function postValue(_albumId) {
-            $.ajax({
-                type: "POST",
-                url: "/Shopping/GetCartCount",
-                data: { ProductId: _albumId },
-                dataType: "text",
-                success: function (response) {
-                    $("#CartCount").text("Cart(" + response + ")");
-                    showProduct(_albumId);
-                }
-            });
-           
-        }
-
-        function showProduct(_albumId) {
-            $.ajax({
-                type: "POST",
-                url: "/Shopping/AddToCart",
-                data: { ProductId: _albumId },
-                dataType: "text",
-                success: function (response) {
-                    $("#ProductShow").html(response);
-                }
-            });
-        }
-
-        var count = document.getElementById("count");
-
-       
-        //Add
-        function add(count_Id) {
-            var Add = count_Id.value;
-            Add++;
-            count_Id.value = Add;
-        }
-        //Reduce
-        function reduce(count_Id) {
-            var Reduce = count_Id.value;
-            if (Reduce > 1) {
-                Reduce--;
-                count_Id.value = Reduce;
-            }
-            else {
-                count_Id.value = 1;
-            }
-        }
-
-        function ReduceProductCount(_albumId) {
-            $.ajax({
-                type: "POST",
-                url: "/Shopping/ReduceProductCount",
-                data: { ProductId: _albumId },
-                dataType: "text",
-                success: function (response) {
-                    $("#CartCount").text("Cart(" + response + ")");
-                    showProduct(_albumId);
-                }
-            });
-        }
-
-        function RemoveProduct(_albumId) {
-            $.ajax({
-                type: "POST",
-                url: "/Shopping/RemoveProduct",
-                data: { ProductId: _albumId },
-                dataType: "text",
-                success: function (response) {
-                    $("#ProductShow").html(response);
-                }
-            });
-        }
-    </script>
+    <script src="~/Asset/js/ProductAjax.js"></script>
 
 
 
 
     @RenderSection("endCSS", required: false)
     @RenderSection("endJS", required: false)
+
+@section endJS{
+    <script src="~/Asset/js/Layout.js"></script>
+}
 </body>
 </html>
