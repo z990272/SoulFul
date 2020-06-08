@@ -176,6 +176,7 @@
     <Compile Include="Controllers\GiveBackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
@@ -202,8 +203,13 @@
     <Compile Include="Migrations\202006040408434_Order.Designer.cs">
       <DependentUpon>202006040408434_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006080626329_AddGiveBack.cs" />
+    <Compile Include="Migrations\202006080626329_AddGiveBack.Designer.cs">
+      <DependentUpon>202006080626329_AddGiveBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
+    <Compile Include="Models\Detail\GiveBack.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
     <Compile Include="Models\Identity\AspNetUserClaims.cs" />
     <Compile Include="Models\Identity\AspNetUserLogins.cs" />
@@ -354,6 +360,7 @@
     <Content Include="Asset\js\modal.js" />
     <Content Include="Asset\js\navbar.js" />
     <Content Include="Asset\js\New.js" />
+    <Content Include="Asset\js\ProductAjax.js" />
     <Content Include="Asset\js\rank.js" />
     <Content Include="Asset\js\Slick.js" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -546,6 +553,7 @@
     <Folder Include="Asset\json\" />
     <Folder Include="Models\Default\" />
     <Folder Include="Views\GiveBack\" />
+    <Folder Include="Views\Order\" />
     <Folder Include="Views\Shopping\" />
   </ItemGroup>
   <ItemGroup>
@@ -574,6 +582,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006040408434_Order.resx">
       <DependentUpon>202006040408434_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006080626329_AddGiveBack.resx">
+      <DependentUpon>202006080626329_AddGiveBack.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
