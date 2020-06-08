@@ -19,6 +19,15 @@
         </div>
     </div>
 </section>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <section id="socialLoginForm">
+                 @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>
+</div>
 <div class="container ">
     <div class="row">
         <div class="col-12 my-5 mx-auto">
@@ -27,7 +36,7 @@
                 {
                     @Html.AntiForgeryToken()
                     <h4>使用者登入</h4>
-                    <hr /> 
+                    <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
                         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
@@ -69,12 +78,6 @@
             </section>
         </div>
     </div>
-
-    <div class="col-md-4">
-            <section id="socialLoginForm">
-                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-            </section>
-        </div>
 </div>
 
 
