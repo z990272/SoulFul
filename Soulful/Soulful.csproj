@@ -246,6 +246,7 @@
     <Content Include="Asset\css\Animate.css" />
     <Content Include="Asset\css\Buy.css" />
     <Content Include="Asset\css\Cheack.css" />
+    <Content Include="Asset\css\count.css" />
     <Content Include="Asset\css\Events.css" />
     <Content Include="Asset\css\home_footer.css" />
     <Content Include="Asset\css\home_header.css" />
