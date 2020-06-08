@@ -537,9 +537,8 @@
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
     <Content Include="Views\Pay\PayView.cshtml" />
     <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
-    <Content Include="Views\Shared\CartPartialView.cshtml" />
     <Content Include="Views\Shared\CartProductPartialView.cshtml" />
-    <Content Include="Views\Shared\NoProductPartialView.cshtml" />
+    <Content Include="Views\Shared\CartPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

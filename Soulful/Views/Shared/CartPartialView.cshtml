@@ -1,7 +1,5 @@
 ﻿
-<a href="#" type="button" class="nav-link" data-toggle="modal" data-target="#modalPoll-1" style="background-color:transparent">
-    Cart(@Session["CartItemCount"])
-</a>
+
 
 <div class="modal fade right " id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true" data-backdrop="false">
@@ -20,16 +18,17 @@
 
             <!--Body-->
             <div class="modal-body ">
-                @if (Session["Cart"] == null)
-                {
-                    <p>請先添加商品</p>
-                }
-                else
-                {
+                <div  id="ProductShow">
+                    @if (Session["Cart"] == null)
+                    {
+                        <p>請先添加商品</p>
+                    }
+                    else
+                    {
 
-                    @Html.Partial("CartProductPartialView")
-                }
-
+                        @Html.Partial("CartProductPartialView")
+                    }
+                </div>
                 <!--Basic textarea-->
                 <div class="md-form">
                     <label for="form79textarea">備註</label>

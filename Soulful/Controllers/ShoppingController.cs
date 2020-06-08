@@ -21,9 +21,8 @@ namespace Soulful.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddToCart(ProductViewModel productVM)
+        public int GetCartCount(ProductViewModel productVM)
         {
-
             ProductService productService = new ProductService();
 
             var ProductInCart = productService.GetProductById(productVM.ProductId);
@@ -67,9 +66,14 @@ namespace Soulful.Controllers
                 }
 
             }
-            return PartialView("CartPartialView");
+            return cartItems.Count;
         }
 
+        [HttpPost]
+        public ActionResult AddToCart(ProductViewModel productVM)
+        {
+            return PartialView("CartProductPartialView");
+        }
 
         [HttpPost]
         public ActionResult RemoveProduct(ProductViewModel productVM)
