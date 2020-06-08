@@ -347,6 +347,7 @@
     <Content Include="Asset\image\華晨宇-新世界.jpg" />
     <Content Include="Asset\image\順著海流.jpg" />
     <Content Include="Asset\js\EventModal.js" />
+    <Content Include="Asset\js\Layout.js" />
     <Content Include="Asset\js\modal.js" />
     <Content Include="Asset\js\navbar.js" />
     <Content Include="Asset\js\New.js" />
