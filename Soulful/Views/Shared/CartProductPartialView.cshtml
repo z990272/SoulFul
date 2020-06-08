@@ -5,7 +5,6 @@
 }
 
 
-
 @foreach (var m in currentCart)
 {
     <div class="main " style="box-sizing:border-box;">
@@ -17,13 +16,13 @@
                 <p>@m.Name</p>
                 <p>@m.Price</p>
                 <div class="count d-flex  ">
-                    <button type="button" class="btn btn-info minus">-</button>
+                    <button id="reduce_one" onclick="reduce()" type="button" class="btn btn-info minus">-</button>
 
-                    <input class="w-25" value="1" type="text" />
+                    <input id="count" class="w-25" value="1" type="text" />
 
-                    <button type="button" class="btn btn-info add">+</button>
+                    <button id="add_one" onclick="add()" type="button" class="btn btn-info add">+</button>
 
-                    <button type="button" class="btn btn-info ml-3">移除</button>
+                    <button type="button" class="btn btn-info ml-3" onclick="ReduceProductCount(@m.Id)">移除</button>
                 </div>
             </div>
         </div>

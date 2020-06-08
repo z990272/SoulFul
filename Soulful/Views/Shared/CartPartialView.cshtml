@@ -1,10 +1,5 @@
 ﻿
-@{
-    var currentCart = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
-}
-<a href="#" type="button" class="nav-link" data-toggle="modal" data-target="#modalPoll-1" style="background-color:transparent">
-    Cart(@Session["CartItemCount"])
-</a>
+
 
 <div class="modal fade right " id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true" data-backdrop="false">
@@ -23,39 +18,17 @@
 
             <!--Body-->
             <div class="modal-body ">
-                @if (Session["Cart"] == null)
-                {
-                    <p>請先添加商品</p>
-                }
-                else
-                {
-
-                    foreach (var m in currentCart)
+                <div  id="ProductShow">
+                    @if (Session["Cart"] == null)
                     {
-                        <div class="main " style="box-sizing:border-box;">
-                            <div class="first d-flex ">
-                                <div class="left w-50 p-3 ">
-                                    <img src="~/Asset/image/@m.Pic" style="width:100%" />
-                                </div>
-                                <div class="right w-50 p-3">
-                                    <p>@m.Name</p>
-                                    <p>@m.Price</p>
-                                    <div class="product d-flex  ">
-                                        <button id="reduce_@m.Id" type="button" class="btn btn-dark minus" onclick="reduce(this)">-</button>
-
-                                        <input  id="count" type="text" class="w-25" value="1"/>
-
-                                        <button id="add_@m.Id" type="button" class="btn btn-dark add" onclick="add()">+</button>
-
-                                        <button id="remove_one" type="button" class="btn btn-dark ml-3" onclick="remove(this)">移除</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <p>請先添加商品</p>
                     }
-                }
+                    else
+                    {
 
+                        @Html.Partial("CartProductPartialView")
+                    }
+                </div>
                 <!--Basic textarea-->
                 <div class="md-form">
                     <label for="form79textarea">備註</label>

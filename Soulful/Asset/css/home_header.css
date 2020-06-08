@@ -139,6 +139,9 @@ a.btn_cart_product {
     top: 0;
     left: 0;
 }
+.modal-footer a{
+    color:black;
+}
 
 @media screen and (max-width:992px) {
     .header-area .navbar {
