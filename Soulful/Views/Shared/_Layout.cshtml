@@ -79,8 +79,6 @@
 
 
     <section class="contact-area">
-
-
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
@@ -168,7 +166,7 @@
                     showProduct(_albumId);
                 }
             });
-           
+
         }
 
         function showProduct(_albumId) {
@@ -185,7 +183,7 @@
 
         var count = document.getElementById("count");
 
-       
+
         //Add
         function add(count_Id) {
             var Add = count_Id.value;
@@ -230,14 +228,13 @@
         }
     </script>
 
+    <script src="~/Asset/js/Layout.js"></script>
 
 
 
     @RenderSection("endCSS", required: false)
     @RenderSection("endJS", required: false)
 
-@section endJS{
-    <script src="~/Asset/js/Layout.js"></script>
-}
+    }
 </body>
 </html>
