@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Soulful.Services;
+using Soulful.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,13 @@ namespace Soulful.Controllers
 {
     public class GiveBackController : Controller
     {
-        // GET: GiveBack
-        public ActionResult Index()
+        [HttpPost]
+        public ActionResult CreateData(GiveBackViewModel giveBack)
         {
-            return View();
+            AccountService service = new AccountService();
+            service.CreateGiveBack(giveBack);
+
+            return new EmptyResult();
         }
     }
 }
