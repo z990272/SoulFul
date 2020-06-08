@@ -1,0 +1,23 @@
+﻿@media screen and (min-width: 425px) and (max-width: 375px) {
+    .minus {
+        width: 31px;
+        height: 38px;
+    }
+
+    .w-25 {
+        width: 50px;
+        height: 38px;
+    }
+
+    .add {
+        width: 31px;
+        height: 38px;
+    }
+
+    .ml-3 {
+        font-size: 5px;
+        width: 58px;
+        height: 38px;
+        padding-bottom: 10px;
+    }
+}
