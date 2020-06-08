@@ -390,3 +390,7 @@ display: inline-block;
     color:white;
    
 }
+.product-area {
+    overflow: scroll;
+    height: 400px;
+}

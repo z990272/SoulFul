@@ -11,6 +11,12 @@ namespace Soulful.Services
     public class ProductService
     {
         SoulfulContext context = new SoulfulContext();
+        public Album GetProductById(int Id)
+        {
+            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
+            var ProductById = AlbumRepository.GetAll().OrderBy(x => x.Album_id).FirstOrDefault(x => x.Album_id == Id);
+            return ProductById;
+        }
         public IEnumerable<CardViewModel> GetSingerName()
         {
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
