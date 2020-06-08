@@ -40,14 +40,15 @@
                                 <div class="right w-50 p-3">
                                     <p>@m.Name</p>
                                     <p>@m.Price</p>
-                                    <div class="count d-flex  ">
-                                        <button id="reduce_one" type="button" class="btn btn-info minus" onclick="reduce()">-</button>
+                                    <div class="product d-flex  ">
+                                        <button id="reduce_@m.Id" type="button" class="btn btn-dark minus" onclick="reduce(this)">-</button>
 
-                                        <input  id="count"      type="text"   class="w-25" value="1" />
+                                        <input  id="count" type="text" class="w-25" value="1"/>
 
-                                        <button id="add_one"    type="button" class="btn btn-info add" onclick="add()">+</button>
+                                        <button id="add_@m.Id" type="button" class="btn btn-dark add" onclick="add()">+</button>
 
-                                        <button type="button" class="btn btn-info ml-3">移除</button>
+                                        <button id="remove_one" type="button" class="btn btn-dark ml-3" onclick="remove(this)">移除</button>
+
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +67,7 @@
 
                 <!--Footer-->
                 <div class="modal-footer justify-content-center">
-                    <a href="/Pay/PayView" type="button" class="btn btn-outline-info waves-effect">前往結帳</a>
+                    <a href="/Pay/PayView" id="checkout" type="button" class="btn btn-dark waves-effect">前往結帳</a>
                 </div>
             </div>
         </div>

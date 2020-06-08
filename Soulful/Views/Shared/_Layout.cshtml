@@ -103,7 +103,7 @@
 
                                         <!--Footer-->
                                         <div class="modal-footer justify-content-center">
-                                            <a href="/Pay/PayView" type="button" class="btn btn-outline-info waves-effect">前往結帳</a>
+                                            <a href="/Pay/PayView" id="checkout" type="button" class="btn btn-dark waves-effect">前往結帳</a>
                                         </div>
                                     </div>
                                 </div>
@@ -221,22 +221,24 @@
         //Add
         function add()
         {
-            var add_txt = document.getElementById("count");     
+            var add_txt = document.getElementById("count");
+            console.log(add);
             var Add = add_txt.value;
+            console.log(Add);
             Add++;
             add_txt.value = Add;
         }
         //Reduce
         function reduce()
         {
-            var minu_txt = document.getElementById("count");
-            var Reduce = minu_txt.value;
+            var minus_txt = document.getElementById("count");
+            var Reduce = minus_txt.value;
             if (Reduce > 1) {
                 Reduce--;
-                minu_txt.value = Reduce;
+                minus_txt.value = Reduce;
             }
             else {
-                minu_txt.value = 1;
+                minus_txt.value = 1;
             }
         }
     </script>
