@@ -74,14 +74,19 @@ namespace Soulful.Controllers
         {
             return PartialView("CartProductPartialView");
         }
-
         [HttpPost]
-        public ActionResult RemoveProduct(ProductViewModel productVM)
+        public int ReduceProductCount(ProductViewModel productVM)
         {
             cartItems = (List<CartViewModel>)Session["Cart"]; //將Session中的購物車記錄還原成集合
             cartItems.Remove(cartItems.FirstOrDefault(x => x.Id == productVM.ProductId));
             Session["CartItemCount"] = cartItems.Count;
-            return PartialView("CartPartialView");
+            return cartItems.Count;
+        }
+        [HttpPost]
+        public ActionResult RemoveProduct(ProductViewModel productVM)
+        {
+
+            return PartialView("CartProductPartialView");
         }
     }
 }

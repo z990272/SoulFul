@@ -205,6 +205,19 @@
             }
         }
 
+        function ReduceProductCount(_albumId) {
+            $.ajax({
+                type: "POST",
+                url: "/Shopping/ReduceProductCount",
+                data: { ProductId: _albumId },
+                dataType: "text",
+                success: function (response) {
+                    $("#CartCount").text("Cart(" + response + ")");
+                    showProduct(_albumId);
+                }
+            });
+        }
+
         function RemoveProduct(_albumId) {
             $.ajax({
                 type: "POST",
@@ -212,11 +225,10 @@
                 data: { ProductId: _albumId },
                 dataType: "text",
                 success: function (response) {
-                    $("#MyCart").html(response);
+                    $("#ProductShow").html(response);
                 }
             });
         }
-
     </script>
 
 
