@@ -58,11 +58,11 @@ namespace Soulful
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "556925752894-sbrmnj9jirttrp3001mr6abudf5biga6.apps.googleusercontent.com",
-            //    ClientSecret = "11zf8uJ4zjRZK-1K6Myp0XIN"
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "677324118430-im0p7dac5qk5fmdg9krfm63u5b6oonvj.apps.googleusercontent.com",
+                ClientSecret = "f6aph88o3durluDrQxrFPXBL"
+            });
         }
     }
 }

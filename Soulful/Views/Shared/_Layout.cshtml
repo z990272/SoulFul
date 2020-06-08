@@ -42,12 +42,13 @@
                             <li class="nav-item">
                                 @Html.ActionLink("Contact", "Contact", "Contact")
                             </li>
-                            <li class="nav-item">
+                            @*<li class="nav-item">
                                 @Html.ActionLink("Login", "Login", "Account")
                             </li>
                             <li class="nav-item">
                                 @Html.ActionLink("Register", "Register", "Account")
-                            </li>
+                            </li>*@
+                            @Html.Partial("_LoginPartial");
                             <li class="nav-item" id="MyCart">
                                 @if (Session["CartItemCount"] == null || (int)Session["CartItemCount"] == 0)
                                 {
