@@ -42,12 +42,13 @@
                             <li class="nav-item">
                                 @Html.ActionLink("Contact", "Contact", "Contact")
                             </li>
-                            <li class="nav-item">
+                            @*<li class="nav-item">
                                 @Html.ActionLink("Login", "Login", "Account")
                             </li>
                             <li class="nav-item">
                                 @Html.ActionLink("Register", "Register", "Account")
-                            </li>
+                            </li>*@
+                            @Html.Partial("_LoginPartial");
                             <li class="nav-item" id="MyCart">
                                 @if (Session["CartItemCount"] == null || (int)Session["CartItemCount"] == 0)
                                 {
@@ -79,9 +80,7 @@
     @RenderBody()
 
 
-    <section class="contact-area">
-
-
+    <section class="contact-area" id="giveback">
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
@@ -160,13 +159,11 @@
     <script src="~/Asset/js/ProductAjax.js"></script>
 
 
-
+    <script src="~/Asset/js/Layout.js"></script>
 
     @RenderSection("endCSS", required: false)
     @RenderSection("endJS", required: false)
 
-@section endJS{
-    <script src="~/Asset/js/Layout.js"></script>
-}
+    }
 </body>
 </html>
