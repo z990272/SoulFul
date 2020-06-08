@@ -203,8 +203,13 @@
     <Compile Include="Migrations\202006040408434_Order.Designer.cs">
       <DependentUpon>202006040408434_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006080626329_AddGiveBack.cs" />
+    <Compile Include="Migrations\202006080626329_AddGiveBack.Designer.cs">
+      <DependentUpon>202006080626329_AddGiveBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
+    <Compile Include="Models\Detail\GiveBack.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
     <Compile Include="Models\Identity\AspNetUserClaims.cs" />
     <Compile Include="Models\Identity\AspNetUserLogins.cs" />
@@ -577,6 +582,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006040408434_Order.resx">
       <DependentUpon>202006040408434_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006080626329_AddGiveBack.resx">
+      <DependentUpon>202006080626329_AddGiveBack.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
