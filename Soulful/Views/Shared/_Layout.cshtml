@@ -116,7 +116,7 @@
             </div>
             <div class="row py-5">
                 <div class="col-12 text-center">
-                    <button class="send-btn">send >></button>
+                    <button class="send-btn" onclick="Send()">send >></button>
                 </div>
             </div>
         </div>
@@ -163,5 +163,9 @@
 
     @RenderSection("endCSS", required: false)
     @RenderSection("endJS", required: false)
+
+@section endJS{
+    <script src="~/Asset/js/Layout.js"></script>
+}
 </body>
 </html>
