@@ -66,9 +66,15 @@
                             <input type="submit" value="登入" class="btn btn-secondary col-12" />
                         </div>
                     </div>
-
                     <div class="col-12 registered">
-                        <span>未註冊帳號?</span>
+                        @*<span>忘記密碼?</span>*@
+                        <p class="btn btn-secondary">
+                            @Html.ActionLink("忘記密碼", "ForgotPassword")
+                        </p>
+
+                    </div>
+                    <div class="col-12 registered">
+                        @*<span>未註冊帳號?</span>*@
                         <p class="btn btn-secondary">
                             @Html.ActionLink("註冊SOULFUL", "Register")
                         </p>
