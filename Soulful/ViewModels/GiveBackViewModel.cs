@@ -11,7 +11,7 @@ namespace Soulful.ViewModels
         [Required]
         public string Name { get; set; }
 
-        [Required]
+        [RegularExpression("[@]+", ErrorMessage = "{0}必須為信箱格式")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

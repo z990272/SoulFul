@@ -10,7 +10,6 @@ namespace Soulful.Controllers
 {
     public class GiveBackController : Controller
     {
-        [HttpPost]
         public ActionResult CreateData(GiveBackViewModel giveBack)
         {
             AccountService service = new AccountService();
