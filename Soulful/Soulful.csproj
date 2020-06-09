@@ -542,7 +542,7 @@
     <Content Include="Views\CRUD\Edit.cshtml" />
     <Content Include="Views\CRUD\Index.cshtml" />
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
-    <Content Include="Views\Album\AlbumPartialView.cshtml" />
+    <Content Include="Views\Shared\AlbumPartialView.cshtml" />
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
     <Content Include="Views\Pay\PayView.cshtml" />
     <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />

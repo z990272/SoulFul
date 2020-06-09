@@ -18,9 +18,7 @@
         border: 2px solid #fff;
     }
 
-.form-box {
-    margin: 100px;
-}
+
 
 @media screen and (max-width: 767px) {
     .head_area {
