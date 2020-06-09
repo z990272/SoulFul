@@ -29,7 +29,8 @@ namespace Soulful.Models
 
         public string Company { get; set; }
         public decimal Price { get; set; }
-
+        [Required]
+        public int Hits { get; set; }
         public virtual Singer Singer { get; set; }
 
         public virtual ICollection<Order> Order { get; set; }
