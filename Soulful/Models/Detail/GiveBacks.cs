@@ -21,5 +21,6 @@ namespace Soulful.Models
 
         [Required]
         public string Message { get; set; }
+        public string Status { get; set; }
     }
 }

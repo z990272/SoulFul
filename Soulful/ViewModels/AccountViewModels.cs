@@ -64,21 +64,22 @@ namespace Soulful.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="電子郵件必須輸入!")]
         [EmailAddress]
         [Display(Name = "電子郵件")]
         public string Email { get; set; }
         
-        [Required]
-        [Phone]
+        [Required(ErrorMessage ="行動電話必須輸入!")]
+        [StringLength(25, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 10)]
+        [DataType(DataType.PhoneNumber)]
         [Display(Name ="行動電話")]
         public string PhoneNumber { get; set; }
-        [Required]
+        [Required(ErrorMessage ="密碼必須輸入")]
         [StringLength(25, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "密碼")]
         public string Password { get; set; }
-        [Required]
+        [Required(ErrorMessage ="確認密碼必須輸入")]
         [DataType(DataType.Password)]
         [Display(Name = "確認密碼")]
         [Compare("Password", ErrorMessage = "密碼和確認密碼不相符。")]

@@ -182,9 +182,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006120342493_AddIndia.cs" />
-    <Compile Include="Migrations\202006120342493_AddIndia.Designer.cs">
-      <DependentUpon>202006120342493_AddIndia.cs</DependentUpon>
+    <Compile Include="Migrations\202006120440592_AddIndia.cs" />
+    <Compile Include="Migrations\202006120440592_AddIndia.Designer.cs">
+      <DependentUpon>202006120440592_AddIndia.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
@@ -525,6 +525,7 @@
     <Content Include="Views\Shared\CartProductPartialView.cshtml" />
     <Content Include="Views\Shared\CartPartialView.cshtml" />
     <Content Include="Views\Pay\BuyProductPartialView.cshtml" />
+    <Content Include="Views\Shared\LanguagePartailView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -546,8 +547,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006120342493_AddIndia.resx">
-      <DependentUpon>202006120342493_AddIndia.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006120440592_AddIndia.resx">
+      <DependentUpon>202006120440592_AddIndia.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
