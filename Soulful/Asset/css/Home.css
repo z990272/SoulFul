@@ -330,38 +330,6 @@
         border-left: 12px solid #ffffff;
     }
 
-.popular_artists_area {
-    position: relative;
-    z-index: 1;
-    padding: 45px 30px;
-    transition-duration: 500ms;
-    border: 1px solid #d8d8d8;
-    background-color: #f5f9fa;
-}
-
-    .popular_artists_area .single_artists {
-        position: relative;
-        z-index: 1;
-        margin-bottom: 17px;
-    }
-
-        .popular_artists_area .single_artists .thumbnail {
-            flex: 0 0 63px;
-            max-width: 63px;
-            width: 63px;
-            margin-right: 20px;
-            border-radius: 50%;
-        }
-
-            .popular_artists_area .single_artists .thumbnail img {
-                border-radius: 50%;
-            }
-
-        .popular_artists_area .single_artists .content_ p {
-            font-size: 16px;
-            margin-bottom: 0;
-        }
-
 
 
 @media screen and (max-width:768px) {
