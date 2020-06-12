@@ -7,13 +7,13 @@ namespace Soulful.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddAlbumHits : IMigrationMetadata
+    public sealed partial class AddIndia : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAlbumHits));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddIndia));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006091033504_AddAlbumHits"; }
+            get { return "202006120342493_AddIndia"; }
         }
         
         string IMigrationMetadata.Source

@@ -13,5 +13,6 @@ namespace Soulful.ViewModels
         public string Name { get; set; }
         public string Pic { get; set; }
         public decimal Price { get; set; }
+        public int Count { get; set; }
     }
 }

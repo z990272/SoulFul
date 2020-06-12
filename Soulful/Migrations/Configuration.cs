@@ -19,6 +19,7 @@ namespace Soulful.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
             context.Singer.AddOrUpdate(x => x.Singer_id,
              new Singer { Singer_id = 1, Name = "劉若英", Gender = "Woman", Country = "TWN", Language_id = 4 },
              new Singer { Singer_id = 2, Name = "吳青峰", Gender = "Man", Country = "TWN", Language_id = 4 },
@@ -48,7 +49,8 @@ namespace Soulful.Migrations
                 new Language { Language_id = 4, Language_type = "Chinese" },
                 new Language { Language_id = 5, Language_type = "Russian" },
                 new Language { Language_id = 6, Language_type = "French" },
-                new Language { Language_id = 7, Language_type = "Latin" }
+                new Language { Language_id = 7, Language_type = "Latin" },
+                new Language { Language_id = 8, Language_type = "India" }
                 );
 
             context.Album.AddOrUpdate(x => x.Album_id,
@@ -201,7 +203,7 @@ namespace Soulful.Migrations
                 new Event { Event_id = 3, Name = "ONE OK ROCK EYE OF THE STORM ASIA TOUR 2020 IN TAIWAN", Singer_id = 13, Datetime = new DateTime(2020, 011, 04), Pic = "ONEOKROCK .jpg", Adress = "台北小巨蛋", About = "ONE OK ROCK風暴強烈席捲2020年11月4日、6日、7日 三天稱霸台北小巨蛋！日本搖滾天團ONE OK ROCK稱霸世界第二章開啟！各位粉絲久違2年昂首期盼的最新「暴風眼」亞洲巡迴最終站就在台灣" },
                 new Event { Event_id = 4, Name = "蔡依林 Ugly Beauty 2019-2020 世界巡迴演唱會 高雄站", Singer_id = 12, Datetime = new DateTime(2020, 09, 04), Pic = "UglyBeauty.jpeg", Adress = "高雄巨蛋", About = "台北站六場場場都給”長輩”各種不同驚喜的Jolin，在最終場尾末仍不忘拋驚喜震撼彈宣布要在5 / 9、5 / 10兩天於高雄巨蛋再加兩場演出，主辦單位特別宣布高雄加場將於1 / 18中午12:16在開始售票！#「蔡依林Ugly Beauty 2019-2020 世界巡迴演唱會 高雄站」2020/9/4 再加場#歌迷注意！Jolin「消極掰幫」以斧頭號召在高雄場相認！" },
                 new Event { Event_id = 5, Name = "GREEN DAY LIVE IN TAIPEI 2021 年輕歲月2021台北演唱會", Singer_id = 14, Datetime = new DateTime(2021, 03, 16), Pic = "GreenDay.jpg", Adress = "台北小巨蛋", About = "有生之年系列再一發成軍33年 終於等到美國大白癡!美國龐克教父年輕歲月 明年3月唱進小巨蛋90年代指標性龐克樂團 全球唱片銷量逾7500萬葛萊美獎五度認證 名列搖滾名人堂" },
-                new Event { Event_id = 6, Name = "SUKIMASWITCH TOUR POPMAN’S CARNIVAL in Taipei", Singer_id = 19, Datetime = new DateTime(2020, 09, 11), Pic = "Popman.jpg",About="無限開關是由常田真太郎及大橋卓彌組成，出道屆滿20周年，2020年是第一次展開亞洲巡迴並到台北開唱。台灣歌迷透過許多由他們演唱的知名動畫例如「哆啦a夢」、「神奇寶貝」、「宇宙兄弟」…. 等主題曲，早已對他們的歌曲有相當的認識，再到爆紅並高話題度的日劇、電影「大叔的愛」主題曲「Revival」，歌迷對無限開關的歌更是不陌生。", Adress = "三創生活園區CLAPPER STUDIO" }
+                new Event { Event_id = 6, Name = "SUKIMASWITCH TOUR POPMAN’S CARNIVAL in Taipei", Singer_id = 19, Datetime = new DateTime(2020, 09, 11), Pic = "Popman.jpg", About = "無限開關是由常田真太郎及大橋卓彌組成，出道屆滿20周年，2020年是第一次展開亞洲巡迴並到台北開唱。台灣歌迷透過許多由他們演唱的知名動畫例如「哆啦a夢」、「神奇寶貝」、「宇宙兄弟」…. 等主題曲，早已對他們的歌曲有相當的認識，再到爆紅並高話題度的日劇、電影「大叔的愛」主題曲「Revival」，歌迷對無限開關的歌更是不陌生。", Adress = "三創生活園區CLAPPER STUDIO" }
                 );
         }
     }

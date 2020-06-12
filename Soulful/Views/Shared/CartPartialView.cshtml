@@ -15,17 +15,15 @@
                     <span aria-hidden="true" class="white-text">×</span>
                 </button>
             </div>
-
             <!--Body-->
             <div class="modal-body ">
-                <div  id="ProductShow">
+                <div id="ProductShow">
                     @if (Session["Cart"] == null)
                     {
                         <p>請先添加商品</p>
                     }
                     else
                     {
-
                         @Html.Partial("CartProductPartialView")
                     }
                 </div>
@@ -40,7 +38,7 @@
 
                 <!--Footer-->
                 <div class="modal-footer justify-content-center">
-                    <a href="/Pay/PayView" id="checkout" type="button" class="btn btn-dark waves-effect">前往結帳</a>
+                    <a href="@Url.Action("PayView","Pay",new { })" id="checkout" type="button" class="btn btn-dark waves-effect">前往結帳</a>
                 </div>
             </div>
         </div>

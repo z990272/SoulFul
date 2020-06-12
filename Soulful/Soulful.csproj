@@ -171,7 +171,6 @@
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ConfirmOrderController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\GiveBackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -183,57 +182,34 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005301117165_AddData.cs" />
-    <Compile Include="Migrations\202005301117165_AddData.Designer.cs">
-      <DependentUpon>202005301117165_AddData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006020437219_chinablue.cs" />
-    <Compile Include="Migrations\202006020437219_chinablue.Designer.cs">
-      <DependentUpon>202006020437219_chinablue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006020553290_NewEvent.cs" />
-    <Compile Include="Migrations\202006020553290_NewEvent.Designer.cs">
-      <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006020707547_DelNews.cs" />
-    <Compile Include="Migrations\202006020707547_DelNews.Designer.cs">
-      <DependentUpon>202006020707547_DelNews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006040408434_Order.cs" />
-    <Compile Include="Migrations\202006040408434_Order.Designer.cs">
-      <DependentUpon>202006040408434_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006080626329_AddGiveBack.cs" />
-    <Compile Include="Migrations\202006080626329_AddGiveBack.Designer.cs">
-      <DependentUpon>202006080626329_AddGiveBack.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006091033504_AddAlbumHits.cs" />
-    <Compile Include="Migrations\202006091033504_AddAlbumHits.Designer.cs">
-      <DependentUpon>202006091033504_AddAlbumHits.cs</DependentUpon>
+    <Compile Include="Migrations\202006120342493_AddIndia.cs" />
+    <Compile Include="Migrations\202006120342493_AddIndia.Designer.cs">
+      <DependentUpon>202006120342493_AddIndia.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
-    <Compile Include="Models\Detail\GiveBack.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
     <Compile Include="Models\Identity\AspNetUserClaims.cs" />
     <Compile Include="Models\Identity\AspNetUserLogins.cs" />
     <Compile Include="Models\Identity\AspNetUsers.cs" />
-    <Compile Include="Models\Detail\Order.cs" />
     <Compile Include="Models\C__MigrationHistory.cs" />
+    <Compile Include="Models\Detail\Event.cs" />
+    <Compile Include="Models\Detail\GiveBacks.cs" />
+    <Compile Include="Models\Detail\Language.cs" />
+    <Compile Include="Models\Detail\Like.cs" />
+    <Compile Include="Models\Detail\Order.cs" />
+    <Compile Include="Models\Detail\OrderDetail.cs" />
+    <Compile Include="Models\Detail\Singer.cs" />
+    <Compile Include="Models\Detail\Song.cs" />
+    <Compile Include="Data\SoulfulContext.cs" />
+    <Compile Include="Models\Detail\Style.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CartViewModel.cs" />
     <Compile Include="ViewModels\GiveBackViewModel.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
-    <Compile Include="Models\Detail\Event.cs" />
-    <Compile Include="Models\Detail\Language.cs" />
-    <Compile Include="Models\Detail\Like.cs" />
-    <Compile Include="Models\Detail\Singer.cs" />
-    <Compile Include="Models\Detail\Song.cs" />
-    <Compile Include="Data\SoulfulContext.cs" />
-    <Compile Include="Models\Detail\Style.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\SoulfulRepository.cs" />
     <Compile Include="Services\EventService.cs" />
@@ -243,6 +219,7 @@
     <Compile Include="ViewModels\AlbumViewModel.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -540,11 +517,6 @@
     <Content Include="Views\Album\Albums.cshtml" />
     <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
-    <Content Include="Views\CRUD\Create.cshtml" />
-    <Content Include="Views\CRUD\Delete.cshtml" />
-    <Content Include="Views\CRUD\Details.cshtml" />
-    <Content Include="Views\CRUD\Edit.cshtml" />
-    <Content Include="Views\CRUD\Index.cshtml" />
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
     <Content Include="Views\Shared\AlbumPartialView.cshtml" />
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
@@ -552,6 +524,7 @@
     <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
     <Content Include="Views\Shared\CartProductPartialView.cshtml" />
     <Content Include="Views\Shared\CartPartialView.cshtml" />
+    <Content Include="Views\Pay\BuyProductPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -573,26 +546,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005301117165_AddData.resx">
-      <DependentUpon>202005301117165_AddData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006020437219_chinablue.resx">
-      <DependentUpon>202006020437219_chinablue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006020553290_NewEvent.resx">
-      <DependentUpon>202006020553290_NewEvent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006020707547_DelNews.resx">
-      <DependentUpon>202006020707547_DelNews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006040408434_Order.resx">
-      <DependentUpon>202006040408434_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006080626329_AddGiveBack.resx">
-      <DependentUpon>202006080626329_AddGiveBack.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006091033504_AddAlbumHits.resx">
-      <DependentUpon>202006091033504_AddAlbumHits.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006120342493_AddIndia.resx">
+      <DependentUpon>202006120342493_AddIndia.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

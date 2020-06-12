@@ -18,6 +18,9 @@ namespace Soulful.Models
 
         public string ClaimValue { get; set; }
 
+        [StringLength(128)]
+        public string AspNetUsers_Id { get; set; }
+
         public virtual AspNetUsers AspNetUsers { get; set; }
     }
 }

@@ -3,7 +3,7 @@ namespace Soulful.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class chinablue : DbMigration
+    public partial class AddIndia : DbMigration
     {
         public override void Up()
         {
