@@ -68,13 +68,17 @@ namespace Soulful.Models
         [EmailAddress]
         [Display(Name = "電子郵件")]
         public string Email { get; set; }
-
+        
         [Required]
-        [StringLength(100, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 6)]
+        [Phone]
+        [Display(Name ="行動電話")]
+        public string PhoneNumber { get; set; }
+        [Required]
+        [StringLength(25, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "密碼")]
         public string Password { get; set; }
-
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "確認密碼")]
         [Compare("Password", ErrorMessage = "密碼和確認密碼不相符。")]
