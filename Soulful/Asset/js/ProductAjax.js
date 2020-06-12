@@ -108,18 +108,24 @@ function Send() {
     if (dataisnull) {
         alert("欄位不可為空白");
     }
+
+    if (email.includes('@') == true) {
+        else {
+            $.ajax({
+                type: "GET",
+                url: "/GiveBack/CreateData",
+                data: { Name: name, Email: email, Subject: subject, Message: message },
+                dataType: "text",
+                success: function (response) {
+                    alert("感謝回饋");
+                }
+            });
+            input.forEach(item => {
+                item.value = "";
+            })
+        } 
+    }
     else {
-        $.ajax({
-            type: "GET",
-            url: "/GiveBack/CreateData",
-            data: { Name: name, Email: email, Subject: subject, Message: message },
-            dataType: "text",
-            success: function (response) {
-                alert("感謝回饋");
-            }
-        });
-        input.forEach(item => {
-            item.value = "";
-        })
-    } 
+        alert('email 必須為信箱格式');
+    }
 }
