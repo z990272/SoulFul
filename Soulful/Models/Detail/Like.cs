@@ -18,6 +18,9 @@ namespace Soulful.Models
         [StringLength(128)]
         public string User_id { get; set; }
 
+        [StringLength(128)]
+        public string AspNetUsers_Id { get; set; }
+
         public virtual AspNetUsers AspNetUsers { get; set; }
 
         public virtual Song Song { get; set; }

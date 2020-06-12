@@ -1,4 +1,5 @@
-﻿using Soulful.Models;
+﻿using Microsoft.Ajax.Utilities;
+using Soulful.Models;
 using Soulful.Repositories;
 using Soulful.ViewModels;
 using System;
@@ -14,9 +15,10 @@ namespace Soulful.Services
         public Album GetProductById(int Id)
         {
             SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-            var ProductById = AlbumRepository.GetAll().OrderBy(x => x.Album_id).FirstOrDefault(x => x.Album_id == Id);
+            var ProductById = AlbumRepository.GetAll().FirstOrDefault(x => x.Album_id == Id);
             return ProductById;
         }
+
         public IEnumerable<CardViewModel> GetSingerName()
         {
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);

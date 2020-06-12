@@ -13,8 +13,8 @@ namespace Soulful.Models
         {
             AspNetUserClaims = new HashSet<AspNetUserClaims>();
             AspNetUserLogins = new HashSet<AspNetUserLogins>();
-            Order = new HashSet<Order>();
             Like = new HashSet<Like>();
+            Order = new HashSet<Order>();
             AspNetRoles = new HashSet<AspNetRoles>();
         }
 
@@ -52,10 +52,10 @@ namespace Soulful.Models
         public virtual ICollection<AspNetUserLogins> AspNetUserLogins { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<Like> Like { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Like> Like { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetRoles> AspNetRoles { get; set; }

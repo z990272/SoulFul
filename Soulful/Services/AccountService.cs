@@ -13,8 +13,8 @@ namespace Soulful.Services
         public void CreateGiveBack(GiveBackViewModel giveBack)
         {
             SoulfulContext context = new SoulfulContext();
-            SoulfulRepository<GiveBack> repository = new SoulfulRepository<GiveBack>(context);
-            GiveBack data = new GiveBack()
+            SoulfulRepository<GiveBacks> repository = new SoulfulRepository<GiveBacks>(context);
+            GiveBacks data = new GiveBacks()
             {
                 Name = giveBack.Name,
                 Email = giveBack.Email,

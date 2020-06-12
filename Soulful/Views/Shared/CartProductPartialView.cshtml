@@ -1,13 +1,13 @@
 ﻿
 
 @{
-    var currentCart = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
+    var currentCart = (IEnumerable<Soulful.ViewModels.CartViewModel>)Session["Cart"];
 }
 
 
 @foreach (var m in currentCart)
 {
-    <div class="main " style="box-sizing:border-box;">
+    <div class="main" style="box-sizing:border-box;">
         <div class="first d-flex ">
             <div class="left w-50 p-3 ">
                 <img src="~/Asset/image/@m.Pic" style="width:100%" />
@@ -16,11 +16,11 @@
                 <p>@m.Name</p>
                 <p>@m.Price</p>
                 <div class="count d-flex  ">
-                    <button id="reduce_@m.Id" onclick="reduce(count_@m.Id)" type="button" class="btn btn-dark minus">-</button>
+                    <button id="reduce_@m.Id" onclick="reduce(count_@m.Id,@m.Id)" type="button" class="btn btn-dark minus">-</button>
 
-                    <input id="count_@m.Id" class="w-25" value="1" type="text" />
+                    <input id="count_@m.Id" class="w-25" value="@m.Count" type="text" />
 
-                    <button id="add_@m.Id" onclick="add(count_@m.Id)" type="button" class="btn btn-dark add">+</button>
+                    <button id="add_@m.Id" onclick="add(count_@m.Id,@m.Id)" type="button" class="btn btn-dark add">+</button>
 
                     <button type="button" class="btn btn-dark ml-3" onclick="ReduceProductCount(@m.Id)">移除</button>
                 </div>

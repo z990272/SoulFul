@@ -13,7 +13,7 @@
         <h4>ConfirmOrder</h4>
     </div>
 </section>
-<<div class="pay">
+    <<div class="pay">
     <div class="container buy-program-box ">
         <div class="row">
             <div class="col-12 buy-program">
@@ -30,20 +30,18 @@
         <div class="row">
             <div class="col-12 statistics">
                 <table class="table-box">
-                    <tbody>
                     <thead class="thead-box">
-                    <th>商品</th>
-                    <th>數量</th>
-                    <th>單價</th>
-                    <th>刪除</th>
+                        <tr class="text-center">
+                            <td>商品</td>
+                            <td>專輯名稱</td>
+                            <td>數量</td>
+                            <td>單價</td>
+                            <td>總價</td>
+                            <td>刪除</td>
+                        </tr>
+
                     </thead>
-                    <tr class="tbody-tr">
-                        <td><img src="https://fakeimg.pl/100/"></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td><i class="fas fa-trash-alt"></i></td>
-                    </tr>
-                    </tbody>
+                    @Html.Partial("BuyProductPartialView")
                 </table>
 
             </div>
@@ -52,14 +50,14 @@
             <div class="row total">
                 <div class="col-12 col-md-6 btn-box">
                     <button type="button" class="btn btn-back">上一步</button>
-                  
+
                 </div>
                 <div class="col-12 col-md-6 btn-box">
-                  
+
                     <button type="button" class="btn btn-secondary">結帳</button>
                 </div>
             </div>
-          
+
         </div>
     </div>
 
@@ -87,7 +85,7 @@
                 </section>
                 <section>
                     <div class=" money">小計金額</div>
-                    <div class=" money">$200</div>
+                    <div class=" money"></div>
                 </section>
             </div>
         </div>

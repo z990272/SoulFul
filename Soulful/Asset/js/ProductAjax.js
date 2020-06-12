@@ -28,17 +28,32 @@ var count = document.getElementById("count");
 
 
 //Add
-function add(count_Id) {
+function add(count_Id, ProductId) {
     var Add = count_Id.value;
     Add++;
     count_Id.value = Add;
+
+    $.ajax({
+        type: "POST",
+        url: "/Shopping/AddCount",
+        data: { ProductId: ProductId },
+        dataType: "text",
+    });
 }
 //Reduce
-function reduce(count_Id) {
+function reduce(count_Id, ProductId) {
     var Reduce = count_Id.value;
     if (Reduce > 1) {
         Reduce--;
         count_Id.value = Reduce;
+
+        $.ajax({
+            type: "POST",
+            url: "/Shopping/ReduceCount",
+            data: { ProductId: ProductId },
+            dataType: "text",
+        });
+
     }
     else {
         count_Id.value = 1;

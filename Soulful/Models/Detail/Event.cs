@@ -13,13 +13,12 @@ namespace Soulful.Models
         public int Event_id { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(256)]
         public string Name { get; set; }
 
         public int Singer_id { get; set; }
 
         public DateTime Datetime { get; set; }
-
 
         [Required]
         [StringLength(64)]
