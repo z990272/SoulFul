@@ -2,25 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Razor.Generator;
 
 namespace Soulful.ViewModels
 {
-    public class AlbumViewModel
+    public class HitViewModel
     {
-        public decimal Price { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public string Pic { get; set; }
 
         public string Singer { get; set; }
 
-        public string About { get; set; }
+        public int WeekHits { get; set; }
 
-        public int Id { get; set; }
+        public int MonthHits { get; set; }
 
-        public string Language { get; set; }
-
+        public int TotalHits { get; set; }
     }
-
 }

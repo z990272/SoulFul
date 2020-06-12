@@ -102,273 +102,35 @@
         <div class="row">
 
             <div class="col-12 col-lg-4">
-                <div class="weeks_top_area mb-100">
+                <div class="weeks_top_area mb-100 week_hits">
                     <div class="section_heading text-left mb-50">
                         <p>See what’s new</p>
                         <h2>This week’s top</h2>
                     </div>
 
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Sam Smith</h6>
-                            <p>Underground</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Power Play</h6>
-                            <p>In my mind</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Cristinne Smith</h6>
-                            <p>My Music</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>The Music Band</h6>
-                            <p>Underground</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Creative Lyrics</h6>
-                            <p>Songs and stuff</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>The Culture</h6>
-                            <p>Pop Songs</p>
-                        </div>
-                    </div>
+                    @Html.Partial("_WeekHitsPartialView")
                 </div>
             </div>
 
             <div class="col-12 col-lg-4">
-                <div class="weeks_top_area mb-100">
+                <div class="weeks_top_area mb-100 month_hits">
                     <div class="section_heading text-left mb-50">
                         <p>See what’s new</p>
-                        <h2>This week’s top</h2>
+                        <h2>This Month’s top</h2>
                     </div>
 
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Sam Smith</h6>
-                            <p>Underground</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Power Play</h6>
-                            <p>In my mind</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Cristinne Smith</h6>
-                            <p>My Music</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>The Music Band</h6>
-                            <p>Underground</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>Creative Lyrics</h6>
-                            <p>Songs and stuff</p>
-                        </div>
-                    </div>
-
-                    <div class="single_top_item d-flex">
-                        <div class="thumbnail">
-                            <img src="~/Asset/image/asset 19.jpeg" alt="">
-                        </div>
-                        <div class="content_">
-                            <h6>The Culture</h6>
-                            <p>Pop Songs</p>
-                        </div>
-                    </div>
+                    @Html.Partial("_MonthHitsPartialView")
                 </div>
             </div>
 
             <div class="col-12 col-lg-4">
-                <div class="new_hits_area mb-100">
+                <div class="new_hits_area mb-100 total_hits">
                     <div class="section_heading text-left mb-50">
                         <p>See what’s new</p>
-                        <h2>New Hits</h2>
+                        <h2>Total Hits</h2>
                     </div>
 
-                    <div class="single_new_item d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="thumbnail">
-                                <img src="~/Asset/image/asset 19.jpeg" alt="">
-                            </div>
-                            <div class="content_">
-                                <h6>Sam Smith</h6>
-                                <p>Underground</p>
-                            </div>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls=""
-                                   style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause" title=""><a href="#"></a></div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="single_new_item d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="thumbnail">
-                                <img src="~/Asset/image/asset 19.jpeg" alt="">
-                            </div>
-                            <div class="content_">
-                                <h6>Power Play</h6>
-                                <p>In my mind</p>
-                            </div>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls=""
-                                   style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause" title=""><a href="#"></a></div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="single_new_item d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="thumbnail">
-                                <img src="~/Asset/image/asset 19.jpeg" alt="">
-                            </div>
-                            <div class="content_">
-                                <h6>Cristinne Smith</h6>
-                                <p>My Music</p>
-                            </div>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls=""
-                                   style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause" title=""><a href="#"></a></div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="single_new_item d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="thumbnail">
-                                <img src="~/Asset/image/asset 19.jpeg" alt="">
-                            </div>
-                            <div class="content_">
-                                <h6>The Music Band</h6>
-                                <p>Underground</p>
-                            </div>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls=""
-                                   style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause" title=""><a href="#"></a></div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="single_new_item d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="thumbnail">
-                                <img src="~/Asset/image/asset 19.jpeg" alt="">
-                            </div>
-                            <div class="content_">
-                                <h6>Creative Lyrics</h6>
-                                <p>Songs and stuff</p>
-                            </div>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls=""
-                                   style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause" title=""><a href="#"></a></div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="single_new_item d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="thumbnail">
-                                <img src="~/Asset/image/asset 19.jpeg" alt="">
-                            </div>
-                            <div class="content_">
-                                <h6>The Culture</h6>
-                                <p>Pop Songs</p>
-                            </div>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls=""
-                                   style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause" title=""><a href="#"></a></div>
-                        </div>
-                    </div>
+                    @Html.Partial("_TotalHitsPartialView")
                 </div>
             </div>
         </div>

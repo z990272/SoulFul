@@ -16,10 +16,14 @@ namespace Soulful.Controllers
         public ActionResult Index()
         {
             ProductService productService = new ProductService();
-            
+
+            ViewData["WeekHits"] = productService.GetWeekHits();
+            ViewData["MonthHits"] = productService.GetMonthHits();
+            ViewData["TotalHits"] = productService.GetTotalHits();
 
             return View(productService.GetSingerName());
         }  
+
         
 
     }

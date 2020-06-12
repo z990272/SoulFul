@@ -26,9 +26,7 @@ namespace Soulful.Services
                                    About = Album.About,
                                    Pic = Album.Pic,
                                    Singer = Singer.Name,
-                                   Id = Album.Album_id,
-                                  
-                                  
+                                   Id = Album.Album_id,                                  
                                };
             return albumContext.ToList();
         }

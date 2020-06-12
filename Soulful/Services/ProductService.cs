@@ -38,5 +38,71 @@ namespace Soulful.Services
 
         }
 
+        public List<HitViewModel> GetWeekHits()
+        {
+            SoulfulContext context = new SoulfulContext();
+            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
+            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
+
+            var albumContext = from Album in AlbumRepository.GetAll()
+                               join Singer in SingerRepository.GetAll()
+                               on Album.Singer_id equals Singer.Singer_id
+                               orderby Album.WeekHits descending
+                               select new HitViewModel
+                               {
+                                   Name = Album.Album_Name,
+                                   Pic = Album.Pic,
+                                   Singer = Singer.Name,
+                                   WeekHits = Album.WeekHits,
+                                   MonthHits = Album.MonthHits,
+                                   TotalHits = Album.Hits
+                               };
+            return albumContext.ToList();
+        }
+
+        public List<HitViewModel> GetMonthHits()
+        {
+            SoulfulContext context = new SoulfulContext();
+            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
+            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
+
+            var albumContext = from Album in AlbumRepository.GetAll()
+                               join Singer in SingerRepository.GetAll()
+                               on Album.Singer_id equals Singer.Singer_id
+                               orderby Album.MonthHits descending
+                               select new HitViewModel
+                               {
+                                   Name = Album.Album_Name,
+                                   Pic = Album.Pic,
+                                   Singer = Singer.Name,
+                                   WeekHits = Album.WeekHits,
+                                   MonthHits = Album.MonthHits,
+                                   TotalHits = Album.Hits
+                               };
+            return albumContext.ToList();
+        }
+        public List<HitViewModel> GetTotalHits()
+        {
+            SoulfulContext context = new SoulfulContext();
+            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
+            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
+
+            var albumContext = from Album in AlbumRepository.GetAll()
+                               join Singer in SingerRepository.GetAll()
+                               on Album.Singer_id equals Singer.Singer_id
+                               orderby Album.Hits descending
+                               select new HitViewModel
+                               {
+                                   Id = Album.Album_id,
+                                   Name = Album.Album_Name,
+                                   Pic = Album.Pic,
+                                   Singer = Singer.Name,
+                                   WeekHits = Album.WeekHits,
+                                   MonthHits = Album.MonthHits,
+                                   TotalHits = Album.Hits
+                               };
+            return albumContext.ToList();
+        }
+
     }
 }

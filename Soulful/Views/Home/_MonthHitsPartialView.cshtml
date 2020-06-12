@@ -1,0 +1,12 @@
+﻿@foreach (var m in (List<Soulful.ViewModels.HitViewModel>)ViewData["MonthHits"])
+{
+    <div class="single_top_item d-flex">
+        <div class="thumbnail">
+            <img src="~/Asset/image/@m.Pic" alt="">
+        </div>
+        <div class="content_">
+            <h6>@m.Name</h6>
+            <p>@m.Singer</p>
+        </div>
+    </div>
+}
