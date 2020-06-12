@@ -1,20 +1,20 @@
-﻿@model IEnumerable<Soulful.ViewModels.AlbumViewModel>
+﻿@model IEnumerable<Soulful.Repositories.AlbumRepository.AlbumCard>
 
 @foreach (var m in Model)
 {
     <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item">
-        <div class="single-album" id="@m.Id" onclick="show(this)">
+        <div class="single-album" id="@m.Album_id" onclick="show(this)">
             <img src="~/Asset/image/@m.Pic" alt="" class="d-block w-100">
         </div>
         <div class="album-txt">
             <a href="">
-                <h5>@m.Name</h5>
+                <h5>@m.Album_Name</h5>
             </a>
-            <p>@m.Singer</p>
+            <p>@m.Name</p>
         </div>
     </div>
 
-    <div class="modal fade" id="modalQuickView_@m.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="modalQuickView_@m.Album_id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -43,7 +43,7 @@
                         <div class="col-lg-7">
                             <div class="album-title-box">
                                 <h2 class=" product-name">
-                                    <strong>@m.Singer</strong>
+                                    <strong>@m.Name</strong>
                                 </h2>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">&times; </button>
                             </div>
@@ -60,7 +60,7 @@
                                         <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
                                            aria-controls="collapseOne1">
                                             <h5 class="mb-0">
-                                                @m.Name
+                                                @m.Album_Name
                                             </h5>
                                         </a>
                                     </div>
@@ -97,7 +97,7 @@
                                         </span>
                                     </h4>
                                     <div class="order">
-                                        <button class="btn buy-btn" onclick="postValue(@m.Id)">訂購</button>
+                                        <button class="btn buy-btn" onclick="postValue(@m.Album_id)">訂購</button>
                                     </div>
                                 </div>
                             </div>

@@ -1,4 +1,5 @@
-﻿using Soulful.Services;
+﻿using Soulful.Repositories;
+using Soulful.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,31 @@ namespace Soulful.Controllers
 {
     public class AlbumController : Controller
     {
-        // GET: Album
-        public ActionResult Albums()
+        private AlbumRepository _ar;
+        public AlbumController()
         {
-           AlbumModalService albumModalService = new AlbumModalService();
-            ViewData["Language"] = albumModalService.GetLanguage();
-            return View(albumModalService.GetModalinform());
+            _ar = new AlbumRepository();
+        }
+        // GET: Album
+        //public ActionResult Albums()
+        //{
+        //    //AlbumModalService albumModalService = new AlbumModalService();
+        //    // ViewData["Language"] = albumModalService.GetLanguage();
+        //    //return View(albumModalService.GetModalinform());
+
+        //    var language = _ar.getLanguages();
+        //    ViewBag.Language = language;
+        //    var album = _ar.getAlbums("All");
+        //    ViewData["Album"] = album;
+        //    return View();
+        //}
+        public ActionResult Albums(string lan)
+        {
+            var language = _ar.getLanguages();
+            ViewBag.Language = language;
+            var album = _ar.getAlbums(lan) ;
+            ViewData["Album"] = album;
+            return View();
         }
     }
 }

@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -208,6 +211,7 @@
     <Compile Include="Data\SoulfulContext.cs" />
     <Compile Include="Models\Detail\Style.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Repositories\AlbumRepository.cs" />
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CartViewModel.cs" />

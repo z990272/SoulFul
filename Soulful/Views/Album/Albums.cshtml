@@ -23,12 +23,20 @@
 </section>
 <div class="container category-box">
     <div class="row justify-content-center text-center">
-     @Html.Partial("LanguagePartailView")
+
+        <div class="browse-categories">
+            <a href="@Url.Action("Albums", "Album", new { lan = "All" }, null)">ALL</a>
+            @foreach (var m in ViewBag.Language)
+            {
+                <a href="@Url.Action("Albums", "Album",new { lan = m.Language_type })">@m.Language_type</a>
+            }
+        </div>
+    
     </div>
 </div>
 <div class="container product-area">
     <div class="row">
-        @Html.Partial("AlbumPartialView")
+        @Html.Partial("AlbumPartialView", ViewData["Album"]);
     </div>
 </div>
 
