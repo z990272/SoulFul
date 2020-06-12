@@ -525,6 +525,7 @@
     <Content Include="Views\Shared\CartProductPartialView.cshtml" />
     <Content Include="Views\Shared\CartPartialView.cshtml" />
     <Content Include="Views\Pay\BuyProductPartialView.cshtml" />
+    <Content Include="Views\Shared\LanguagePartailView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
