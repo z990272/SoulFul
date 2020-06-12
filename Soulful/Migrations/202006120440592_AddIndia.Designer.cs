@@ -13,7 +13,7 @@ namespace Soulful.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202006120342493_AddIndia"; }
+            get { return "202006120440592_AddIndia"; }
         }
         
         string IMigrationMetadata.Source
