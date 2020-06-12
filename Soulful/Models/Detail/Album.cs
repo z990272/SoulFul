@@ -40,6 +40,8 @@ namespace Soulful.Models
         public decimal Price { get; set; }
 
         public int Hits { get; set; }
+        public int WeekHits { get; set; }
+        public int MonthHits { get; set; }
 
         public virtual Singer Singer { get; set; }
 
