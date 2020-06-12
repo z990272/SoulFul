@@ -13,7 +13,7 @@ namespace Soulful.Controllers
         public ActionResult Albums()
         {
            AlbumModalService albumModalService = new AlbumModalService();
-
+            ViewData["Language"] = albumModalService.GetLanguage();
             return View(albumModalService.GetModalinform());
         }
     }

@@ -186,6 +186,10 @@
     <Compile Include="Migrations\202006120440592_AddIndia.Designer.cs">
       <DependentUpon>202006120440592_AddIndia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006120808405_AddWeekMonthHits.cs" />
+    <Compile Include="Migrations\202006120808405_AddWeekMonthHits.Designer.cs">
+      <DependentUpon>202006120808405_AddWeekMonthHits.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
@@ -549,6 +553,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006120440592_AddIndia.resx">
       <DependentUpon>202006120440592_AddIndia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006120808405_AddWeekMonthHits.resx">
+      <DependentUpon>202006120808405_AddWeekMonthHits.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
