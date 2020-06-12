@@ -527,14 +527,14 @@
     <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
-    <Content Include="Views\Shared\AlbumPartialView.cshtml" />
+    <Content Include="Views\Album\AlbumPartialView.cshtml" />
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
     <Content Include="Views\Pay\PayView.cshtml" />
     <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
     <Content Include="Views\Shared\CartProductPartialView.cshtml" />
     <Content Include="Views\Shared\CartPartialView.cshtml" />
     <Content Include="Views\Pay\BuyProductPartialView.cshtml" />
-    <Content Include="Views\Shared\LanguagePartailView.cshtml" />
+    <Content Include="Views\Album\LanguagePartailView.cshtml" />
     <Content Include="Views\Home\_WeekHitsPartialView.cshtml" />
     <Content Include="Views\Home\_MonthHitsPartialView.cshtml" />
     <Content Include="Views\Home\_TotalHitsPartialView.cshtml" />
