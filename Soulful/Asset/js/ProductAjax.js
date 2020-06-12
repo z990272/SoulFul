@@ -110,20 +110,20 @@ function Send() {
     }
 
     if (email.includes('@') == true) {
-        else {
-            $.ajax({
-                type: "GET",
-                url: "/GiveBack/CreateData",
-                data: { Name: name, Email: email, Subject: subject, Message: message },
-                dataType: "text",
-                success: function (response) {
-                    alert("感謝回饋");
-                }
-            });
-            input.forEach(item => {
-                item.value = "";
-            })
-        } 
+
+        $.ajax({
+            type: "GET",
+            url: "/GiveBack/CreateData",
+            data: { Name: name, Email: email, Subject: subject, Message: message },
+            dataType: "text",
+            success: function (response) {
+                alert("感謝回饋");
+            }
+        });
+        input.forEach(item => {
+            item.value = "";
+        })
+
     }
     else {
         alert('email 必須為信箱格式');
