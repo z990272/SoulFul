@@ -21,9 +21,9 @@
         background-repeat: no-repeat;
     }
 }
+
 body {
     /*background-color: #e3ded5;*/
-  
 }
 
 .block {
@@ -41,16 +41,17 @@ body {
     background-color: #fff;
     padding-top: 40px;
 }
+
 .pic {
     position: relative;
 }
 
-.pic div {
+    .pic div {
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
-}
+    }
 
 .container {
     margin: auto;
@@ -69,6 +70,7 @@ body {
     font-weight: bolder;
     font-size: larger;
 }
+
 .money {
     text-align: center;
     font-weight: bold;
@@ -80,6 +82,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .col-12 button {
     text-align: center;
 }
@@ -110,22 +113,21 @@ body {
     font-weight: bolder;
     justify-content: space-around;
 }
-.btn-secondary {
-    background-color: rgb(44, 54, 110);
-    color: #e3ded5;
-    font-weight: bold;
+
+.btn-secondary:hover {
+    background-color: black;
+    font-weight: bolder;
 }
+
 .btn-keep-buy:hover {
     background: -webkit-linear-gradient(left, rgb(44, 54, 110), #bf2fcb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: larger;
 }
 
 .btn-secondary:hover {
     background-color: black;
     font-weight: bolder;
-    font-size: larger;
 }
 
 
@@ -138,18 +140,20 @@ body {
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.delete-btn{
-    border:none;
+
+.delete-btn {
+    border: none;
 }
-.buy-program
-{
-    text-align:center;
-  
+
+.buy-program {
+    text-align: center;
 }
+
 .thead-box {
     font-size: larger;
     font-weight: bolder;
 }
+
 .total {
     font-size: larger;
     font-weight: bolder;

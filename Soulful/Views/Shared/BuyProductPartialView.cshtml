@@ -1,0 +1,25 @@
+﻿@{
+    var currentCart = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
+}
+
+
+@if (currentCart != null)
+{
+        foreach (var m in currentCart)
+        {
+
+
+            <tr class="tbody-tr" id="Product_@m.Id">
+                <td class="w-25"><img class="w-50" src="~/Asset/image/@m.Pic"></td>
+                <td>@m.Name</td>
+                <td>@m.Count</td>
+                <td>@m.Price</td>
+                <td class="totalAmount">@(m.Price*m.Count)</td>
+                <td><i class="fas fa-trash-alt delete" style="cursor:pointer" onclick="RemoveProduct(Product_@m.Id,@m.Id)"></i></td>
+            </tr>
+
+        }
+    
+}
+
+

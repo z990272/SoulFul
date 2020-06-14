@@ -27,18 +27,10 @@
                         @Html.Partial("CartProductPartialView")
                     }
                 </div>
-                <!--Basic textarea-->
-                <div class="md-form">
-                    <label for="form79textarea">備註</label>
-                    <textarea type="text" id="formtextarea" class="md-textarea form-control" rows="3"></textarea>
-                </div>
-                <div class="total">
-                    <p>總金額:</p>
-                </div>
 
                 <!--Footer-->
                 <div class="modal-footer justify-content-center">
-                    <a href="@Url.Action("PayView","Pay",new { })" id="checkout" type="button" class="btn btn-dark waves-effect">前往結帳</a>
+                    <a href="@Url.Action("Order","Order",new { })" id="checkout" type="button" class="btn btn-dark waves-effect">前往結帳</a>
                 </div>
             </div>
         </div>

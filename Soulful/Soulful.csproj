@@ -172,15 +172,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
-    <Compile Include="Controllers\ConfirmOrderController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\GiveBackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
-    <Compile Include="Controllers\PayController.cs" />
-    <Compile Include="Controllers\RankController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -192,6 +190,10 @@
     <Compile Include="Migrations\202006120808405_AddWeekMonthHits.cs" />
     <Compile Include="Migrations\202006120808405_AddWeekMonthHits.Designer.cs">
       <DependentUpon>202006120808405_AddWeekMonthHits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006140626128_stringRecieverPhone.cs" />
+    <Compile Include="Migrations\202006140626128_stringRecieverPhone.Designer.cs">
+      <DependentUpon>202006140626128_stringRecieverPhone.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
@@ -213,6 +215,7 @@
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Repositories\AlbumRepository.cs" />
     <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\OrderService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CartViewModel.cs" />
     <Compile Include="ViewModels\GiveBackViewModel.cs" />
@@ -228,6 +231,7 @@
     <Compile Include="ViewModels\AlbumViewModel.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
     <Compile Include="ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
@@ -524,27 +528,29 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Album\Albums.cshtml" />
-    <Content Include="Views\Rank\Index.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\Home\HomeCardPartialView.cshtml" />
     <Content Include="Views\Album\AlbumPartialView.cshtml" />
     <Content Include="Views\Event\EventCardPartialView.cshtml" />
-    <Content Include="Views\Pay\PayView.cshtml" />
-    <Content Include="Views\ConfirmOrder\ConfirmOrderView.cshtml" />
+    <Content Include="Views\Order\Order.cshtml" />
+    <Content Include="Views\Order\ConfirmOrder.cshtml" />
     <Content Include="Views\Shared\CartProductPartialView.cshtml" />
     <Content Include="Views\Shared\CartPartialView.cshtml" />
-    <Content Include="Views\Pay\BuyProductPartialView.cshtml" />
+    <Content Include="Views\Shared\BuyProductPartialView.cshtml" />
     <Content Include="Views\Album\LanguagePartailView.cshtml" />
     <Content Include="Views\Home\_WeekHitsPartialView.cshtml" />
     <Content Include="Views\Home\_MonthHitsPartialView.cshtml" />
     <Content Include="Views\Home\_TotalHitsPartialView.cshtml" />
+    <Content Include="Views\CRUD\Create.cshtml" />
+    <Content Include="Views\CRUD\Delete.cshtml" />
+    <Content Include="Views\CRUD\Details.cshtml" />
+    <Content Include="Views\CRUD\Edit.cshtml" />
+    <Content Include="Views\CRUD\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
     <Folder Include="Models\Default\" />
-    <Folder Include="Views\GiveBack\" />
-    <Folder Include="Views\Order\" />
     <Folder Include="Views\Shopping\" />
   </ItemGroup>
   <ItemGroup>
@@ -564,6 +570,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006120808405_AddWeekMonthHits.resx">
       <DependentUpon>202006120808405_AddWeekMonthHits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006140626128_stringRecieverPhone.resx">
+      <DependentUpon>202006140626128_stringRecieverPhone.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

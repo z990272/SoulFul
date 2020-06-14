@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "PayView";
+}
+@section topCSS{
+
+    <link href="~/Asset/css/Cheack.css" rel="stylesheet" />
+}
+<section class="pic">
+    <div class="block"></div>
+    <div class="bradcumb-content">
+        <p>I Like It</p>
+        <h4>ConfirmOrder</h4>
+    </div>
+</section>
+<div class="confirm">
+    <div class="container buy-program-box ">
+        <div class="row">
+            <div class="col-12 buy-program">
+                <div class="alert alert-light col-12" style="width: 550px;" role="alert">
+                    確認購物清單 <i class="fas fa-arrow-circle-right"></i>
+                </div>
+                @*<div class="alert alert-dark" style="width: 550px;" role="alert">
+                        選擇付款方式 <i class="fas fa-cart-arrow-down"></i>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 statistics">
+                <table class="table-box">
+                    <thead class="thead-box">
+                        <tr class="text-center">
+                            <td>商品</td>
+                            <td>專輯名稱</td>
+                            <td>數量</td>
+                            <td>單價</td>
+                            <td>總價</td>
+                            <td>刪除</td>
+                        </tr>
+
+                    </thead>
+                    <tbody id="ShowCartProduct">
+                        @Html.Partial("BuyProductPartialView")
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row total ">
+                @*<div class="col-12 col-md-6 btn-box">
+                        <button type="button" class="btn btn-back">上一步</button>
+
+                    </div>*@
+
+                <div class="col-12 col-md-4 btn-box">
+                    @*<span class="total"><i class="fas fa-donate" style="font-weight: bold;"></i>Count:</span>*@
+                    <p><i class="fas fa-coins"></i>$ : <span>@Model</span></p>
+
+                </div>
+
+
+
+                <div class="col-12 btn-box">
+                    <a href="@Url.Action("ConfirmOrder","Order",new { })" type="button" class="col-12 btn btn-secondary">下一步</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*<div class="container">
+                <div class="row pay-row">
+                    <div class="col-12 d-flex pay-program">
+                        <section>
+                            <h5>付款方式</h5>
+                            <select class="md-form mdb-select colorful-select dropdown-primary">
+                                <option value="" disabled selected>選擇付款方式...</option>
+                                <option value="1">ATM轉帳</option>
+                                <option value="2">線上刷卡</option>
+                                <option value="3">超商取貨</option>
+                            </select>
+                        </section>
+
+                        <section>
+                            <h5>運送方式</h5>
+                            <select class="md-form mdb-select colorful-select dropdown-primary">
+                                <option value="" disabled selected>選擇運送方式...</option>
+                                <option value="1">黑貓宅配</option>
+                                <option value="2">自取</option>
+                            </select>
+                        </section>
+                        <section>
+                            <div class=" money">小計金額</div>
+                            <div class=" money"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+</div>

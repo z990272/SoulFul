@@ -24,6 +24,7 @@ function showProduct(_albumId) {
     });
 }
 
+
 var count = document.getElementById("count");
 
 
@@ -73,16 +74,26 @@ function ReduceProductCount(_albumId) {
     });
 }
 
-function RemoveProduct(_albumId) {
+function RemoveProduct(Product_id, _albumId) {
     $.ajax({
         type: "POST",
         url: "/Shopping/RemoveProduct",
         data: { ProductId: _albumId },
         dataType: "text",
         success: function (response) {
-            $("#ProductShow").html(response);
+            ReduceProductCount(_albumId);
+            document.getElementById('ShowCartProduct').removeChild(Product_id);
+            GetTotalAmount();
         }
     });
+}
+function GetTotalAmount() {
+    var totalAmount = document.querySelector('.total p span');
+    var temp = 0;
+    document.querySelectorAll('.totalAmount').forEach(item => {
+        temp += Number.parseFloat(item.textContent);
+    });
+    totalAmount.textContent = temp;
 }
 
 function Send() {

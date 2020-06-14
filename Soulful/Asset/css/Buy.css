@@ -117,9 +117,10 @@
         color: #fff;
     }
 
-.btn-secondary:hover {
-    background-color: black;
-    font-weight: bolder;
+.btn-secondary {
+    background-color: rgb(44, 54, 110);
+    color: #e3ded5;
+    font-weight: bold;
 }
 
 .pay {
