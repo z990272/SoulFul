@@ -57,8 +57,15 @@
 .browse-categories{
     text-align: center;
 }
+.browse-categories a{
+    color:black;
+    display:flex;
+    margin:0px 10px;
+    justify-content:center;
+    display:inline-block;
+}
 
-.album-info a{
+.album-info a {
     color: #000;
 }
 
