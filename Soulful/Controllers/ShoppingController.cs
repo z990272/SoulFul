@@ -87,7 +87,7 @@ namespace Soulful.Controllers
         public ActionResult RemoveProduct(int ProductId)
         {
 
-            return PartialView("CartProductPartialView");
+            return PartialView("BuyProductPartialView");
         }
         [HttpPost]
         public ActionResult ReduceCount(int ProductId)
