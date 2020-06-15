@@ -84,12 +84,6 @@ namespace Soulful.Controllers
             return cartItems.Count;
         }
         [HttpPost]
-        public ActionResult RemoveProduct(int ProductId)
-        {
-
-            return PartialView("BuyProductPartialView");
-        }
-        [HttpPost]
         public ActionResult ReduceCount(int ProductId)
         {
             cartItems = (List<CartViewModel>)Session["Cart"]; //將Session中的購物車記錄還原成集合
