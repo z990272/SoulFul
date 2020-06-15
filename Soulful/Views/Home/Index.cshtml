@@ -3,8 +3,13 @@
 }
 @section topCSS{
     <link rel="stylesheet" href="~/Asset/css/Home.css" />
+    <link href="~/Asset/css/modal.css" rel="stylesheet" />
+    <link href="~/Content/Slick/slick-theme.css" rel="stylesheet" />
+    <link href="~/Content/Slick/slick.css" rel="stylesheet" />
 }
 @section endJS{
+    <script src="~/Scripts/Slick/slick.js"></script>
+    <script src="~/Asset/js/Slick.js"></script>
     <script src="~/Asset/js/yt_modal.js"></script>
 }
 <!-- hero_image -->
@@ -16,7 +21,7 @@
                 <div class="hero-text w-100">
                     <h6 class="fadeInUp">Latest album</h6>
                     <h2 class="fadeInUp mb-3">Beyond Time</h2>
-                    <a class="soul_btn mt-2" href="">Discover</a>
+                    @Html.ActionLink("Discover", "Albums", "Album", new { lan = "All" }, new { @class = "soul_btn mt-2" })
                 </div>
             </div>
         </div>
@@ -51,39 +56,16 @@
                         <h2>Buy What’s New</h2>
                     </div>
                     <p>
-                        Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam
-                        varius
-                        rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget
-                        lobortis
-                        nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.
-                        Donec
-                        in velit non elit pulvinar pellentesque et non eros.
+                        Soulful 創立於1976年，在台北西門商圈經營。 40年以來，一直堅持「專業及多元化音樂」 ，這二個原則讓我們在競爭激烈的唱片業中依然屹立不搖。
+
+
+                        「專業」---我們要求員工對於所負責的部門，能夠具有一定程度的專業知識，以提供最好的服務給消費者。
+
+                        秉持服務廣大消費者的原則，除了提供流行音樂、影音產品， 對於國內沒有代理的CD，就以進口的方式來服務需要的顧客。 在這裡有代訂東洋、西洋、古典、粵語等音樂商品，只要有該商品的相關資料，且公司未斷貨，我們會盡力找到。
+
+                        「多元化」---我們訂購各種領域的音樂CD， 不在乎銷售量，只在乎消費者可以在 Soulful 找到所要的CD，我們始終相信‘每一種音樂都有人欣賞 ’ ‘每一個人都有喜歡的音樂 ’我們追求的目標是使 Soulful 成為「音樂雜貨店」，期待以多元化的音樂商品來滿足您對音樂的需求。
                     </p>
-                    <div class="song_play_area mt-auto">
-                        <div class="song_name">
-                            <p class="m-0">01. Main Hit Song</p>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause " title=""><a href="#"></a></div>
-                            <div class="audioplayer_time audioplayer_time_current my-auto ml-3">00:00</div>
-                            <div class="audioplayer_bar my-auto ">
-                                <div class="audioplayer_bar_loaded"></div>
-                                <div class="audioplayer_bar_played"></div>
-                            </div>
-                            <div class="audioplayer_time audioplayer_time_duration my-auto">…</div>
-                            <div class="audioplayer_volume my-auto ml-1 d-flex">
-                                <div class="audioplayer_volume_button" title=""><a href="#"></a></div>
-                                <div class="audioplayer_volume_adjust ml-1 ">
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
