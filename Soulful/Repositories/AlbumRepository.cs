@@ -45,14 +45,14 @@ namespace Soulful.Repositories
                 string sql;
                 if (language == "All")
                 {
-                    sql = @"select a.Album_id ,a.Pic ,a.About , a.Album_Name , s.Name
+                    sql = @"select a.Album_id ,a.Pic ,a.About , a.Album_Name , s.Name,a.Price
                             from Album a
                             inner join Singer s on s.Singer_id = a.Singer_id
                             inner join [Language] l on l.Language_id = s.Language_id";
                 }
                 else
                 {
-                    sql = $"select a.Album_id ,a.Pic ,a.About , a.Album_Name , s.Name from Album a inner join Singer s on s.Singer_id = a.Singer_id inner join[Language] l on l.Language_id = s.Language_id where l.Language_type = '{language}'";
+                    sql = $"select a.Album_id ,a.Pic ,a.About , a.Album_Name , s.Name , a.Price from Album a inner join Singer s on s.Singer_id = a.Singer_id inner join[Language] l on l.Language_id = s.Language_id where l.Language_type = '{language}'";
                 }
                 albums = conn.Query<AlbumCard>(sql).ToList();
 
@@ -65,7 +65,7 @@ namespace Soulful.Repositories
         {
             public int Album_id { get; set; }
             public string Pic { get; set; }
-
+            public decimal Price { get; set; }
             public string About { get; set; }
             public string Album_Name { get; set; }
             public string Name { get; set; }

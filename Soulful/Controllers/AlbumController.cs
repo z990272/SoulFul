@@ -34,7 +34,9 @@ namespace Soulful.Controllers
             ViewBag.Language = language;
             var album = _ar.getAlbums(lan) ;
             ViewData["Album"] = album;
+           
             return View();
         }
+
     }
 }

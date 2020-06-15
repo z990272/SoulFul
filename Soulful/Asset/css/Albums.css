@@ -367,10 +367,11 @@
     margin-top: 5px;
 }
 .album-txt h5{
-    color: #fff;
+    color: #000;
+    font-weight:bolder;
 }
     .album-txt p{
-        color:#dde2e6;
+        color:gray;
     }
     .album-txt a {
         text-decoration: none;
@@ -382,6 +383,7 @@
     -o-transform: scale(1.1);
     transform: scale(1.1);
     transition: transform .9s ease;
+    
 }
 .browse-categories button{
     border:none;
@@ -392,11 +394,11 @@
 }
 
 .product-area {
-    overflow: scroll;
-    height: 400px;
+    
+    
     margin-top: 100px;
     margin-bottom: 200px;
-    background-color:#000;
+   
 }
 .category-box{
     margin-top:100px;
