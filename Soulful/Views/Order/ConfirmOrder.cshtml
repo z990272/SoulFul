@@ -34,15 +34,6 @@
                     @Html.AntiForgeryToken()
                     <h4>OrderInformation</h4>
                     <hr />
-                    @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
-                    
-                    @*<div class="form-group">
-                        @Html.LabelFor(model => model.UserName, "UserName", htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-                        </div>
-                    </div>*@
 
                     <div class="form-group">
                         @Html.LabelFor(model => model.RecieverName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -70,45 +61,13 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Create" class="btn btn-default" />
+                            @Html.ActionLink("Previous", "Order", "", new { @class = "btn btn-keep-buy" })
+                            <input type="submit" value="完成訂單" class="btn btn-keep-buy" />
                         </div>
                     </div>
 
                 }
-                @*<table class="table-box">
-                        <thead class="thead-box">
-                            <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>UnitPrice</th>
-                                <th>Delete</th>
-                            </tr>
-
-                        </thead>
-                        <tbody>
-
-                            <tr class="tbody-tr">
-                                <td><img src="https://fakeimg.pl/100/"></td>
-                                <td style="font-size:large;font-weight: bold;">1</td>
-                                <td style="font-size:large;font-weight: bold;">100</td>
-                                <td style="font-size:large;font-weight: bold;color: black;"><i class="fas fa-trash-alt"></i></td>
-                            </tr>
-                        </tbody>
-                    </table>*@
-
             </div>
-        </div>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 col-md-4 money"><button type="button" class="btn btn-keep-buy">KeepBuy</button></div>
-                <div class="col-12 col-md-4 money"> <button type="button" class="btn btn-secondary">Next</button></div>
-                <div class="col-12 col-md-4 btn-box">
-                    <span class="total"><i class="fas fa-donate" style="font-weight: bold;"></i>Count</span>
-                    <p><i class="fas fa-coins"></i>$200</p>
-
-                </div>
-            </div>
-
         </div>
     </div>
 </div>

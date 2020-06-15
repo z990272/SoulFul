@@ -195,6 +195,10 @@
     <Compile Include="Migrations\202006140626128_stringRecieverPhone.Designer.cs">
       <DependentUpon>202006140626128_stringRecieverPhone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006150736418_Videos.cs" />
+    <Compile Include="Migrations\202006150736418_Videos.Designer.cs">
+      <DependentUpon>202006150736418_Videos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Detail\Album.cs" />
     <Compile Include="Models\Identity\AspNetRoles.cs" />
@@ -574,6 +578,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006140626128_stringRecieverPhone.resx">
       <DependentUpon>202006140626128_stringRecieverPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006150736418_Videos.resx">
+      <DependentUpon>202006150736418_Videos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
