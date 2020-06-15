@@ -100,3 +100,6 @@
 .head_area p {
     margin-bottom: 16px;
 }
+#socialLoginForm:hover{
+    background-color:#000;
+}
