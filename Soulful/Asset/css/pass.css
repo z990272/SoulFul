@@ -100,6 +100,21 @@
 .head_area p {
     margin-bottom: 16px;
 }
+.change-password {
+  
+    margin: auto;
+}
+.change-password-box{
+  margin-bottom: 100px;
+    margin-top: 100px;
+}
+.dl-horizontal {
+    text-align: center;
+    font-size:larger;
+}
+.dl-horizontal a{
+    font-size:25px;
+}
 #socialLoginForm:hover{
     background-color:#000;
 }
