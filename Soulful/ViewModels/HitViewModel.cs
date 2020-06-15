@@ -19,5 +19,7 @@ namespace Soulful.ViewModels
         public int MonthHits { get; set; }
 
         public int TotalHits { get; set; }
+
+        public string VideoUrl { get; set; }
     }
 }
