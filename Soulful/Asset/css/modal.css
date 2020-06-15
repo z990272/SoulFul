@@ -37,9 +37,7 @@
 /*.modal-body {
     background-color: black;
 }*/
-strong{
-    font-weight: 600;
-}
+
 .buy-btn {
     /*background-color: coral;*/
     background-color: #6d4c41;
@@ -67,6 +65,15 @@ strong{
 .grey-text s {
     color: #9a9fb0;
 }
-.product-name strong{
-    color:white;
+.product-name strong {
+    color: white;
+    font-family: Show fantasy font;
+    font-weight: 600;
+}
+.card-body p{
+    font-family: Microsoft JhengHei;
+}
+.card-header h5 {
+    font-family: Microsoft JhengHei;
+    font-weight:bolder;
 }
