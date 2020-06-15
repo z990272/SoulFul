@@ -6,15 +6,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebGrease.Css.Extensions;
 
 namespace Soulful.Services
 {
     public class OrderService
     {
-        SoulfulContext context = new SoulfulContext();
-        public void Create(OrderViewModel orderView, string userId)
+        private SoulfulContext context = new SoulfulContext();
+        public void Create(OrderViewModel orderView, string userId, List<CartViewModel> cartItems)
         {
-            SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
+            SoulfulRepository<Order> O_Repository = new SoulfulRepository<Order>(context);
+            SoulfulRepository<OrderDetail> Od_Repository = new SoulfulRepository<OrderDetail>(context);
 
             Order order = new Order()
             {
@@ -23,14 +25,28 @@ namespace Soulful.Services
                 RecieverAdress = orderView.RecieverAdress,
                 Datetime = DateTime.Now,
                 AspNetUsers_Id = userId
-
             };
 
 
+            O_Repository.Create(order);
 
-            //repository.Create(order);
+            context.SaveChanges();
 
-            //context.SaveChanges();
+
+            cartItems.ForEach(item =>
+            {
+                OrderDetail orderDetail = new OrderDetail()
+                {
+                    Order_id = order.Order_id,
+                    Album_id = item.Id,
+                    Count = item.Count,
+                    Price = item.Price
+                };
+
+                Od_Repository.Create(orderDetail);
+
+                context.SaveChanges();
+            });
         }
     }
 }

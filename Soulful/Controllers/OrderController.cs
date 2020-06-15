@@ -15,6 +15,7 @@ namespace Soulful.Controllers
     public class OrderController : Controller
     {
         // GET: Pay
+        [Authorize]
         public ActionResult Order()
         {
             var cartItems = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
@@ -33,19 +34,23 @@ namespace Soulful.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ConfirmOrder([Bind(Include = "RecieverName,RecieverPhone,RecieverAdress")] OrderViewModel orderView)
+        public ActionResult ConfirmOrder(OrderViewModel orderView)
         {
             OrderService orderService = new OrderService();
-
+            var cartItems = (List<CartViewModel>)Session["Cart"];
             if (ModelState.IsValid)
             {
                 var userId = HttpContext.User.Identity.GetUserId();
-                orderService.Create(orderView, userId);
-                return RedirectToAction("Index");
+                orderService.Create(orderView, userId, cartItems);
+                return RedirectToAction("Completed");
             }
 
             //ViewBag.AspNetUsers_Id = new SelectList(db.AspNetUsers, "Id", "Email", order.AspNetUsers_Id);
             return View(orderView);
+        }
+        public ActionResult Completed()
+        {
+            return View();
         }
     }
 }
