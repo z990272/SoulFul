@@ -25,7 +25,7 @@
     <div class="row justify-content-center text-center">
         <nav class="navbar-language navbar-expand-lg  ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">三</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="browse-categories collapse navbar-collapse">
@@ -37,6 +37,12 @@
 
 
                     }
+                    <form class="form-inline my-2 my-lg-0">
+                        @*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">*@
+                        @Html.TextBox("searching")<input type="submit" value="Search"/>
+                        @*<button class="search-btn  my-2 my-sm-0" type="submit" value="Search"><i class="fas fa-search"></i></button>*@
+                    </form>
+                
                 </div>
             </div>
         </nav>
