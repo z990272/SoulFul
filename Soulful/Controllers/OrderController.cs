@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using ECPay.Payment.Integration;
+using Microsoft.AspNet.Identity;
 using Soulful.Models;
 using Soulful.Repositories;
 using Soulful.Services;
@@ -52,5 +53,7 @@ namespace Soulful.Controllers
         {
             return View();
         }
+
     }
 }
+
