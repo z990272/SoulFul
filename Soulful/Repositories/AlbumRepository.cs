@@ -60,6 +60,7 @@ namespace Soulful.Repositories
             }
         }
 
+
         #region AlbumCard
         public class AlbumCard
         {
