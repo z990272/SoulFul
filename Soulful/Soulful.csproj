@@ -49,6 +49,10 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="ECPay.Payment.Integration, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EcPay\ECPay.Payment.Integration.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -192,6 +196,7 @@
     <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="EcPay.aspx.cs">
       <DependentUpon>EcPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EcPay.aspx.designer.cs">
       <DependentUpon>EcPay.aspx</DependentUpon>
