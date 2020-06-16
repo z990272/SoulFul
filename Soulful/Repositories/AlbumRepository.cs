@@ -59,6 +59,16 @@ namespace Soulful.Repositories
                 return albums;
             }
         }
+        public List<AlbumCard> getSearchs(string searching)
+        {
+            List<AlbumCard> searchs = null;
+            using (conn = new SqlConnection(connString))
+            {
+                string sql = @"select * from Album";
+                searchs = conn.Query<AlbumCard>(sql).ToList();
+            }
+            return searchs;
+        }
 
         #region AlbumCard
         public class AlbumCard
