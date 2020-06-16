@@ -365,7 +365,7 @@
     <Content Include="Asset\js\New.js" />
     <Content Include="Asset\js\ProductAjax.js" />
     <Content Include="Asset\js\rank.js" />
-    <Content Include="Asset\js\Slick.js" />
+    <Content Include="Asset\js\yt_modal.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />

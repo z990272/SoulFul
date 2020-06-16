@@ -371,3 +371,6 @@
         position: sticky;
     }
 }
+.modal-backdrop{
+    display: none !important;
+}

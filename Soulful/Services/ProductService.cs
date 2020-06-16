@@ -99,7 +99,8 @@ namespace Soulful.Services
                                    Singer = Singer.Name,
                                    WeekHits = Album.WeekHits,
                                    MonthHits = Album.MonthHits,
-                                   TotalHits = Album.Hits
+                                   TotalHits = Album.Hits,
+                                   VideoUrl = Album.Video
                                };
             return albumContext.ToList();
         }
