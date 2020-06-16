@@ -49,6 +49,10 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="ECPay.Payment.Integration, Version=1.0.0.7, Culture=neutral, PublicKeyToken=afb33c1e6a3b1bbd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ECPayAIO_Net\ECPay.Payment.Integration.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -361,6 +365,7 @@
     <Content Include="Asset\js\New.js" />
     <Content Include="Asset\js\ProductAjax.js" />
     <Content Include="Asset\js\rank.js" />
+    <Content Include="Asset\js\slick.js" />
     <Content Include="Asset\js\yt_modal.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -582,6 +587,9 @@
     <EmbeddedResource Include="Migrations\202006150736418_Videos.resx">
       <DependentUpon>202006150736418_Videos.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
