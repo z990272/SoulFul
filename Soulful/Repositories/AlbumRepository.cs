@@ -59,7 +59,7 @@ namespace Soulful.Repositories
                 return albums;
             }
         }
-       
+     
 
         #region AlbumCard
         public class AlbumCard
