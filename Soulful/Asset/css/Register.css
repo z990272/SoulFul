@@ -143,12 +143,9 @@
         font-size: larger;
     }
 
-.btn-box {
-   margin:auto;
-   
-}
-    .btn-box button{
-        margin:0px 20px;
+
+    .btn-box {
+       align-items:center;
       
     }
     .finish p {
@@ -158,3 +155,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+.btn-keep-buy a{
+    color:darkblue;
+}
