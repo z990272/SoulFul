@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EcPay.aspx.cs" Inherits="AioCheckOut.AioCheckOut" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AioCheckOut.aspx.cs" Inherits="AioCheckOut.AioCheckOut" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
