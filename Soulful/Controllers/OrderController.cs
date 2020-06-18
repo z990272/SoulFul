@@ -1,10 +1,11 @@
-﻿//using ECPay.Payment.Integration;
+﻿using ECPay.Payment.Integration;
 using Microsoft.AspNet.Identity;
 using Soulful.Models;
 using Soulful.Repositories;
 using Soulful.Services;
 using Soulful.ViewModels;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ExceptionServices;
@@ -29,6 +30,7 @@ namespace Soulful.Controllers
             return View(dec);
 
         }
+        [Authorize]
         public ActionResult ConfirmOrder()
         {
             return View();
@@ -43,17 +45,22 @@ namespace Soulful.Controllers
             {
                 var userId = HttpContext.User.Identity.GetUserId();
                 orderService.Create(orderView, userId, cartItems);
-                return RedirectToAction("Completed");
+                return Redirect("~/AioCheckOut.aspx");
             }
 
             //ViewBag.AspNetUsers_Id = new SelectList(db.AspNetUsers, "Id", "Email", order.AspNetUsers_Id);
             return View(orderView);
         }
+        [Authorize]
         public ActionResult Completed()
         {
-            return View();
+            OrderService service = new OrderService();
+            var FeedBack = service.GetEcPayOrderDetail();
+
+            return View(FeedBack);
         }
 
     }
+
 }
 
