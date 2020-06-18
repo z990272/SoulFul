@@ -18,5 +18,10 @@ namespace Soulful.ViewModels
         public string TradeAmt { get; set; }
         public string TradeDate { get; set; }
         public string TradeNo { get; set; }
+        public string CustomField1 { get; set; }
+        public string CustomField2 { get; set; }
+        public string CustomField3 { get; set; }
+        public string CustomField4 { get; set; }
+
     }
 }
