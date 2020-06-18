@@ -59,6 +59,19 @@ namespace Soulful.Repositories
                 return albums;
             }
         }
+        public IEnumerable<AlbumCard> searchAlbums()
+        {
+            List<AlbumCard> albums = null;
+            using (conn = new SqlConnection(connString))
+            {
+                string sql;
+                sql = $"select a.Album_id ,a.Pic ,a.About , a.Album_Name , s.Name,a.Price from Album a inner join Singer s on s.Singer_id = a.Singer_id inner join [Language] l on l.Language_id = s.Language_id";
+                
+                albums = conn.Query<AlbumCard>(sql).ToList();
+
+                return albums;
+            }
+        }
 
         #region AlbumCard
         public class AlbumCard

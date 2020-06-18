@@ -1,7 +1,46 @@
-﻿
+﻿@model Soulful.ViewModels.EcPayViewModel
 @{
     ViewBag.Title = "Completed";
 }
+@section topCSS{
 
-<h2>Completed</h2>
+    <link href="~/Asset/css/Register.css" rel="stylesheet" />
+}
+<section class="head_area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="head_img"></div>
+            <div class="head_txt">
+                <p>I Hope You Enjoy</p>
+                <h2>Finish</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<h2 class="text-center">完成訂單</h2>
+<hr />
+<div class="container finish-order">
+    <div class="row">
+        <div class="col-12">
+            <div class="finish">
+                <p><i class="fas fa-check-circle"></i>訂單完成囉~~</p>
+                <p>感謝購買，我們會盡快幫你送達<i class="far fa-smile-wink"></i></p>
+                <p>交易編號:@Model.TradeNo</p>
+                <p>交易時間:@Model.TradeDate</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container ">
+    <div class="row">
+        <div class="col-12 ">
+            <div class="btn-box">
+                <button type="button" class="btn btn-keep-buy">@Html.ActionLink("繼續購物", "Albums", "Album", new { lan = "All" })</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
 
