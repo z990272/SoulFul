@@ -184,6 +184,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="CheckOutFeedback.aspx.cs">
+      <DependentUpon>CheckOutFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOutFeedback.aspx.designer.cs">
+      <DependentUpon>CheckOutFeedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -194,12 +201,12 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
-    <Compile Include="EcPay.aspx.cs">
-      <DependentUpon>EcPay.aspx</DependentUpon>
+    <Compile Include="AioCheckOut.aspx.cs">
+      <DependentUpon>AioCheckOut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EcPay.aspx.designer.cs">
-      <DependentUpon>EcPay.aspx</DependentUpon>
+    <Compile Include="AioCheckOut.aspx.designer.cs">
+      <DependentUpon>AioCheckOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -243,6 +250,7 @@
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CartViewModel.cs" />
+    <Compile Include="ViewModels\EcPayViewModel.cs" />
     <Compile Include="ViewModels\GiveBackViewModel.cs" />
     <Compile Include="ViewModels\HitViewModel.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
@@ -386,6 +394,7 @@
     <Content Include="Asset\js\rank.js" />
     <Content Include="Asset\js\slick.js" />
     <Content Include="Asset\js\yt_modal.js" />
+    <Content Include="CheckOutFeedback.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -396,7 +405,7 @@
     <Content Include="Content\Slick\fonts\slick.svg" />
     <Content Include="Content\Slick\slick-theme.css" />
     <Content Include="Content\Slick\slick.css" />
-    <Content Include="EcPay.aspx" />
+    <Content Include="AioCheckOut.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

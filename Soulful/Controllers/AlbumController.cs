@@ -32,9 +32,20 @@ namespace Soulful.Controllers
         {
             var language = _ar.getLanguages();
             ViewBag.Language = language;
-            var album = _ar.getAlbums(lan) ;
+            var album = _ar.getAlbums(lan);
             ViewData["Album"] = album;
            
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Albums(string search)
+        {
+            var language = _ar.getLanguages();
+            ViewBag.Language = language;
+            var data = _ar.searchAlbums();
+            //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
+            var result = data.Where(x=>x.Album_Name.Contains(search)||x.Name.Contains(search));
+            ViewData["Album"] = result;
             return View();
         }
 
