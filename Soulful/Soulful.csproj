@@ -272,6 +272,7 @@
     <Content Include="Asset\css\Albums.css" />
     <Content Include="Asset\css\Animate.css" />
     <Content Include="Asset\css\Buy.css" />
+    <Content Include="Asset\css\change_password.css" />
     <Content Include="Asset\css\Cheack.css" />
     <Content Include="Asset\css\count.css" />
     <Content Include="Asset\css\Events.css" />

@@ -54,9 +54,9 @@ namespace Soulful
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "549144905961752",
+               appSecret: "9ad15cf6eb19528a8de8c81c41b5b6d2");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
