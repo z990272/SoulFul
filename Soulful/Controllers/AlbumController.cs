@@ -40,11 +40,9 @@ namespace Soulful.Controllers
         [HttpPost]
         public ActionResult Albums(string search)
         {
-            var language = _ar.getLanguages();
-            ViewBag.Language = language;
             var data = _ar.searchAlbums();
             var result = data.Where(x => search.Contains(x.Album_Name));
-            ViewData["Album"] = result;
+            ViewData["Album"] = data;
             return View();
         }
 

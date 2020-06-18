@@ -59,7 +59,7 @@ namespace Soulful.Repositories
                 return albums;
             }
         }
-        public List<AlbumCard> searchAlbums()
+        public IEnumerable<AlbumCard> searchAlbums()
         {
             List<AlbumCard> albums = null;
             using (conn = new SqlConnection(connString))
