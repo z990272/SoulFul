@@ -35,7 +35,7 @@ namespace Soulful.Controllers
             ViewBag.Language = language;
             var album = _ar.getAlbums(lan);
             ViewData["Album"] = album;
-           
+
             return View();
         }
         [HttpPost]
@@ -45,7 +45,7 @@ namespace Soulful.Controllers
             ViewBag.Language = language;
             var data = _ar.searchAlbums();
             //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
-            var result = data.Where(x=>x.Album_Name.Contains(search)||x.Name.Contains(search));
+            var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
             ViewData["Album"] = result;
             return View();
         }
@@ -55,15 +55,14 @@ namespace Soulful.Controllers
             var data = _ar.searchAlbums();
             //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
             var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
+            return PartialView("AlbumPartialView", result);
+        }
 
         public ActionResult HitClick(int id)
         {
             ProductService service = new ProductService();
             service.UpdateHit(id);
             return new EmptyResult();
-        }
-
-            return PartialView("AlbumPartialView", result);
         }
     }
 }
