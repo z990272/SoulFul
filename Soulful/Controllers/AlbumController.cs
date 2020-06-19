@@ -49,5 +49,12 @@ namespace Soulful.Controllers
             return View();
         }
 
+        public ActionResult HitClick(int id)
+        {
+            ProductService service = new ProductService();
+            service.UpdateHit(id);
+            return new EmptyResult();
+        }
+
     }
 }
