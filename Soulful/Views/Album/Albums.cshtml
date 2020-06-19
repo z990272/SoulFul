@@ -41,10 +41,9 @@
                     @*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">*@
                     @using (Html.BeginForm("Albums", "Album", null, FormMethod.Post, new { @class = "form-horizontal my-2 my-lg-0", role = "form" }))
                     {
-                        <input type="text" id="search" name="search">
+                        <input type="text" id="search" name="search" oninput="OnInputSearch(this)" >
                         <input type="submit" value="Search" />
                         @*<button class="search-btn  my-2 my-sm-0" type="submit" value="Search"><i class="fas fa-search"></i></button>*@
-
                     }
                     @*</form>*@
 
@@ -215,6 +214,6 @@
 @section endJS{
 
     <script src="~/Asset/js/modal.js"></script>
-
+    <script src="~/Asset/js/Search.js"></script>
  
 }
