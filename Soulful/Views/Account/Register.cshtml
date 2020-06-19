@@ -22,16 +22,7 @@
         </div>
     </div>
 </section>
-<div class="container">
-    <div class="row text-center">
-        <div class="col-12">
-            <section id="socialLoginForm">
-                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
 
-            </section>
-        </div>
-    </div>
-</div>
 <div class="container form-box">
     <div class="row">
         @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal col-8", role = "form" }))
