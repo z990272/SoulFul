@@ -389,6 +389,7 @@
     <Content Include="Asset\js\EventModal.js" />
     <Content Include="Asset\js\Search.js" />
     <Content Include="Asset\js\modal.js" />
+    <Content Include="Asset\js\Album.js" />
     <Content Include="Asset\js\navbar.js" />
     <Content Include="Asset\js\New.js" />
     <Content Include="Asset\js\ProductAjax.js" />

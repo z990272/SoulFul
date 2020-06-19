@@ -56,6 +56,13 @@ namespace Soulful.Controllers
             //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
             var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
 
+        public ActionResult HitClick(int id)
+        {
+            ProductService service = new ProductService();
+            service.UpdateHit(id);
+            return new EmptyResult();
+        }
+
             return PartialView("AlbumPartialView", result);
         }
     }
