@@ -35,6 +35,7 @@ namespace Soulful.Controllers
         {
             return View();
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ConfirmOrder(OrderViewModel orderView)
@@ -54,8 +55,8 @@ namespace Soulful.Controllers
         [Authorize]
         public ActionResult Completed()
         {
-            OrderService service = new OrderService();
-            var FeedBack = service.GetEcPayOrderDetail();
+            OrderService orderService = new OrderService();
+            var FeedBack = orderService.GetEcPayOrderDetail();
 
             return View(FeedBack);
         }

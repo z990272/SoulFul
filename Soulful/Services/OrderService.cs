@@ -80,6 +80,10 @@ namespace Soulful.Services
                     string szTradeAmt = String.Empty;
                     string szTradeDate = String.Empty;
                     string szTradeNo = String.Empty;
+                    string szCustomField1 = String.Empty;
+                    string szCustomField2 = String.Empty;
+                    string szCustomField3 = String.Empty;
+                    string szCustomField4 = String.Empty;
                     // 取得資料
                     foreach (string szKey in htFeedback.Keys)
                     {
@@ -97,6 +101,10 @@ namespace Soulful.Services
                             case "TradeAmt": szTradeAmt = htFeedback[szKey].ToString(); break;
                             case "TradeDate": szTradeDate = htFeedback[szKey].ToString(); break;
                             case "TradeNo": szTradeNo = htFeedback[szKey].ToString(); break;
+                            case "CustomField1": szCustomField1 = htFeedback[szKey].ToString(); break;
+                            case "CustomField2": szCustomField2 = htFeedback[szKey].ToString(); break;
+                            case "CustomField3": szCustomField3 = htFeedback[szKey].ToString(); break;
+                            case "CustomField4": szCustomField4 = htFeedback[szKey].ToString(); break;
                             default: break;
                         }
                     }
@@ -113,6 +121,10 @@ namespace Soulful.Services
                     Feedback.TradeAmt = szTradeAmt;
                     Feedback.TradeDate = szTradeDate;
                     Feedback.TradeNo = szTradeNo;
+                    Feedback.CustomField1 = szCustomField1;
+                    Feedback.CustomField2 = szCustomField2;
+                    Feedback.CustomField3 = szCustomField3;
+                    Feedback.CustomField4 = szCustomField4;
 
 
                 }
