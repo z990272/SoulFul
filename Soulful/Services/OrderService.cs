@@ -1,5 +1,4 @@
 ﻿using ECPay.Payment.Integration;
-using Microsoft.AspNet.Identity;
 using Soulful.Models;
 using Soulful.Repositories;
 using Soulful.ViewModels;
@@ -7,8 +6,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using WebGrease.Css.Extensions;
 
 namespace Soulful.Services
 {
@@ -50,6 +47,14 @@ namespace Soulful.Services
 
                 context.SaveChanges();
             });
+        }
+
+        public IEnumerable<Order> GetUserOrders(string userId)
+        {
+            SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
+            var result = repository.GetAll().Where(x => x.AspNetUsers_Id.Equals(userId));
+
+            return result;
         }
         public EcPayViewModel GetEcPayOrderDetail()
         {
@@ -149,5 +154,14 @@ namespace Soulful.Services
 
             return LatestOrder;
         }
+        public Order GetOrderById(int? id)
+        {
+            SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
+            var result = repository.GetAll().FirstOrDefault(x => x.Order_id == id);
+
+            return result;
+        }
     }
 }
+
+

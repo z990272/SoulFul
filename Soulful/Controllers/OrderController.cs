@@ -52,7 +52,7 @@ namespace Soulful.Controllers
             //ViewBag.AspNetUsers_Id = new SelectList(db.AspNetUsers, "Id", "Email", order.AspNetUsers_Id);
             return View(orderView);
         }
-        [Authorize]
+
         public ActionResult Completed()
         {
             OrderService orderService = new OrderService();

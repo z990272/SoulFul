@@ -4,6 +4,7 @@ using Soulful.Repositories;
 using Soulful.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -32,7 +33,6 @@ namespace Soulful.Services
                                  Name = album.Album_Name,
                                  Singer = singer.Name
                              };
-
 
             return SingerName;
 

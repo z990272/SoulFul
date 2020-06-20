@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Soulful.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+@section topCSS{
+    <link href="~/Asset/css/UserOrder.css" rel="stylesheet" />
+}
+
+
+<section class="head_area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="head_img"></div>
+            <div class="head_txt">
+                <p>See what's new</p>
+                <h2>UserOrder</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <table class="table my-5 text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AspNetUsers.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Datetime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecieverName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecieverPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecieverAdress)
+                </th>
+                <th></th>
+            </tr>
+            
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AspNetUsers.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datetime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecieverName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecieverPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RecieverAdress)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.Order_id }) |
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

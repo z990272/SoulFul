@@ -1,4 +1,5 @@
-﻿using Soulful.Repositories;
+﻿using Soulful.Models;
+using Soulful.Repositories;
 using Soulful.Services;
 using System;
 using System.Collections.Generic;
@@ -28,13 +29,13 @@ namespace Soulful.Controllers
         //    ViewData["Album"] = album;
         //    return View();
         //}
-        public ActionResult Albums(string lan,string searching)
+        public ActionResult Albums(string lan, string search)
         {
             var language = _ar.getLanguages();
             ViewBag.Language = language;
             var album = _ar.getAlbums(lan);
             ViewData["Album"] = album;
-           
+
             return View();
         }
         [HttpPost]
@@ -44,9 +45,17 @@ namespace Soulful.Controllers
             ViewBag.Language = language;
             var data = _ar.searchAlbums();
             //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
-            var result = data.Where(x=>x.Album_Name.Contains(search)||x.Name.Contains(search));
+            var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
             ViewData["Album"] = result;
             return View();
+        }
+        [HttpPost]
+        public ActionResult OnclickAlbums(string search)
+        {
+            var data = _ar.searchAlbums();
+            //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
+            var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
+            return PartialView("AlbumPartialView", result);
         }
 
         public ActionResult HitClick(int id)
@@ -55,6 +64,5 @@ namespace Soulful.Controllers
             service.UpdateHit(id);
             return new EmptyResult();
         }
-
     }
 }

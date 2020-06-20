@@ -53,3 +53,18 @@ img {
     height: auto;
     max-width: 100%;
 }
+
+.dropdown-menu{
+    top:60%;
+    min-width:14rem;
+}
+
+.dropdown-menu {
+    top: 80%;
+    min-width: 14rem;
+    background-color:black;
+    border-radius:unset;
+}
+.dropdown-toggle::after {
+    content:unset;
+}
