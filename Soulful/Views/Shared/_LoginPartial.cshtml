@@ -12,9 +12,8 @@
         </li>
 
         <li class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            @Html.ActionLink("密碼管理", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
+            @Html.ActionLink("密碼管理", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
             @Html.ActionLink("訂單查詢", "Index", "UserOrderDetails", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
-            <a class="dropdown-item" href="#">Another action</a>
         </li>
         <li class="nav-item"><a href="javascript:document.getElementById('logoutForm').submit()">OUT</a></li>
     </ul>

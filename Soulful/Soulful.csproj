@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -207,7 +207,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\UserOrderDetailsController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\GiveBackController.cs" />
@@ -406,8 +405,8 @@
     <Content Include="Asset\image\華晨宇-新世界.jpg" />
     <Content Include="Asset\image\順著海流.jpg" />
     <Content Include="Asset\js\EventModal.js" />
+    <Content Include="Asset\js\GetLineButton.js" />
     <Content Include="Asset\js\Search.js" />
-    <Content Include="Asset\js\modal.js" />
     <Content Include="Asset\js\Album.js" />
     <Content Include="Asset\js\navbar.js" />
     <Content Include="Asset\js\New.js" />
@@ -603,11 +602,6 @@
     <Content Include="Views\UserOrderDetails\Index.cshtml" />
     <Content Include="Views\Order\Completed.cshtml" />
     <Content Include="Views\Order\Order.cshtml" />
-    <Content Include="Views\CRUD\Create.cshtml" />
-    <Content Include="Views\CRUD\Delete.cshtml" />
-    <Content Include="Views\CRUD\Details.cshtml" />
-    <Content Include="Views\CRUD\Edit.cshtml" />
-    <Content Include="Views\CRUD\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
