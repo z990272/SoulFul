@@ -52,11 +52,9 @@ namespace Soulful.Services
                                    Name = Album.Album_Name,
                                    Pic = Album.Pic,
                                    Singer = Singer.Name,
-                                   WeekHits = Album.WeekHits,
-                                   MonthHits = Album.MonthHits,
-                                   TotalHits = Album.Hits
+                                   WeekHits = Album.WeekHits
                                };
-            return albumContext.ToList();
+            return albumContext.Take(10).ToList();
         }
 
         public List<HitViewModel> GetMonthHits()
@@ -73,11 +71,9 @@ namespace Soulful.Services
                                    Name = Album.Album_Name,
                                    Pic = Album.Pic,
                                    Singer = Singer.Name,
-                                   WeekHits = Album.WeekHits,
-                                   MonthHits = Album.MonthHits,
-                                   TotalHits = Album.Hits
+                                   MonthHits = Album.MonthHits
                                };
-            return albumContext.ToList();
+            return albumContext.Take(10).ToList();
         }
         public List<HitViewModel> GetTotalHits()
         {
@@ -94,12 +90,10 @@ namespace Soulful.Services
                                    Name = Album.Album_Name,
                                    Pic = Album.Pic,
                                    Singer = Singer.Name,
-                                   WeekHits = Album.WeekHits,
-                                   MonthHits = Album.MonthHits,
                                    TotalHits = Album.Hits,
                                    VideoUrl = Album.Video
                                };
-            return albumContext.ToList();
+            return albumContext.Take(10).ToList();
         }
 
         public void UpdateHit(int id)
