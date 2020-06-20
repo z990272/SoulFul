@@ -40,7 +40,6 @@ namespace Soulful.Services
 
         public List<HitViewModel> GetWeekHits()
         {
-            SoulfulContext context = new SoulfulContext();
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
             SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
 
@@ -62,7 +61,6 @@ namespace Soulful.Services
 
         public List<HitViewModel> GetMonthHits()
         {
-            SoulfulContext context = new SoulfulContext();
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
             SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
 
@@ -83,7 +81,6 @@ namespace Soulful.Services
         }
         public List<HitViewModel> GetTotalHits()
         {
-            SoulfulContext context = new SoulfulContext();
             SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
             SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
 
@@ -103,6 +100,19 @@ namespace Soulful.Services
                                    VideoUrl = Album.Video
                                };
             return albumContext.ToList();
+        }
+
+        public void UpdateHit(int id)
+        {
+            SoulfulRepository<Album> soulfulRepository = new SoulfulRepository<Album>(context);
+            var product = GetProductById(id);
+
+            product.Hits++;
+            product.WeekHits++;
+            product.MonthHits++;
+
+            soulfulRepository.Update(product);
+            context.SaveChanges();
         }
 
     }

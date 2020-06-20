@@ -1,5 +1,5 @@
-﻿function show(btn) {
-    let t = btn.id;
+﻿function show(modal) {
+    let id = btn.id;
 
-    $('#modal_'.concat(t)).modal('show');
+    $('#modal_'.concat(id)).modal('show');
 }
