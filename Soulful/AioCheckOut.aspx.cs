@@ -29,9 +29,9 @@ namespace AioCheckOut
                     oPayment.MerchantID = "2000132";//ECPay提供的特店編號
 
                     /* 基本參數 */
-                    oPayment.Send.ReturnURL = "https://localhost:44360/CheckOutFeedBack.aspx";//付款完成通知回傳的網址
+                    oPayment.Send.ReturnURL = "https://soulful-mvc.azurewebsites.net/CheckOutFeedBack.aspx";//付款完成通知回傳的網址
                     //oPayment.Send.ClientBackURL = "https://localhost:44360/Order/Completed";//瀏覽器端返回的廠商網址
-                    oPayment.Send.OrderResultURL = "https://localhost:44360/Order/Completed";//瀏覽器端回傳付款結果網址
+                    oPayment.Send.OrderResultURL = "https://soulful-mvc.azurewebsites.net/Order/Completed";//瀏覽器端回傳付款結果網址
                     oPayment.Send.MerchantTradeNo = "ECPay" + new Random().Next(0, 99999).ToString();//廠商的交易編號
                     oPayment.Send.MerchantTradeDate = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");//廠商的交易時間
                     oPayment.Send.TotalAmount = (int)TotalAmount;//交易總金額

@@ -457,7 +457,7 @@
     <Content Include="Content\Slick\fonts\slick.woff" />
     <Content Include="Content\Slick\fonts\slick.ttf" />
     <Content Include="Content\Slick\fonts\slick.eot" />
-    <None Include="Properties\PublishProfiles\soulful2020 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Soulful-mvc - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
