@@ -61,7 +61,20 @@ namespace Soulful.Controllers
             return View(FeedBack);
         }
 
-    }
+        [AcceptVerbs("GET", "POST")]
+        public ActionResult GetOrderNumber(string Email)
+        {
+            //var Email = "Allen321@gmail.com";
+            OrderService orderService = new OrderService();
+            var order = orderService.GetUserOrdersByEmail(Email);
 
+            //JsonDataApi/GetCarSalesNumber
+
+
+            return Json(order, JsonRequestBehavior.AllowGet);
+
+        }
+
+    }
 }
 

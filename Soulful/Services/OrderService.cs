@@ -1,4 +1,5 @@
 ﻿using ECPay.Payment.Integration;
+using Soulful.Controllers;
 using Soulful.Models;
 using Soulful.Repositories;
 using Soulful.ViewModels;
@@ -6,12 +7,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using WebGrease.Css.Extensions;
 
 namespace Soulful.Services
 {
     public class OrderService
     {
-        private SoulfulContext context = new SoulfulContext();
+        private SoulfulContext context;
+        public OrderService()
+        {
+            context = new SoulfulContext();
+        }
 
         public void Create(OrderViewModel orderView, string userId, List<CartViewModel> cartItems)
         {
@@ -147,19 +153,39 @@ namespace Soulful.Services
             return Feedback;
 
         }
-        public Order GetLatestOrder()
-        {
-            SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
-            var LatestOrder = repository.GetAll().LastOrDefault();
-
-            return LatestOrder;
-        }
         public Order GetOrderById(int? id)
         {
             SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
             var result = repository.GetAll().FirstOrDefault(x => x.Order_id == id);
 
             return result;
+        }
+        public List<OrderDetailViewModel> GetUserOrdersByEmail(string email)
+        {
+            SoulfulRepository<Order> O_repository = new SoulfulRepository<Order>(context);
+            SoulfulRepository<OrderDetail> Od_repository = new SoulfulRepository<OrderDetail>(context);
+
+            var orderTemp = O_repository.GetAll().Where(x => x.AspNetUsers.Email == email).Distinct();
+
+            var result = new List<OrderDetailViewModel>();
+
+            orderTemp.ForEach(item =>
+            {
+                result.Add(new OrderDetailViewModel()
+                {
+                    OrderId = item.Order_id,
+                    OrderDetails = Od_repository.GetAll().Where(x => x.Order_id == item.Order_id).Select(x => new ApiOrderDetail
+                    {
+                        Count = x.Count,
+                        Product = x.Album.Album_Name,
+                        UnitPrice = x.Price
+
+                    }).ToList()
+                });
+            });
+
+            return result.ToList();
+
         }
     }
 }
