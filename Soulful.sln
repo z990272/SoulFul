@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soulful", "Soulful\Soulful.csproj", "{75AD2443-DC31-45D0-9A01-B0810B9A72D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoulfulLineBot", "..\SoulfulLineBot\SoulfulLineBot\SoulfulLineBot.csproj", "{72BD44BE-C977-44BE-BB57-6ECE7C69B6C9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{75AD2443-DC31-45D0-9A01-B0810B9A72D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AD2443-DC31-45D0-9A01-B0810B9A72D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AD2443-DC31-45D0-9A01-B0810B9A72D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72BD44BE-C977-44BE-BB57-6ECE7C69B6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72BD44BE-C977-44BE-BB57-6ECE7C69B6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72BD44BE-C977-44BE-BB57-6ECE7C69B6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72BD44BE-C977-44BE-BB57-6ECE7C69B6C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
