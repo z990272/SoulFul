@@ -21,5 +21,7 @@ namespace Soulful.ViewModels
         [Required]
         public string Message { get; set; }
 
+        public string Status { get; set; }
+
     }
 }
