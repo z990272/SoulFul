@@ -10,10 +10,10 @@ namespace AioCheckOut
 {
     public partial class AioCheckOut : System.Web.UI.Page
     {
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             var cartItems = (List<CartViewModel>)Session["Cart"];
             var TotalAmount = cartItems.Sum(x => x.Price * x.Count);
             List<string> enErrors = new List<string>();
