@@ -19,7 +19,8 @@ namespace Soulful.Services
                 Name = giveBack.Name,
                 Email = giveBack.Email,
                 Subject = giveBack.Subject,
-                Message = giveBack.Message
+                Message = giveBack.Message,
+                Status = "未處理"
             };
             repository.Create(data);
 
