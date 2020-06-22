@@ -115,3 +115,14 @@
 .dl-horizontal a{
     font-size:25px;
 }
+#Facebook {
+    background-color: #385898;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+}
+#Google{
+    width:200px;
+    color:forestgreen;
+    font-size:20px;
+}

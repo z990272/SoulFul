@@ -29,6 +29,8 @@ namespace Soulful.Controllers
         //    ViewData["Album"] = album;
         //    return View();
         //}
+        
+      
         public ActionResult Albums(string lan, string search)
         {
             var language = _ar.getLanguages();
