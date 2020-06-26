@@ -5,18 +5,18 @@
     {
         @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right dropdown">
-        <li class="nav-item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            @Html.ActionLink("Hello  " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", datatoggle = "dropdown", ariahaspopup = "true", ariaexpanded = "false" })
+        <ul class="nav navbar-nav navbar-right dropdown">
+            <li class="nav-item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @Html.ActionLink("Hello  " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", datatoggle = "dropdown", ariahaspopup = "true", ariaexpanded = "false" })
 
-        </li>
+            </li>
 
-        <li class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            @Html.ActionLink("密碼管理", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
-            @Html.ActionLink("訂單查詢", "Index", "UserOrderDetails", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
-        </li>
-        <li class="nav-item"><a href="javascript:document.getElementById('logoutForm').submit()">OUT</a></li>
-    </ul>
+            <li class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                @Html.ActionLink("密碼管理", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
+                @Html.ActionLink("訂單查詢", "Index", "UserOrderDetails", routeValues: null, htmlAttributes: new { @class = "dropdown-item" })
+            </li>
+            <li class="nav-item"><a href="javascript:document.getElementById('logoutForm').submit()">OUT</a></li>
+        </ul>
     }
 
 }

@@ -372,6 +372,7 @@
     <Content Include="Asset\image\ChinaBlue_2020RockStar.jpg" />
     <Content Include="Asset\image\GreenDay.jpg" />
     <Content Include="Asset\image\Popman.jpg" />
+    <Content Include="Asset\image\title.jpg" />
     <Content Include="Asset\image\伯賢-DELIGHT.jpg" />
     <Content Include="Asset\image\event 1.jpeg" />
     <Content Include="Asset\image\event 10.jpeg" />
@@ -460,7 +461,6 @@
     <Content Include="Content\Slick\fonts\slick.ttf" />
     <Content Include="Content\Slick\fonts\slick.eot" />
     <None Include="Properties\PublishProfiles\Soulful-mvc - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\Soulful20200621151052 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
