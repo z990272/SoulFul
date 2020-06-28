@@ -262,7 +262,7 @@
     <Compile Include="Data\SoulfulContext.cs" />
     <Compile Include="Models\Detail\Style.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
-    <Compile Include="Repositories\AlbumRepository.cs" />
+    <Compile Include="Services\AlbumDapperService.cs" />
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />

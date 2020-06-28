@@ -11,16 +11,20 @@ using System.Linq;
 using System.Runtime.ExceptionServices;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace Soulful.Controllers
 {
     public class OrderController : Controller
     {
+        private static List<CartViewModel> cartItem;
+        private static OrderViewModel order;
+
         // GET: Pay
         [Authorize]
         public ActionResult Order()
         {
-            var cartItems = (List<Soulful.ViewModels.CartViewModel>)Session["Cart"];
+            var cartItems = (List<CartViewModel>)Session["Cart"];
             if (cartItems != null)
             {
                 var TotalAmount = cartItems.Sum(x => x.Price * x.Count);
@@ -44,8 +48,8 @@ namespace Soulful.Controllers
             var cartItems = (List<CartViewModel>)Session["Cart"];
             if (ModelState.IsValid)
             {
-                var userId = HttpContext.User.Identity.GetUserId();
-                orderService.Create(orderView, userId, cartItems); 
+                cartItem = cartItems;
+                order = orderView;
                 return Redirect("~/AioCheckOut.aspx");
             }
 
@@ -57,7 +61,16 @@ namespace Soulful.Controllers
         {
             OrderService orderService = new OrderService();
             var FeedBack = orderService.GetEcPayOrderDetail();
-
+            if (FeedBack.RtnMsg == "Succeeded")
+            {
+                var userId = HttpContext.User.Identity.GetUserId();
+                orderService.Create(order, userId, cartItem);
+            }
+            else
+            {
+                FeedBack.TradeDate = "交易失敗";
+                FeedBack.TradeNo = "交易失敗";
+            }
             return View(FeedBack);
         }
 
