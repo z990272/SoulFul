@@ -23,6 +23,16 @@
     animation-duration: 30s;
 }
 
+/*@media screen and (max-width:600px) {
+    .hero_image {
+        animation-name: unset;
+        animation-timing-function: unset;
+        animation-iteration-count: unset;
+        animation-duration: unset;
+    }
+}*/
+
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -62,5 +72,3 @@
     animation-iteration-count: infinite;
     animation-duration: 15s;
 }
-
-
