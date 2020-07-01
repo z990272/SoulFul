@@ -66,5 +66,15 @@ namespace Soulful.Controllers
             service.UpdateHit(id);
             return new EmptyResult();
         }
+        //[HttpPost]
+        //public ActionResult getlan(string lan)
+        //{
+        //    var language = _ar.getLanguages();
+        //    ViewBag.Language = language;
+        //    var album = _ar.getAlbums(lan);
+        //    ViewData["Album"] = album;
+
+        //    return View();
+        //}
     }
 }
