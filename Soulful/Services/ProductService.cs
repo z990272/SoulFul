@@ -52,7 +52,8 @@ namespace Soulful.Services
                                    Name = Album.Album_Name,
                                    Pic = Album.Pic,
                                    Singer = Singer.Name,
-                                   WeekHits = Album.WeekHits
+                                   WeekHits = Album.WeekHits,
+                                   Price=Album.Price
                                };
             return albumContext.Take(10).ToList();
         }
