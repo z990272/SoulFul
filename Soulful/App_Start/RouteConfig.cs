@@ -19,6 +19,11 @@ namespace Soulful
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            //routes.MapRoute(
+            //    name: "All",
+            //    url: "Album/getlan/{All}",
+            //    defaults: new { controller = "Album", action = "Albums"}
+            //);
         }
 
     }
