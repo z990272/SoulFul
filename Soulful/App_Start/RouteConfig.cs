@@ -15,15 +15,18 @@ namespace Soulful
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
+                name: "All",
+                url: "Albums/{lan}",
+                defaults: new { controller = "Album", action = "Albums", lan = UrlParameter.Optional }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-            //routes.MapRoute(
-            //    name: "All",
-            //    url: "Album/getlan/{All}",
-            //    defaults: new { controller = "Album", action = "Albums"}
-            //);
+            
+           
+          
         }
 
     }
