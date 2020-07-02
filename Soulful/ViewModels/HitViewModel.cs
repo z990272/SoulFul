@@ -21,5 +21,6 @@ namespace Soulful.ViewModels
         public int TotalHits { get; set; }
 
         public string VideoUrl { get; set; }
+        public decimal Price { get; set; }
     }
 }

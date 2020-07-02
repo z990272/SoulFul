@@ -87,6 +87,18 @@ namespace Soulful.Controllers
             return Json(order, JsonRequestBehavior.AllowGet);
 
         }
+        [AcceptVerbs("GET", "POST")]
+        public ActionResult GetWeekHotProduct()
+        {
+            //var Email = "Allen321@gmail.com";
+            ProductService productService = new ProductService();
+            var WeekHot = productService.GetWeekHits();
+
+            //JsonDataApi/GetCarSalesNumber
+
+            return Json(WeekHot, JsonRequestBehavior.AllowGet);
+
+        }
 
     }
 }
