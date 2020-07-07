@@ -610,7 +610,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\json\" />
-    <Folder Include="Models\Default\" />
     <Folder Include="Views\Shopping\" />
   </ItemGroup>
   <ItemGroup>
