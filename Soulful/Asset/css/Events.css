@@ -61,7 +61,7 @@
 }
 
 .event_area{
-    padding: 100px;
+    padding: 50px;
 }
 
 .event_area .event_meta{
@@ -221,5 +221,30 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
+}
+
+.modal-body img{
+    width: 50%;
+    height: 50%;
+}
+
+.modal-body h4{
+    color: black !important;
+    padding: 5px 0;
+}
+
+.modal-body h5 {
+    color: darkblue !important;
+    padding-bottom: 5px;
+}
+
+.modal-body h6 {
+    padding-bottom: 5px;
+}
+
+.modal-body p {
+    color: #555555;
+    font-size: 16px;
+    text-align: left;
 }
 

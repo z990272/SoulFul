@@ -110,5 +110,11 @@ namespace Soulful.Services
             context.SaveChanges();
         }
 
+        public string GetVideoById(int Id)
+        {
+            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
+            var ProductById = AlbumRepository.GetAll().FirstOrDefault(x => x.Album_id == Id);
+            return ProductById.Video;
+        }
     }
 }
