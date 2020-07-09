@@ -3,7 +3,6 @@ using Soulful.Services;
 using Soulful.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Core.Metadata.Edm;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
