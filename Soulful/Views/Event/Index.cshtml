@@ -23,6 +23,29 @@
     <div class="container">
         <div class="row">
             @Html.Partial("EventCardPartialView")
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+
+                    <!--Content-->
+                    <div class="modal-content">
+
+                        <!--Header-->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body mb-0 text-center p-4" id="modalContainer">
+                            
+                        </div>
+                    </div>
+                    <!--/.Content-->
+
+                </div>
+            </div>
         </div>
     </div>
 </section>

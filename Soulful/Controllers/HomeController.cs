@@ -22,9 +22,14 @@ namespace Soulful.Controllers
             ViewData["TotalHits"] = productService.GetTotalHits();
 
             return View(productService.GetSingerName());
-        }  
+        }
 
-        
+        public string GetData(int id)
+        {
+            ProductService productService = new ProductService();
+
+            return productService.GetVideoById(id);
+        }
 
     }
 }
