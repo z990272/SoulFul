@@ -8,13 +8,13 @@ using Dapper;
 using Soulful.Models;
 using Soulful.ViewModels;
 
-namespace Soulful.Repositories
+namespace Soulful.Services
 {
-    public class AlbumRepository
+    public class AlbumDapperService
     {
         public static string connString;
         public SqlConnection conn;
-        public AlbumRepository()
+        public AlbumDapperService()
         {
             if (string.IsNullOrEmpty(connString))
             {

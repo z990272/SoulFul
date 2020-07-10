@@ -41,7 +41,7 @@
                     @*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">*@
                     @using (Html.BeginForm("Albums", "Album", null, FormMethod.Post, new { @class = "form-horizontal my-2 my-lg-0", role = "form" }))
                     {
-                        <input type="text" id="search" name="search" oninput="OnInputSearch(this)" >
+                        <input type="text" id="search" name="search" oninput="OnInputSearch(this)">
                         <input type="submit" value="Search" />
                         @*<button class="search-btn  my-2 my-sm-0" type="submit" value="Search"><i class="fas fa-search"></i></button>*@
                     }
@@ -58,163 +58,91 @@
     </div>
 </div>
 
-
-
-
-@*<div class="conainer py-5">
-        <div class="container">
-            <div class="row" style="justify-content: center;">
-                <div class="col-12">
-                    <img src="https://colorlib.com/preview/theme/onemusic/img/bg-img/add3.gif" class="d-block " alt=""
-                         style="width: 100%;">
-                </div>
-            </div>
-        </div>
-
-    </div>*@
-
-@*<div class="container py-5">
-        <div class="row">
-            <div class="single-song-area w-100">
-                <div class="col-12 d-flex ">
-                    <div class="song-thumbnail">
-                        <img src="~/Asset/image/s1.jpg" alt="" class="d-block w-100*">
-                    </div>
-                    <div class="song_play_area ">
-                        <div class="song_name">
-                            <p class="m-0">01. Main Hit Song</p>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause " title=""><a href="#"></a></div>
-                            <div class="audioplayer_time audioplayer_time_current my-auto ml-3">00:00</div>
-                            <div class="audioplayer_bar my-auto ">
-                                <div class="audioplayer_bar_loaded"></div>
-                                <div class="audioplayer_bar_played"></div>
+<div class="modal fade" id="modalQuickView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="album-modal">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+                             data-ride="carousel">
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100"
+                                         src=""
+                                         alt="First slide">
+                                </div>
                             </div>
-                            <div class="audioplayer_time audioplayer_time_duration my-auto">…</div>
-                            <div class="audioplayer_volume my-auto ml-1 d-flex">
-                                <div class="audioplayer_volume_button" title=""><a href="#"></a></div>
-                                <div class="audioplayer_volume_adjust ml-1 ">
-                                    <div>
-                                        <div></div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                            <!--/.Controls-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="album-title-box">
+                            <h2 class=" product-name">
+                                <strong></strong>
+                            </h2>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">&times; </button>
+                        </div>
+
+                        <!--Accordion wrapper-->
+                        <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                            <!-- Accordion card -->
+                            <div class="card">
+
+                                <!-- Card header -->
+                                <div class="card-header" role="tab" id="headingOne1">
+                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                                       aria-controls="collapseOne1">
+                                        <h5 class="mb-0">
+                           
+                                        </h5>
+                                    </a>
+                                </div>
+
+                                <!-- Card body -->
+                                <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                                     data-parent="#accordionEx">
+                                    <div class="card-body">
+                                        <p></p>
                                     </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Accordion wrapper -->
+                        <!-- Add to Cart -->
+                        <div class="card-body">
+                            <div class="text-right">
+                                <h4 class="h4-responsive">
+                                    <span class="green-text">
+                                        <strong>會員價 <span></span></strong>
+                                    </span>
+                                </h4>
+                                <div class="order">
+                                    <button class="btn buy-btn" onclick="">訂購</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- /.Add to Cart -->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="single-song-area w-100">
-                <div class="col-12 d-flex">
-                    <div class="song-thumbnail">
-                        <img src="~/Asset/image/s2.jpg" alt="">
-                    </div>
-                    <div class="song_play_area ">
-                        <div class="song_name">
-                            <p class="m-0">01. Main Hit Song</p>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause " title=""><a href="#"></a></div>
-                            <div class="audioplayer_time audioplayer_time_current my-auto ml-3">00:00</div>
-                            <div class="audioplayer_bar my-auto ">
-                                <div class="audioplayer_bar_loaded"></div>
-                                <div class="audioplayer_bar_played"></div>
-                            </div>
-                            <div class="audioplayer_time audioplayer_time_duration my-auto">…</div>
-                            <div class="audioplayer_volume my-auto ml-1 d-flex">
-                                <div class="audioplayer_volume_button" title=""><a href="#"></a></div>
-                                <div class="audioplayer_volume_adjust ml-1 ">
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="single-song-area w-100">
-                <div class="col-12 d-flex">
-                    <div class="song-thumbnail">
-                        <img src="~/Asset/image/s3.jpg" alt="">
-                    </div>
-                    <div class="song_play_area ">
-                        <div class="song_name">
-                            <p class="m-0">01. Main Hit Song</p>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause " title=""><a href="#"></a></div>
-                            <div class="audioplayer_time audioplayer_time_current my-auto ml-3">00:00</div>
-                            <div class="audioplayer_bar my-auto ">
-                                <div class="audioplayer_bar_loaded"></div>
-                                <div class="audioplayer_bar_played"></div>
-                            </div>
-                            <div class="audioplayer_time audioplayer_time_duration my-auto">…</div>
-                            <div class="audioplayer_volume my-auto ml-1 d-flex">
-                                <div class="audioplayer_volume_button" title=""><a href="#"></a></div>
-                                <div class="audioplayer_volume_adjust ml-1 ">
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="single-song-area w-100">
-                <div class="col-12 d-flex">
-                    <div class="song-thumbnail">
-                        <img src="~/Asset/image/s4.jpg" alt="">
-                    </div>
-                    <div class="song_play_area ">
-                        <div class="song_name">
-                            <p class="m-0">01. Main Hit Song</p>
-                        </div>
-                        <div class="audioplayer">
-                            <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-                                <source src="audio/dummy-audio.mp3">
-                            </audio>
-                            <div class="audioplayer_playpause " title=""><a href="#"></a></div>
-                            <div class="audioplayer_time audioplayer_time_current my-auto ml-3">00:00</div>
-                            <div class="audioplayer_bar my-auto ">
-                                <div class="audioplayer_bar_loaded"></div>
-                                <div class="audioplayer_bar_played"></div>
-                            </div>
-                            <div class="audioplayer_time audioplayer_time_duration my-auto">…</div>
-                            <div class="audioplayer_volume my-auto ml-1 d-flex">
-                                <div class="audioplayer_volume_button" title=""><a href="#"></a></div>
-                                <div class="audioplayer_volume_adjust ml-1 ">
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>*@
+    </div>
+</div>
+
+
 @section endJS{
 
     <script src="~/Asset/js/modal.js"></script>
     <script src="~/Asset/js/Search.js"></script>
- 
-    <script src="~/Asset/js/Album.js"></script> 
+
+    <script src="~/Asset/js/Album.js"></script>
 }

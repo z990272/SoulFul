@@ -11,10 +11,10 @@ namespace Soulful.Controllers
 {
     public class AlbumController : Controller
     {
-        private AlbumRepository _ar;
+        private AlbumDapperService _ar;
         public AlbumController()
         {
-            _ar = new AlbumRepository();
+            _ar = new AlbumDapperService();
         }
         // GET: Album
         //public ActionResult Albums()
@@ -66,7 +66,16 @@ namespace Soulful.Controllers
             service.UpdateHit(id);
             return new EmptyResult();
         }
-        
-        
+
+        public string AlbumClick(int id)
+        {
+            AlbumDapperService service = new AlbumDapperService();
+
+            var album = service.searchAlbums();
+            var obj= album.FirstOrDefault(x => x.Album_id == id);
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+
+            return json;
+        }
     }
 }

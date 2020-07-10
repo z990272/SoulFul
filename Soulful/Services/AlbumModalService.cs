@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using Soulful.Models;
 using Soulful.Repositories;
+using static Soulful.Services.AlbumDapperService;
+
 namespace Soulful.Services
 {
     public class AlbumModalService
@@ -43,6 +45,6 @@ namespace Soulful.Services
             return language.ToList();
             
         }
-
+       
     }
 }
