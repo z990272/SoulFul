@@ -24,14 +24,15 @@ namespace Soulful.Controllers
         [Authorize]
         public ActionResult Order()
         {
+            ShoppingService shoppingService = new ShoppingService();
             var cartItems = (List<CartViewModel>)Session["Cart"];
+
             if (cartItems != null)
             {
-                var TotalAmount = cartItems.Sum(x => x.Price * x.Count);
+                var TotalAmount = shoppingService.GetTotalAmount();
                 return View(TotalAmount);
             }
-            decimal dec = 0;
-            return View(dec);
+            return View(0);
 
         }
         [Authorize]
@@ -53,7 +54,6 @@ namespace Soulful.Controllers
                 return Redirect("~/AioCheckOut.aspx");
             }
 
-            //ViewBag.AspNetUsers_Id = new SelectList(db.AspNetUsers, "Id", "Email", order.AspNetUsers_Id);
             return View(orderView);
         }
 
@@ -90,11 +90,11 @@ namespace Soulful.Controllers
         [AcceptVerbs("GET", "POST")]
         public ActionResult GetWeekHotProduct()
         {
-            //var Email = "Allen321@gmail.com";
+        
             ProductService productService = new ProductService();
             var WeekHot = productService.GetWeekHits();
 
-            //JsonDataApi/GetCarSalesNumber
+  
 
             return Json(WeekHot, JsonRequestBehavior.AllowGet);
 

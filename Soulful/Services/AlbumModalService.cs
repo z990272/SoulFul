@@ -11,14 +11,23 @@ namespace Soulful.Services
 {
     public class AlbumModalService
     {
+        SoulfulContext _context;
+        SoulfulRepository<Singer> _singerRepo;
+        SoulfulRepository<Album> _albumRepo;
+        SoulfulRepository<Language> _languageRepo ;
+        public AlbumModalService()
+        {
+            _context = new SoulfulContext();
+            _singerRepo = new SoulfulRepository<Singer>(_context);
+            _albumRepo = new SoulfulRepository<Album>(_context);
+            _languageRepo = new SoulfulRepository<Language>(_context);
+        }
         public List<AlbumViewModel> GetModalinform()
         {
-            SoulfulContext context = new SoulfulContext();
-            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
+
        
-            var albumContext = from Album in AlbumRepository.GetAll()
-                               join Singer in SingerRepository.GetAll()
+            var albumContext = from Album in _albumRepo.GetAll()
+                               join Singer in _singerRepo.GetAll()
                                 on Album.Singer_id equals Singer.Singer_id
                               
                               
@@ -34,9 +43,7 @@ namespace Soulful.Services
         }
         public List<AlbumViewModel> GetLanguage()
         {
-            SoulfulContext context = new SoulfulContext();
-            SoulfulRepository<Language> LanguageRepository = new SoulfulRepository<Language>(context);
-            var language = from Language in LanguageRepository.GetAll()
+            var language = from Language in _languageRepo.GetAll()
 
                            select new AlbumViewModel
                            {

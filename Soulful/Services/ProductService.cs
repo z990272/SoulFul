@@ -12,20 +12,25 @@ namespace Soulful.Services
 {
     public class ProductService
     {
-        SoulfulContext context = new SoulfulContext();
+        SoulfulContext _context  ;
+        SoulfulRepository<Singer> _singerRepo ;
+        SoulfulRepository<Album> _albumRepo ;
+        public ProductService()
+        {
+            _context = new SoulfulContext();
+            _singerRepo = new SoulfulRepository<Singer>(_context);
+            _albumRepo = new SoulfulRepository<Album>(_context);
+        }
         public Album GetProductById(int Id)
         {
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-            var ProductById = AlbumRepository.GetAll().FirstOrDefault(x => x.Album_id == Id);
+            var ProductById = _albumRepo.GetAll().FirstOrDefault(x => x.Album_id == Id);
             return ProductById;
         }
 
         public IEnumerable<CardViewModel> GetSingerName()
         {
-            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-            var SingerName = from album in AlbumRepository.GetAll()
-                             join singer in SingerRepository.GetAll()
+            var SingerName = from album in _albumRepo.GetAll()
+                             join singer in _singerRepo.GetAll()
                              on album.Singer_id equals singer.Singer_id
                              select new CardViewModel
                              {
@@ -40,11 +45,8 @@ namespace Soulful.Services
 
         public List<HitViewModel> GetWeekHits()
         {
-            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-
-            var albumContext = from Album in AlbumRepository.GetAll()
-                               join Singer in SingerRepository.GetAll()
+            var albumContext = from Album in _albumRepo.GetAll()
+                               join Singer in _singerRepo.GetAll()
                                on Album.Singer_id equals Singer.Singer_id
                                orderby Album.WeekHits descending
                                select new HitViewModel
@@ -60,11 +62,8 @@ namespace Soulful.Services
 
         public List<HitViewModel> GetMonthHits()
         {
-            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-
-            var albumContext = from Album in AlbumRepository.GetAll()
-                               join Singer in SingerRepository.GetAll()
+            var albumContext = from Album in _albumRepo.GetAll()
+                               join Singer in _singerRepo.GetAll()
                                on Album.Singer_id equals Singer.Singer_id
                                orderby Album.MonthHits descending
                                select new HitViewModel
@@ -78,11 +77,8 @@ namespace Soulful.Services
         }
         public List<HitViewModel> GetTotalHits()
         {
-            SoulfulRepository<Singer> SingerRepository = new SoulfulRepository<Singer>(context);
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-
-            var albumContext = from Album in AlbumRepository.GetAll()
-                               join Singer in SingerRepository.GetAll()
+            var albumContext = from Album in _albumRepo.GetAll()
+                               join Singer in _singerRepo.GetAll()
                                on Album.Singer_id equals Singer.Singer_id
                                orderby Album.Hits descending
                                select new HitViewModel
@@ -99,21 +95,19 @@ namespace Soulful.Services
 
         public void UpdateHit(int id)
         {
-            SoulfulRepository<Album> soulfulRepository = new SoulfulRepository<Album>(context);
             var product = GetProductById(id);
 
             product.Hits++;
             product.WeekHits++;
             product.MonthHits++;
 
-            soulfulRepository.Update(product);
-            context.SaveChanges();
+            _albumRepo.Update(product);
+            _context.SaveChanges();
         }
 
         public string GetVideoById(int Id)
         {
-            SoulfulRepository<Album> AlbumRepository = new SoulfulRepository<Album>(context);
-            var ProductById = AlbumRepository.GetAll().FirstOrDefault(x => x.Album_id == Id);
+            var ProductById = _albumRepo.GetAll().FirstOrDefault(x => x.Album_id == Id);
             return ProductById.Video;
         }
     }

@@ -12,23 +12,24 @@ namespace Soulful.Controllers
 {
     public class HomeController : Controller
     {
-
+        ProductService _productService;
+        public HomeController()
+        {
+            _productService = new ProductService();
+        }
         public ActionResult Index()
         {
-            ProductService productService = new ProductService();
 
-            ViewData["WeekHits"] = productService.GetWeekHits();
-            ViewData["MonthHits"] = productService.GetMonthHits();
-            ViewData["TotalHits"] = productService.GetTotalHits();
+            ViewData["WeekHits"] = _productService.GetWeekHits();
+            ViewData["MonthHits"] = _productService.GetMonthHits();
+            ViewData["TotalHits"] = _productService.GetTotalHits();
 
-            return View(productService.GetSingerName());
+            return View(_productService.GetSingerName());
         }
 
         public string GetData(int id)
         {
-            ProductService productService = new ProductService();
-
-            return productService.GetVideoById(id);
+            return _productService.GetVideoById(id);
         }
 
     }

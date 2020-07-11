@@ -9,16 +9,21 @@ using System.Web;
 namespace Soulful.Services
 {
     public class EventService
-    {        
+    {
+        SoulfulContext _context;
+        SoulfulRepository<Event> _eventRepo;
+        SoulfulRepository<Singer> _singerRepo;
+        public EventService()
+        {
+            _context = new SoulfulContext();
+            _eventRepo = new SoulfulRepository<Event>(_context);
+            _singerRepo = new SoulfulRepository<Singer>(_context);
+        }
         public List<EventViewModel> GetSingerName()
         {
-            SoulfulContext context = new SoulfulContext();
-            SoulfulRepository<Event> eventRepostitory = new SoulfulRepository<Event>(context);
-            SoulfulRepository<Singer> singerRepostitory = new SoulfulRepository<Singer>(context);
-
-            var eventContext = from Event in eventRepostitory.GetAll()
-                               join Singer in singerRepostitory.GetAll()
-                               on Event.Singer_id equals Singer.Singer_id 
+            var eventContext = from Event in _eventRepo.GetAll()
+                               join Singer in _singerRepo.GetAll()
+                               on Event.Singer_id equals Singer.Singer_id
                                select new EventViewModel
                                {
                                    Id = Event.Event_id,
@@ -26,7 +31,7 @@ namespace Soulful.Services
                                    Singer = Singer.Name,
                                    Date = Event.Datetime,
                                    Address = Event.Adress,
-                                   Pic = Event.Pic,                                   
+                                   Pic = Event.Pic,
                                    About = Event.About
                                };
 
@@ -35,11 +40,8 @@ namespace Soulful.Services
 
         public EventViewModel GetEventById(int EventId)
         {
-            SoulfulContext context = new SoulfulContext();
-            SoulfulRepository<Event> eventRepostitory = new SoulfulRepository<Event>(context);
-            SoulfulRepository<Singer> singerRepostitory = new SoulfulRepository<Singer>(context);
-            var eventContext = from Event in eventRepostitory.GetAll()
-                               join Singer in singerRepostitory.GetAll()
+            var eventContext = from Event in _eventRepo.GetAll()
+                               join Singer in _singerRepo.GetAll()
                                on Event.Singer_id equals Singer.Singer_id
                                select new EventViewModel
                                {
@@ -52,7 +54,7 @@ namespace Soulful.Services
                                    About = Event.About
                                };
             var EventById = eventContext.FirstOrDefault(x => x.Id == EventId);
-            
+
             return EventById;
         }
 

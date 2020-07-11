@@ -14,8 +14,6 @@ namespace Soulful.Controllers
 {
     public class UserOrderDetailsController : Controller
     {
-        private SoulfulContext db = new SoulfulContext();
-
         // GET: CRUD
         [Authorize]
         public ActionResult Index()
@@ -42,13 +40,6 @@ namespace Soulful.Controllers
             return View(order);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+
     }
 }

@@ -10,10 +10,17 @@ namespace Soulful.Services
 {
     public class AccountService
     {
+        SoulfulContext _context;
+        SoulfulRepository<GiveBacks> _repository ;
+        public AccountService()
+        {
+            _context = new SoulfulContext();
+            _repository = new SoulfulRepository<GiveBacks>(_context);
+        }
+
         public void CreateGiveBack(GiveBackViewModel giveBack)
         {
-            SoulfulContext context = new SoulfulContext();
-            SoulfulRepository<GiveBacks> repository = new SoulfulRepository<GiveBacks>(context);
+
             GiveBacks data = new GiveBacks()
             {
                 Name = giveBack.Name,
@@ -22,9 +29,9 @@ namespace Soulful.Services
                 Message = giveBack.Message,
                 Status = "未處理"
             };
-            repository.Create(data);
+            _repository.Create(data);
 
-            context.SaveChanges();      
+            _context.SaveChanges();      
         }
     }
 

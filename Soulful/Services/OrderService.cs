@@ -13,17 +13,18 @@ namespace Soulful.Services
 {
     public class OrderService
     {
-        private SoulfulContext context;
+        private SoulfulContext _context;
+        SoulfulRepository<Order> _orderRepo;
+        SoulfulRepository<OrderDetail> _odRepo;
         public OrderService()
         {
-            context = new SoulfulContext();
+            _context = new SoulfulContext();
+            _orderRepo = new SoulfulRepository<Order>(_context);
+            _odRepo = new SoulfulRepository<OrderDetail>(_context);
         }
 
         public void Create(OrderViewModel orderView, string userId, List<CartViewModel> cartItems)
         {
-            SoulfulRepository<Order> O_Repository = new SoulfulRepository<Order>(context);
-            SoulfulRepository<OrderDetail> Od_Repository = new SoulfulRepository<OrderDetail>(context);
-
             Order order = new Order()
             {
                 RecieverName = orderView.RecieverName,
@@ -34,9 +35,9 @@ namespace Soulful.Services
             };
 
 
-            O_Repository.Create(order);
+            _orderRepo.Create(order);
 
-            context.SaveChanges();
+            _context.SaveChanges();
 
 
             cartItems.ForEach(item =>
@@ -49,16 +50,15 @@ namespace Soulful.Services
                     Price = item.Price
                 };
 
-                Od_Repository.Create(orderDetail);
+                _odRepo.Create(orderDetail);
 
-                context.SaveChanges();
+                _context.SaveChanges();
             });
         }
 
         public IEnumerable<Order> GetUserOrders(string userId)
         {
-            SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
-            var result = repository.GetAll().Where(x => x.AspNetUsers_Id.Equals(userId));
+            var result = _orderRepo.GetAll().Where(x => x.AspNetUsers_Id.Equals(userId));
 
             return result;
         }
@@ -155,17 +155,13 @@ namespace Soulful.Services
         }
         public Order GetOrderById(int? id)
         {
-            SoulfulRepository<Order> repository = new SoulfulRepository<Order>(context);
-            var result = repository.GetAll().FirstOrDefault(x => x.Order_id == id);
+            var result = _orderRepo.GetAll().FirstOrDefault(x => x.Order_id == id);
 
             return result;
         }
         public List<OrderDetailViewModel> GetUserOrdersByEmail(string email)
         {
-            SoulfulRepository<Order> O_repository = new SoulfulRepository<Order>(context);
-            SoulfulRepository<OrderDetail> Od_repository = new SoulfulRepository<OrderDetail>(context);
-
-            var orderTemp = O_repository.GetAll().Where(x => x.AspNetUsers.Email == email).Distinct();
+            var orderTemp = _orderRepo.GetAll().Where(x => x.AspNetUsers.Email == email).Distinct();
 
             var result = new List<OrderDetailViewModel>();
 
@@ -174,7 +170,7 @@ namespace Soulful.Services
                 result.Add(new OrderDetailViewModel()
                 {
                     OrderId = item.Order_id,
-                    OrderDetails = Od_repository.GetAll().Where(x => x.Order_id == item.Order_id).Select(x => new ApiOrderDetail
+                    OrderDetails = _odRepo.GetAll().Where(x => x.Order_id == item.Order_id).Select(x => new ApiOrderDetail
                     {
                         Count = x.Count,
                         Product = x.Album.Album_Name,

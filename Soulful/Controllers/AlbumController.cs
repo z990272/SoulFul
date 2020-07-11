@@ -16,20 +16,6 @@ namespace Soulful.Controllers
         {
             _ar = new AlbumDapperService();
         }
-        // GET: Album
-        //public ActionResult Albums()
-        //{
-        //    //AlbumModalService albumModalService = new AlbumModalService();
-        //    // ViewData["Language"] = albumModalService.GetLanguage();
-        //    //return View(albumModalService.GetModalinform());
-
-        //    var language = _ar.getLanguages();
-        //    ViewBag.Language = language;
-        //    var album = _ar.getAlbums("All");
-        //    ViewData["Album"] = album;
-        //    return View();
-        //}
-        
       
         public ActionResult Albums(string lan, string search)
         {
@@ -46,7 +32,6 @@ namespace Soulful.Controllers
             var language = _ar.getLanguages();
             ViewBag.Language = language;
             var data = _ar.searchAlbums();
-            //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
             var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
             ViewData["Album"] = result;
             return View();
@@ -55,23 +40,19 @@ namespace Soulful.Controllers
         public ActionResult OnclickAlbums(string search)
         {
             var data = _ar.searchAlbums();
-            //var result = data.Where(x => search.Contains(x.Album_Name)||search.Contains(x.Name));
             var result = data.Where(x => x.Album_Name.Contains(search) || x.Name.Contains(search));
             return PartialView("AlbumPartialView", result);
         }
 
-        public ActionResult HitClick(int id)
+        public void HitClick(int id)
         {
             ProductService service = new ProductService();
             service.UpdateHit(id);
-            return new EmptyResult();
         }
 
         public string AlbumClick(int id)
         {
-            AlbumDapperService service = new AlbumDapperService();
-
-            var album = service.searchAlbums();
+            var album = _ar.searchAlbums();
             var obj= album.FirstOrDefault(x => x.Album_id == id);
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
 

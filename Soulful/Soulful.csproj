@@ -265,6 +265,7 @@
     <Compile Include="Services\AlbumDapperService.cs" />
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\ShoppingService.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CartViewModel.cs" />
     <Compile Include="ViewModels\EcPayViewModel.cs" />
