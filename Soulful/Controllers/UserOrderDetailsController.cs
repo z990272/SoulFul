@@ -14,13 +14,17 @@ namespace Soulful.Controllers
 {
     public class UserOrderDetailsController : Controller
     {
+        OrderService _orderService;
+        public UserOrderDetailsController()
+        {
+            _orderService = new OrderService();
+        }
         // GET: CRUD
         [Authorize]
         public ActionResult Index()
         {
             var userId = HttpContext.User.Identity.GetUserId();
-            OrderService orderService = new OrderService();
-            var order = orderService.GetUserOrders(userId);
+            var order = _orderService.GetUserOrders(userId);
             return View(order.ToList());
         }
 
@@ -31,8 +35,7 @@ namespace Soulful.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrderService orderService = new OrderService();
-            var order = orderService.GetOrderById(id);
+            var order = _orderService.GetOrderById(id);
             if (order == null)
             {
                 return HttpNotFound();

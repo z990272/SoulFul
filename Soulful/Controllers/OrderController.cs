@@ -19,17 +19,25 @@ namespace Soulful.Controllers
     {
         private static List<CartViewModel> cartItem;
         private static OrderViewModel order;
+        ShoppingService _shoppingService;
+        OrderService _orderService;
+        ProductService _productService;
+        public OrderController()
+        {
+            _shoppingService = new ShoppingService();
+            _orderService = new OrderService();
+            _productService = new ProductService();
+        }
 
         // GET: Pay
         [Authorize]
         public ActionResult Order()
         {
-            ShoppingService shoppingService = new ShoppingService();
             var cartItems = (List<CartViewModel>)Session["Cart"];
 
             if (cartItems != null)
             {
-                var TotalAmount = shoppingService.GetTotalAmount();
+                var TotalAmount = _shoppingService.GetTotalAmount();
                 return View(TotalAmount);
             }
             return View(0);
@@ -45,7 +53,6 @@ namespace Soulful.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ConfirmOrder(OrderViewModel orderView)
         {
-            OrderService orderService = new OrderService();
             var cartItems = (List<CartViewModel>)Session["Cart"];
             if (ModelState.IsValid)
             {
@@ -59,12 +66,12 @@ namespace Soulful.Controllers
 
         public ActionResult Completed()
         {
-            OrderService orderService = new OrderService();
-            var FeedBack = orderService.GetEcPayOrderDetail();
+            OrderService _orderService = new OrderService();
+            var FeedBack = _orderService.GetEcPayOrderDetail();
             if (FeedBack.RtnMsg == "Succeeded")
             {
                 var userId = HttpContext.User.Identity.GetUserId();
-                orderService.Create(order, userId, cartItem);
+                _orderService.Create(order, userId, cartItem);
             }
             else
             {
@@ -77,12 +84,8 @@ namespace Soulful.Controllers
         [AcceptVerbs("GET", "POST")]
         public ActionResult GetOrderNumber(string Email)
         {
-            //var Email = "Allen321@gmail.com";
-            OrderService orderService = new OrderService();
-            var order = orderService.GetUserOrdersByEmail(Email);
 
-            //JsonDataApi/GetCarSalesNumber
-
+            var order = _orderService.GetUserOrdersByEmail(Email);
 
             return Json(order, JsonRequestBehavior.AllowGet);
 
@@ -90,11 +93,8 @@ namespace Soulful.Controllers
         [AcceptVerbs("GET", "POST")]
         public ActionResult GetWeekHotProduct()
         {
-        
-            ProductService productService = new ProductService();
-            var WeekHot = productService.GetWeekHits();
 
-  
+            var WeekHot = _productService.GetWeekHits();
 
             return Json(WeekHot, JsonRequestBehavior.AllowGet);
 
