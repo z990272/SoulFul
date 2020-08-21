@@ -308,6 +308,7 @@
     <Content Include="Asset\css\UserOrder.css" />
     <Content Include="Asset\css\_layout.css" />
     <Content Include="Asset\EcPay\ECPay.Payment.Integration.dll" />
+    <Content Include="Asset\image\a11.jpg" />
     <Content Include="Asset\image\asset 12.jpeg" />
     <Content Include="Asset\image\asset 32.jpeg" />
     <Content Include="Asset\image\asset 33.jpeg" />
